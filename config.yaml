@@ -1,0 +1,104 @@
+
+github:
+  token: ""
+  trending_url: "https://github.com/trending"
+  search_url: "https://api.github.com/search/repositories"
+
+huggingface:
+  base_url: "https://huggingface.co"
+
+producthunt:
+  base_url: "https://www.producthunt.com"
+
+hackernews:
+  base_url: "https://hacker-news.firebaseio.com/v0"
+
+reddit:
+  base_url: "https://www.reddit.com/r"
+  subreddits:
+    - LocalLLaMA
+    - OpenAI
+    - ChatGPT
+    - singularity
+    - selfhosted
+
+project:
+  categories:
+    - AI
+    - LLM
+    - Agent
+    - Multi Agent
+    - Coding Agent
+    - Vibe Coding
+    - MCP
+    - MCP Server
+    - Claude Code
+    - Cursor
+    - Codex
+    - OpenAI
+    - Anthropic
+    - DeepSeek
+    - Gemini
+    - RAG
+    - Workflow
+    - Automation
+    - Browser Use
+    - Computer Use
+    - Local AI
+    - OCR
+    - Whisper
+    - TTS
+    - Voice AI
+    - Image Generation
+    - Video Generation
+    - ComfyUI
+    - Flux
+    - Stable Diffusion
+    - 开发工具
+    - 效率工具
+    - 黑科技工具
+  
+  filter_keywords:
+    - awesome
+    - tutorial
+    - learning
+    - course
+    - demo
+    - fork
+    - mirror
+    - archive
+    - game
+    - cheatsheet
+    - prompt collection
+    - prompt-collection
+    - prompt_collection
+
+scoring:
+  heat_weight: 0.20
+  innovation_weight: 0.20
+  completeness_weight: 0.20
+  runtime_success_weight: 0.20
+  actual_value_weight: 0.20
+  min_score: 90
+  min_stars: 4
+
+paths:
+  workspace: "./workspace"
+  clones: "./workspace/clones"
+  screenshots: "./workspace/screenshots"
+  demos: "./workspace/demos"
+  logs: "./workspace/logs"
+  knowledge_base: "./Knowledge-Base"
+  daily_reports: "./Daily-Reports"
+  weekly_reports: "./Weekly-Reports"
+  monthly_reports: "./Monthly-Reports"
+  awesome_projects: "./Awesome-Projects"
+  benchmarks: "./Benchmarks"
+  reviews: "./Reviews"
+  architecture: "./Architecture"
+  metadata: "./Metadata"
+
+github_sync:
+  enabled: false
+  repo_url: "https://github.com/wuqijin442/vibeRepository"
+  branch: "main"
