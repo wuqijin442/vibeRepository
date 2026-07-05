@@ -25,6 +25,7 @@ from modules.knowledge_base import KnowledgeBaseManager
 from modules.reporter import ReportGenerator
 from modules.github_sync import GitHubSyncer
 
+Path('workspace/logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
