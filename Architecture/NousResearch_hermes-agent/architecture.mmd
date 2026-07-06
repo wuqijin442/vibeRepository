@@ -1,0 +1,47 @@
+%%{init: {'theme': 'dark'}}%%
+graph TB
+    User[用户] --> Interface[接口层]
+    
+    subgraph Interface[接口层]
+        direction LR
+        WebUI[Web UI]
+        CLI[CLI]
+        API[API 接口]
+        MCP[MCP Server]
+    end
+    
+    subgraph Core[核心层]
+        direction TB
+        Business[业务逻辑]
+        AgentEngine[Agent 引擎]:::highlight
+        LLM[LLM 集成]
+    end
+    
+    subgraph Data[数据层]
+        direction LR
+        Database[(数据库)]
+        VectorDB[(向量数据库)]
+        Cache[(缓存)]
+        Files[文件存储]
+    end
+    
+    subgraph Infra[基础设施]
+        direction TB
+        Docker[Docker 部署]
+        CI/CD[CI/CD]
+        Monitoring[监控]
+    end
+    
+    Interface --> Core
+    Core --> Data
+    Core --> Infra
+
+    classDef highlight fill:#3b82f6,stroke:#60a5fa,stroke-width:2px,color:white
+    
+    %% 技术栈信息
+    subgraph TechStack[技术栈]
+        direction LR
+        Lang[Python]
+        FW[N/A]
+        Deps[N/A]
+    end
