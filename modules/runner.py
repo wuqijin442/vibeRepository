@@ -95,6 +95,27 @@ class ProjectRunner:
         files = project.get('top_level_files', [])
         dirs = project.get('top_level_dirs', [])
         
+        if any(f == 'package.json' for f in files):
+            clone_path = Path(project.get('clone_path', '.'))
+            pkg_json = clone_path / 'package.json'
+            if pkg_json.exists():
+                try:
+                    import json
+                    with open(pkg_json, 'r') as f:
+                        pkg = json.load(f)
+                    if 'engines' in pkg and 'vscode' in pkg.get('engines', {}):
+                        return 'vscode_extension'
+                    if 'browser_action' in pkg or 'chrome_url_overrides' in pkg:
+                        return 'browser_extension'
+                except Exception:
+                    pass
+        
+        if 'vscode' in readme or 'vs code' in readme or 'vscode extension' in readme:
+            return 'vscode_extension'
+        
+        if 'chrome extension' in readme or 'firefox extension' in readme or 'browser extension' in readme:
+            return 'browser_extension'
+        
         if 'MCP' in tags or 'mcp server' in readme:
             return 'mcp_server'
         elif any(d.lower() in ['src', 'app', 'client'] for d in dirs) and any(f.endswith('.tsx') or f.endswith('.jsx') for f in files):
@@ -175,6 +196,14 @@ class ProjectRunner:
         
         if install_method == 'docker':
             return 'docker run -d project-test'
+        
+        project_type = project.get('project_type', '')
+        if project_type == 'vscode_extension':
+            if install_method in ['npm', 'pnpm', 'yarn', 'bun']:
+                return f'{install_method} run compile'
+        if project_type == 'browser_extension':
+            if install_method in ['npm', 'pnpm', 'yarn', 'bun']:
+                return f'{install_method} run build'
         
         return ''
 

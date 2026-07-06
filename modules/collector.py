@@ -33,6 +33,9 @@ class DataCollector:
             self._collect_huggingface,
             self._collect_hackernews,
             self._collect_reddit,
+            self._collect_producthunt,
+            self._collect_papers_with_code,
+            self._collect_twitter,
         ]
         
         for collector in collectors:
@@ -328,10 +331,169 @@ class DataCollector:
 
     def _collect_producthunt(self) -> List[Dict]:
         projects = []
-        logger.info("Product Hunt 采集需要 API key，暂跳过")
+        url = "https://www.producthunt.com"
+        
+        try:
+            resp = self.session.get(f"{url}/topics/ai", timeout=30)
+            if resp.status_code != 200:
+                logger.warning(f"Product Hunt 请求失败: {resp.status_code}")
+                return projects
+            
+            soup = BeautifulSoup(resp.text, 'lxml')
+            
+            cards = soup.select('[data-test^="post-item"]')
+            for card in cards[:30]:
+                try:
+                    name_tag = card.select_one('[data-test^="post-name"]')
+                    if not name_tag:
+                        continue
+                    
+                    name = name_tag.get_text(strip=True)
+                    
+                    desc_tag = card.select_one('[data-test^="post-tagline"]')
+                    description = desc_tag.get_text(strip=True) if desc_tag else ''
+                    
+                    vote_tag = card.select_one('[data-test^="vote-count"]')
+                    votes = 0
+                    if vote_tag:
+                        vote_text = vote_tag.get_text(strip=True).replace(',', '')
+                        try:
+                            votes = int(vote_text)
+                        except ValueError:
+                            pass
+                    
+                    link_tag = card.select_one('a[href^="/posts/"]')
+                    post_url = url + link_tag['href'] if link_tag and link_tag.get('href') else ''
+                    
+                    projects.append({
+                        'name': name,
+                        'url': post_url,
+                        'description': description,
+                        'stars': votes,
+                        'daily_stars': votes,
+                        'language': '',
+                        'source': 'producthunt',
+                        'ph_votes': votes,
+                        'collected_at': datetime.now().isoformat()
+                    })
+                except Exception as e:
+                    continue
+                    
+        except Exception as e:
+            logger.error(f"Product Hunt 采集失败: {e}")
+        
+        logger.info(f"Product Hunt 采集到 {len(projects)} 个项目")
         return projects
 
     def _collect_papers_with_code(self) -> List[Dict]:
         projects = []
-        logger.info("Papers With Code 采集暂跳过")
+        base_url = "https://paperswithcode.com"
+        
+        try:
+            url = f"{base_url}/latest"
+            resp = self.session.get(url, timeout=30)
+            if resp.status_code != 200:
+                logger.warning(f"Papers With Code 请求失败: {resp.status_code}")
+                return projects
+            
+            soup = BeautifulSoup(resp.text, 'lxml')
+            
+            cards = soup.select('.paper-card, .row.infinite-item')
+            for card in cards[:30]:
+                try:
+                    title_tag = card.select_one('h1 a, h2 a, .paper-title a')
+                    if not title_tag:
+                        continue
+                    
+                    name = title_tag.get_text(strip=True)
+                    href = title_tag.get('href', '')
+                    paper_url = base_url + href if href.startswith('/') else href
+                    
+                    desc_tag = card.select_one('.paper-abstract p, .entity-strip')
+                    description = desc_tag.get_text(strip=True)[:200] if desc_tag else ''
+                    
+                    stars_tag = card.select_one('.stars-count, .badge-secondary')
+                    stars = 0
+                    if stars_tag:
+                        stars_text = stars_tag.get_text(strip=True).replace(',', '')
+                        try:
+                            stars = int(stars_text)
+                        except ValueError:
+                            pass
+                    
+                    github_link = card.select_one('a[href*="github.com"]')
+                    github_url = github_link['href'] if github_link else ''
+                    
+                    projects.append({
+                        'name': name,
+                        'url': github_url if github_url else paper_url,
+                        'description': description,
+                        'stars': stars,
+                        'daily_stars': 0,
+                        'language': 'Python',
+                        'source': 'papers_with_code',
+                        'paper_url': paper_url,
+                        'collected_at': datetime.now().isoformat()
+                    })
+                except Exception as e:
+                    continue
+                    
+        except Exception as e:
+            logger.error(f"Papers With Code 采集失败: {e}")
+        
+        logger.info(f"Papers With Code 采集到 {len(projects)} 个项目")
+        return projects
+
+    def _collect_twitter(self) -> List[Dict]:
+        projects = []
+        
+        twitter_accounts = [
+            'OpenAI', 'AnthropicAI', 'GoogleDeepMind', 'cursor_ai',
+            'ClaudeAI', 'codex', 'ModelContextP', 'vibe_coding'
+        ]
+        
+        try:
+            for account in twitter_accounts[:5]:
+                try:
+                    url = f"https://twitter.com/{account}"
+                    resp = self.session.get(url, timeout=15)
+                    
+                    if resp.status_code != 200:
+                        continue
+                    
+                    soup = BeautifulSoup(resp.text, 'lxml')
+                    
+                    links = soup.select('a[href*="github.com"]')
+                    for link in links[:5]:
+                        href = link.get('href', '')
+                        if 'github.com' in href and href.count('/') >= 3:
+                            try:
+                                parts = href.split('github.com/')[-1].split('/')
+                                if len(parts) >= 2:
+                                    repo_name = f"{parts[0]}/{parts[1].split('?')[0].split('#')[0]}"
+                                    
+                                    projects.append({
+                                        'name': repo_name,
+                                        'url': f"https://github.com/{repo_name}",
+                                        'description': f"Mentioned by @{account} on X(Twitter)",
+                                        'stars': 0,
+                                        'daily_stars': 0,
+                                        'language': '',
+                                        'source': 'twitter',
+                                        'twitter_account': account,
+                                        'collected_at': datetime.now().isoformat()
+                                    })
+                            except Exception:
+                                continue
+                    
+                    time.sleep(random.uniform(1, 2))
+                    
+                except Exception as e:
+                    logger.debug(f"Twitter 账号 {account} 采集失败: {e}")
+                    continue
+                    
+        except Exception as e:
+            logger.error(f"Twitter 采集失败: {e}")
+        
+        logger.info(f"Twitter/X 采集到 {len(projects)} 个项目引用")
         return projects

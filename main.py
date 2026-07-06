@@ -24,6 +24,7 @@ from modules.scoring import ProjectScorer
 from modules.knowledge_base import KnowledgeBaseManager
 from modules.reporter import ReportGenerator
 from modules.github_sync import GitHubSyncer
+from modules.failure_handler import FailureHandler
 
 Path('workspace/logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -61,6 +62,7 @@ class AIDailyWorkflow:
         self.kb_manager = KnowledgeBaseManager(self.config)
         self.reporter = ReportGenerator(self.config)
         self.github_syncer = GitHubSyncer(self.config)
+        self.failure_handler = FailureHandler(self.config)
         
         self.stats = {
             'scanned': 0,
@@ -122,6 +124,7 @@ class AIDailyWorkflow:
             self._step_11_architecture()
             self._step_12_score()
             self._step_13_knowledge_base()
+            self._step_13_5_kb_daily_scan()
             self._step_14_report()
             self._step_15_github_sync()
             
@@ -318,13 +321,31 @@ class AIDailyWorkflow:
                 self.kb_manager.add_project(project)
             except Exception as e:
                 logger.error(f"知识库整理 {project.get('name', 'unknown')} 失败: {e}")
+                self.failure_handler.record_failure(
+                    project.get('name', 'unknown'),
+                    'knowledge_base',
+                    e,
+                    suggestion='检查项目数据完整性'
+                )
+
+    def _step_13_5_kb_daily_scan(self):
+        logger.info("[步骤13.5] 知识库每日扫描...")
+        try:
+            scan_results = self.kb_manager.daily_scan()
+            logger.info(f"知识库扫描完成: {scan_results.get('total', 0)} 个项目, "
+                       f"{scan_results.get('updated', 0)} 个更新, "
+                       f"{scan_results.get('new_releases', 0)} 个新版本")
+            self.stats['kb_scan_results'] = scan_results
+        except Exception as e:
+            logger.error(f"知识库每日扫描失败: {e}")
 
     def _step_14_report(self):
         logger.info("[步骤14] 生成报告...")
         self.reporter.generate_daily_report(
             self.scored_projects,
             self.stats,
-            self.today
+            self.today,
+            failure_handler=self.failure_handler
         )
         
         if self.is_sunday:

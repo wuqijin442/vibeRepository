@@ -30,12 +30,16 @@ class ArchitectureGenerator:
         try:
             mermaid = self._generate_mermaid(project)
             plantuml = self._generate_plantuml(project)
+            svg = self._generate_svg(project)
             
             with open(arch_dir / 'architecture.mmd', 'w', encoding='utf-8') as f:
                 f.write(mermaid)
             
             with open(arch_dir / 'architecture.puml', 'w', encoding='utf-8') as f:
                 f.write(plantuml)
+            
+            with open(arch_dir / 'architecture.svg', 'w', encoding='utf-8') as f:
+                f.write(svg)
             
             project['architecture_generated'] = True
             project['architecture_path'] = str(arch_dir)
@@ -180,3 +184,107 @@ end note
 """
         
         return plantuml
+
+    def _generate_svg(self, project: Dict) -> str:
+        name = project.get('name', 'System Architecture')
+        tags = project.get('tags', [])
+        language = project.get('primary_language', 'N/A')
+        frameworks = project.get('frameworks', [])
+        
+        highlight_color = '#3b82f6'
+        bg_color = '#1e1e2e'
+        text_color = '#cdd6f4'
+        box_color = '#313244'
+        border_color = '#45475a'
+        
+        is_agent = 'Agent' in tags
+        is_mcp = 'MCP' in tags
+        
+        svg = f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <style>
+    .title {{ font-size: 20px; font-weight: bold; fill: {text_color}; font-family: sans-serif; }}
+    .subtitle {{ font-size: 12px; fill: #9399b2; font-family: sans-serif; }}
+    .box-title {{ font-size: 14px; font-weight: bold; fill: {text_color}; font-family: sans-serif; }}
+    .box-text {{ font-size: 11px; fill: #bac2de; font-family: sans-serif; }}
+    .layer-title {{ font-size: 13px; font-weight: bold; fill: #89b4fa; font-family: sans-serif; }}
+  </style>
+  
+  <rect width="800" height="600" fill="{bg_color}"/>
+  
+  <text x="400" y="35" text-anchor="middle" class="title">{name} - Architecture</text>
+  <text x="400" y="55" text-anchor="middle" class="subtitle">Language: {language} | Frameworks: {', '.join(frameworks[:3]) if frameworks else 'N/A'}</text>
+  
+  <text x="400" y="90" text-anchor="middle" class="layer-title">用户层 / User Layer</text>
+  <rect x="300" y="105" width="200" height="50" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="400" y="135" text-anchor="middle" class="box-title">👤 用户</text>
+  
+  <line x1="400" y1="155" x2="400" y2="180" stroke="{border_color}" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="400" y="200" text-anchor="middle" class="layer-title">接口层 / Interface Layer</text>
+  <rect x="50" y="215" width="150" height="60" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="125" y="240" text-anchor="middle" class="box-title">Web UI</text>
+  <text x="125" y="258" text-anchor="middle" class="box-text">前端界面</text>
+  
+  <rect x="220" y="215" width="150" height="60" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="295" y="240" text-anchor="middle" class="box-title">CLI</text>
+  <text x="295" y="258" text-anchor="middle" class="box-text">命令行工具</text>
+  
+  <rect x="390" y="215" width="150" height="60" rx="8" fill="{box_color}" stroke="{highlight_color if is_mcp else border_color}" stroke-width="{'3' if is_mcp else '2'}"/>
+  <text x="465" y="240" text-anchor="middle" class="box-title">{'🔌 MCP Server' if is_mcp else 'API Server'}</text>
+  <text x="465" y="258" text-anchor="middle" class="box-text">{'模型上下文协议' if is_mcp else 'RESTful API'}</text>
+  
+  <rect x="560" y="215" width="150" height="60" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="635" y="240" text-anchor="middle" class="box-title">SDK</text>
+  <text x="635" y="258" text-anchor="middle" class="box-text">开发工具包</text>
+  
+  <line x1="400" y1="275" x2="400" y2="300" stroke="{border_color}" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="400" y="320" text-anchor="middle" class="layer-title">核心层 / Core Layer</text>
+  <rect x="100" y="335" width="180" height="70" rx="8" fill="{box_color}" stroke="{highlight_color if is_agent else border_color}" stroke-width="{'3' if is_agent else '2'}"/>
+  <text x="190" y="360" text-anchor="middle" class="box-title">{'🤖 Agent 引擎' if is_agent else '业务逻辑'}</text>
+  <text x="190" y="380" text-anchor="middle" class="box-text">{'多代理协作' if is_agent else '核心功能模块'}</text>
+  <text x="190" y="395" text-anchor="middle" class="box-text">{'任务编排' if is_agent else '业务流程'}</text>
+  
+  <rect x="310" y="335" width="180" height="70" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="400" y="360" text-anchor="middle" class="box-title">LLM 集成</text>
+  <text x="400" y="380" text-anchor="middle" class="box-text">大语言模型调用</text>
+  <text x="400" y="395" text-anchor="middle" class="box-text">多模型支持</text>
+  
+  <rect x="520" y="335" width="180" height="70" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="610" y="360" text-anchor="middle" class="box-title">工具集成</text>
+  <text x="610" y="380" text-anchor="middle" class="box-text">外部工具调用</text>
+  <text x="610" y="395" text-anchor="middle" class="box-text">插件系统</text>
+  
+  <line x1="400" y1="405" x2="400" y2="430" stroke="{border_color}" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="400" y="450" text-anchor="middle" class="layer-title">数据层 / Data Layer</text>
+  <rect x="100" y="465" width="130" height="60" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="165" y="490" text-anchor="middle" class="box-title">💾 数据库</text>
+  <text x="165" y="508" text-anchor="middle" class="box-text">结构化数据</text>
+  
+  <rect x="250" y="465" width="130" height="60" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="315" y="490" text-anchor="middle" class="box-title">🔍 向量库</text>
+  <text x="315" y="508" text-anchor="middle" class="box-text">RAG 检索</text>
+  
+  <rect x="400" y="465" width="130" height="60" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="465" y="490" text-anchor="middle" class="box-title">📦 缓存</text>
+  <text x="465" y="508" text-anchor="middle" class="box-text">性能优化</text>
+  
+  <rect x="550" y="465" width="130" height="60" rx="8" fill="{box_color}" stroke="{border_color}" stroke-width="2"/>
+  <text x="615" y="490" text-anchor="middle" class="box-title">📁 文件存储</text>
+  <text x="615" y="508" text-anchor="middle" class="box-text">文档/媒体</text>
+  
+  <line x1="400" y1="525" x2="400" y2="545" stroke="{border_color}" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="400" y="565" text-anchor="middle" class="layer-title">基础设施 / Infrastructure</text>
+  <text x="400" y="585" text-anchor="middle" class="box-text">Docker • CI/CD • Monitoring • Logging</text>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="{border_color}"/>
+    </marker>
+  </defs>
+</svg>
+'''
+        return svg
