@@ -3,6 +3,7 @@
 
 import logging
 import time
+import os
 from pathlib import Path
 from typing import Dict
 
@@ -16,6 +17,25 @@ class ScreenshotTaker:
         self.demos_dir = Path(config.get('paths', {}).get('demos', './workspace/demos'))
         self.screenshots_dir.mkdir(parents=True, exist_ok=True)
         self.demos_dir.mkdir(parents=True, exist_ok=True)
+        self._check_dependencies()
+    
+    def _check_dependencies(self):
+        self.has_ffmpeg = self._check_tool('ffmpeg')
+        self.has_scrot = self._check_tool('scrot')
+        logger.info(f"视频录制依赖: ffmpeg={'✓' if self.has_ffmpeg else '✗'}")
+    
+    def _check_tool(self, tool_name: str) -> bool:
+        try:
+            import subprocess
+            result = subprocess.run(
+                ['which', tool_name],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            return result.returncode == 0
+        except Exception:
+            return False
 
     def take_screenshots(self, project: Dict) -> Dict:
         name = project.get('name', 'unknown')
@@ -41,11 +61,94 @@ class ScreenshotTaker:
         
         try:
             self._take_web_screenshots(project, project_screenshot_dir, safe_name)
+            self._record_demo_video(project, project_screenshot_dir, safe_name)
         except Exception as e:
             logger.error(f"截图失败 {name}: {e}")
             project['screenshot_error'] = str(e)
         
         return project
+    
+    def _record_demo_video(self, project: Dict, save_dir: Path, safe_name: str):
+        if not self.has_ffmpeg:
+            logger.info("ffmpeg 未安装，跳过视频录制")
+            return
+        
+        project_type = project.get('project_type', '')
+        if project_type not in ['web_app', 'api_server', 'python_server']:
+            return
+        
+        if not project.get('run_success', False):
+            return
+        
+        port = self._detect_port(project)
+        url = f'http://localhost:{port}'
+        video_path = str(self.demos_dir / f'{safe_name}_demo.webm')
+        gif_path = str(self.demos_dir / f'{safe_name}_demo.gif')
+        
+        try:
+            from playwright.sync_api import sync_playwright
+            
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
+                context = browser.new_context(
+                    viewport={'width': 1280, 'height': 720},
+                    record_video_dir=str(self.demos_dir),
+                    record_video_size={'width': 1280, 'height': 720}
+                )
+                page = context.new_page()
+                
+                try:
+                    page.goto(url, timeout=30000, wait_until='networkidle')
+                    time.sleep(2)
+                    
+                    for i in range(3):
+                        try:
+                            page.mouse.move(100 + i * 200, 200 + i * 100)
+                            page.mouse.wheel(0, 500)
+                            time.sleep(1)
+                        except Exception:
+                            continue
+                    
+                    context.close()
+                    
+                    video_files = list(self.demos_dir.glob(f'{safe_name}*.webm'))
+                    if video_files:
+                        latest_video = max(video_files, key=lambda x: x.stat().st_mtime)
+                        final_video = self.demos_dir / f'{safe_name}_demo.webm'
+                        if latest_video != final_video:
+                            import shutil
+                            shutil.move(str(latest_video), str(final_video))
+                        project['demo_video'] = str(final_video)
+                        logger.info(f"Demo 视频已保存: {final_video}")
+                        
+                        self._convert_to_gif(str(final_video), gif_path)
+                        project['demo_gif'] = gif_path
+                        logger.info(f"Demo GIF 已保存: {gif_path}")
+                    
+                except Exception as e:
+                    logger.error(f"视频录制失败: {e}")
+                
+                browser.close()
+                
+        except ImportError:
+            logger.warning("Playwright 未安装，跳过视频录制")
+        except Exception as e:
+            logger.error(f"视频录制异常: {e}")
+    
+    def _convert_to_gif(self, video_path: str, gif_path: str):
+        if not self.has_ffmpeg or not os.path.exists(video_path):
+            return
+        
+        try:
+            import subprocess
+            cmd = [
+                'ffmpeg', '-y', '-i', video_path,
+                '-vf', 'fps=10,scale=640:-1:flags=lanczos',
+                '-c:v', 'gif', gif_path
+            ]
+            subprocess.run(cmd, capture_output=True, timeout=60)
+        except Exception as e:
+            logger.debug(f"GIF 转换失败: {e}")
 
     def _take_web_screenshots(self, project: Dict, save_dir: Path, safe_name: str):
         try:

@@ -40,6 +40,10 @@ class ProjectTester:
                 success, log = self._test_mcp_project(project)
             elif project_type == 'agent':
                 success, log = self._test_agent_project(project)
+            elif project_type == 'vscode_extension':
+                success, log = self._test_vscode_extension(project)
+            elif project_type == 'browser_extension':
+                success, log = self._test_browser_extension(project)
             else:
                 success, log = self._test_generic(project)
             
@@ -195,6 +199,97 @@ class ProjectTester:
 
     def _test_agent_project(self, project: Dict) -> tuple:
         return self._test_cli_project(project)
+
+    def _test_vscode_extension(self, project: Dict) -> tuple:
+        clone_path = Path(project.get('clone_path', '.'))
+        install_method = project.get('install_method', '')
+        
+        if install_method not in ['npm', 'pnpm', 'yarn', 'bun']:
+            return (False, '非 Node.js 项目，无法测试 VSCode 扩展')
+        
+        try:
+            pkg_json = clone_path / 'package.json'
+            if not pkg_json.exists():
+                return (False, '未找到 package.json')
+            
+            import json
+            with open(pkg_json, 'r') as f:
+                pkg = json.load(f)
+            
+            scripts = pkg.get('scripts', {})
+            
+            if 'compile' in scripts or 'build' in scripts:
+                build_cmd = 'compile' if 'compile' in scripts else 'build'
+                result = subprocess.run(
+                    f'{install_method} run {build_cmd}',
+                    cwd=str(clone_path),
+                    capture_output=True,
+                    text=True,
+                    timeout=120,
+                    shell=True
+                )
+                
+                log = f"STDOUT:\n{result.stdout[:1000]}\nSTDERR:\n{result.stderr[:1000]}"
+                
+                if result.returncode == 0:
+                    return (True, f"VSCode 扩展 {build_cmd} 成功\n{log}")
+                else:
+                    return (False, f"VSCode 扩展 {build_cmd} 失败\n{log}")
+            
+            return (True, 'VSCode 扩展项目结构完整')
+            
+        except subprocess.TimeoutExpired:
+            return (False, 'VSCode 扩展编译超时')
+        except Exception as e:
+            return (False, f"VSCode 扩展测试异常: {str(e)}")
+
+    def _test_browser_extension(self, project: Dict) -> tuple:
+        clone_path = Path(project.get('clone_path', '.'))
+        
+        try:
+            manifest_files = ['manifest.json', 'manifest v3']
+            has_manifest = any((clone_path / f).exists() for f in ['manifest.json'])
+            
+            if not has_manifest:
+                return (False, '未找到 manifest.json')
+            
+            src_dir = clone_path / 'src'
+            has_src = src_dir.exists()
+            
+            install_method = project.get('install_method', '')
+            build_success = False
+            
+            if install_method in ['npm', 'pnpm', 'yarn', 'bun']:
+                pkg_json = clone_path / 'package.json'
+                if pkg_json.exists():
+                    try:
+                        import json
+                        with open(pkg_json, 'r') as f:
+                            pkg = json.load(f)
+                        scripts = pkg.get('scripts', {})
+                        if 'build' in scripts:
+                            result = subprocess.run(
+                                f'{install_method} run build',
+                                cwd=str(clone_path),
+                                capture_output=True,
+                                text=True,
+                                timeout=120,
+                                shell=True
+                            )
+                            build_success = result.returncode == 0
+                    except Exception:
+                        pass
+            
+            if has_manifest and has_src:
+                msg = 'Browser 扩展结构完整'
+                if build_success:
+                    msg += '，构建成功'
+                return (True, msg)
+            
+            return (False, 'Browser 扩展结构不完整')
+            
+        except Exception as e:
+            return (False, f"Browser 扩展测试异常: {str(e)}")
 
     def _test_generic(self, project: Dict) -> tuple:
         clone_path = Path(project.get('clone_path', '.'))
