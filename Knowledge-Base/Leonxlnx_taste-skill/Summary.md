@@ -5,8 +5,8 @@
 - **项目名称**: Leonxlnx/taste-skill
 - **项目地址**: https://github.com/Leonxlnx/taste-skill
 - **作者**: 未知
-- **License**: MIT
-- **主要语言**: Shell
+- **License**: Unknown
+- **主要语言**: JavaScript
 
 ## 一句话介绍
 
@@ -16,15 +16,15 @@ Taste-Skill - gives your AI good taste. stops the AI from generating boring, gen
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 57466 |
-| 今日新增 | 863 |
+| Stars | 58896 |
+| 今日新增 | 1458 |
 | Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
 ## 主要标签
 
-Agent, LLM, Coding, Workflow, Image Gen, Open Source
+AI
 
 ## 快速判断
 
@@ -34,19 +34,16 @@ Agent, LLM, Coding, Workflow, Image Gen, Open Source
 
 ## 适合谁
 
-产品经理, 开发者, 设计师, 数据科学家, 程序员, 自动化爱好者, 内容创作者, AI 研究者, 运维工程师, AI 工程师
+技术研究者, AI 爱好者
 
 ## 主要用途
 
-- 多代理协作
-- 自动化任务执行
-- 业务流程编排
-- 智能客服
-- 图像生成
+- AI 应用开发
+- 技术研究探索
 
 ## 技术栈
 
-- 语言: Shell
+- 语言: JavaScript
 - 框架: 暂无
 - 部署: 未知
 

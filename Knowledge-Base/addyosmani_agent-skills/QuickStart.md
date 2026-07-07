@@ -1,9 +1,9 @@
-# Leonxlnx/taste-skill 快速开始
+# addyosmani/agent-skills 快速开始
 
 ## 前置要求
 
 - **操作系统**: Linux
-- **主要语言环境**: JavaScript
+- **主要语言环境**: Shell
 - **依赖管理工具**: unknown
 
 ## 安装步骤
@@ -11,8 +11,8 @@
 ### 1. Clone 项目
 
 ```bash
-git clone https://github.com/Leonxlnx/taste-skill
-cd taste-skill
+git clone https://github.com/addyosmani/agent-skills
+cd agent-skills
 ```
 
 ### 2. 安装依赖

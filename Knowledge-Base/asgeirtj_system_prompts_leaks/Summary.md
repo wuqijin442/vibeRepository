@@ -5,7 +5,7 @@
 - **项目名称**: asgeirtj/system_prompts_leaks
 - **项目地址**: https://github.com/asgeirtj/system_prompts_leaks
 - **作者**: 未知
-- **License**: Other
+- **License**: Unknown
 - **主要语言**: JavaScript
 
 ## 一句话介绍
@@ -16,15 +16,15 @@ Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 49936 |
-| 今日新增 | 981 |
+| Stars | 51484 |
+| 今日新增 | 1378 |
 | Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
 ## 主要标签
 
-Agent, LLM, RAG, Workflow, Voice
+LLM
 
 ## 快速判断
 
@@ -34,21 +34,18 @@ Agent, LLM, RAG, Workflow, Voice
 
 ## 适合谁
 
-产品经理, 数据科学家, 自动化爱好者, 语音开发者, AI 研究者, 运维工程师, 播客创作者, AI 工程师
+数据科学家, AI 工程师
 
 ## 主要用途
 
-- 多代理协作
-- 自动化任务执行
-- 企业内部搜索
-- 文档智能检索
-- 业务流程编排
+- AI 应用开发
+- 技术研究探索
 
 ## 技术栈
 
 - 语言: JavaScript
 - 框架: 暂无
-- 部署: GitHub Actions
+- 部署: 未知
 
 ---
 

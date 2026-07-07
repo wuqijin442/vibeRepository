@@ -1,4 +1,4 @@
-# asgeirtj/system_prompts_leaks 常见问题
+# addyosmani/agent-skills 常见问题
 
 ## 安装相关
 

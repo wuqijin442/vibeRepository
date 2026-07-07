@@ -4,26 +4,23 @@
 
 Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop
 
-**标签**: Agent, LLM, Coding, Workflow, Image Gen, Open Source
+**标签**: AI
 
 **项目地址**: https://github.com/Leonxlnx/taste-skill
 
 ## 技术栈
 
-- **主要语言**: Shell
+- **主要语言**: JavaScript
 - **框架**: 暂无
-- **License**: MIT
-- **支持平台**: macOS, Windows, Linux
+- **License**: Unknown
+- **支持平台**: Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 多代理协作
-- 自动化任务执行
-- 业务流程编排
-- 智能客服
-- 图像生成
+- AI 应用开发
+- 技术研究探索
 
 ## 安装方式
 
@@ -39,8 +36,8 @@ Taste-Skill - gives your AI good taste. stops the AI from generating boring, gen
 
 ## 社区数据
 
-- **Stars**: 57466
-- **今日新增**: 863
+- **Stars**: 58896
+- **今日新增**: 1458
 - **Forks**: 0
 
 ---
