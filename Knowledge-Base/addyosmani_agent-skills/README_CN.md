@@ -1,18 +1,18 @@
-# NousResearch/hermes-agent - 中文文档
+# addyosmani/agent-skills - 中文文档
 
 ## 项目简介
 
-The agent that grows with you
+Production-grade engineering skills for AI coding agents.
 
-**标签**: Agent
+**标签**: Agent, MCP, Coding, Workflow, Browser Use, Local AI, DevTools
 
-**项目地址**: https://github.com/NousResearch/hermes-agent
+**项目地址**: https://github.com/addyosmani/agent-skills
 
 ## 技术栈
 
-- **主要语言**: Python
+- **主要语言**: Shell
 - **框架**: 暂无
-- **License**: MIT License
+- **License**: MIT
 - **支持平台**: Linux
 
 ## 功能特性
@@ -20,8 +20,10 @@ The agent that grows with you
 根据项目分析，该项目主要功能包括：
 
 - 自动化任务执行
-- 多代理协作
-- 智能客服
+- 网页自动化
+- 工作流自动化
+- 多工具协同
+- 代码生成
 
 ## 安装方式
 
@@ -37,9 +39,9 @@ The agent that grows with you
 
 ## 社区数据
 
-- **Stars**: 210354
-- **今日新增**: 0
-- **Forks**: 38532
+- **Stars**: 70771
+- **今日新增**: 1112
+- **Forks**: 0
 
 ---
 

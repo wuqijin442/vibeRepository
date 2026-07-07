@@ -1,16 +1,16 @@
-# asgeirtj/system_prompts_leaks 评测报告
+# addyosmani/agent-skills 评测报告
 
 ## 项目概述
 
-**项目名称**: asgeirtj/system_prompts_leaks
-**项目地址**: https://github.com/asgeirtj/system_prompts_leaks
-**一句话介绍**: Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.
+**项目名称**: addyosmani/agent-skills
+**项目地址**: https://github.com/addyosmani/agent-skills
+**一句话介绍**: Production-grade engineering skills for AI coding agents.
 
 ## 评测结果
 
 | 维度 | 评分 | 说明 |
 |------|------|------|
-| 热度 | 175.1 / 100 | 基于 Star 数量和增长速度 |
+| 热度 | 164.5 / 100 | 基于 Star 数量和增长速度 |
 | 创新性 | 待评估 | 基于功能独特性 |
 | 完整度 | 待评估 | 基于文档和功能完整性 |
 | 运行成功率 | 失败 | 实际运行测试结果 |
@@ -19,22 +19,25 @@
 ## 优点
 
 - 社区热度高，Star 数量多
+- 文档完善
+- 支持本地运行，保护隐私
 
 ## 缺点
 
 - 安装可能存在依赖问题
 - 运行稳定性待验证
-- 文档不够完善
-- README 信息较少
 
 ## 适用人群
 
-数据科学家, AI 工程师
+程序员, 开发者, 自动化爱好者, 产品经理, 隐私关注者, 企业用户, AI 研究者, 运维工程师
 
 ## 适用场景
 
-- AI 应用开发
-- 技术研究探索
+- 自动化任务执行
+- 网页自动化
+- 工作流自动化
+- 多工具协同
+- 代码生成
 
 ## 性能数据
 
@@ -42,7 +45,7 @@
 - 启动耗时: 0s
 - 内存占用: 0MB
 - CPU占用: 0%
-- 磁盘占用: 0.0MB
+- 磁盘占用: 0.86MB
 
 ## 推荐指数
 

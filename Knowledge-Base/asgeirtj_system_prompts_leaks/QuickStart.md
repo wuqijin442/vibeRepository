@@ -2,7 +2,7 @@
 
 ## 前置要求
 
-- **操作系统**: macOS, Windows, Linux
+- **操作系统**: Linux
 - **主要语言环境**: JavaScript
 - **依赖管理工具**: unknown
 

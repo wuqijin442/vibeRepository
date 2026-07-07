@@ -102,3 +102,5 @@ github_sync:
   enabled: false
   repo_url: "https://github.com/wuqijin442/vibeRepository"
   branch: "main"
+  author_name: "wuqijin442"
+  author_email: "wuqijin442@users.noreply.github.com"

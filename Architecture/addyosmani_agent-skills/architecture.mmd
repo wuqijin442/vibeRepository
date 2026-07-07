@@ -7,13 +7,13 @@ graph TB
         WebUI[Web UI]
         CLI[CLI]
         API[API 接口]
-        MCP[MCP Server]
+        MCP[MCP Server]:::highlight
     end
     
     subgraph Core[核心层]
         direction TB
         Business[业务逻辑]
-        AgentEngine[Agent 引擎]
+        AgentEngine[Agent 引擎]:::highlight
         LLM[LLM 集成]
     end
     
@@ -41,7 +41,7 @@ graph TB
     %% 技术栈信息
     subgraph TechStack[技术栈]
         direction LR
-        Lang[JavaScript]
+        Lang[Shell]
         FW[N/A]
         Deps[N/A]
     end

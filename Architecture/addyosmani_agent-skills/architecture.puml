@@ -8,7 +8,7 @@ skinparam classBorderColor #45475a
 skinparam titleFontColor #cdd6f4
 skinparam ArrowColor #89b4fa
 
-title Leonxlnx/taste-skill 架构图
+title addyosmani/agent-skills 架构图
 
 package "接口层" #313244 {
     interface WebUI
@@ -52,7 +52,7 @@ AgentEngine --> Cache
 LLMIntegration --> FileStorage
 
 note right of LLMIntegration
-  主要语言: JavaScript
+  主要语言: Shell
   框架: N/A
 end note
 

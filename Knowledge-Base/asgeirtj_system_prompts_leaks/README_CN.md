@@ -4,7 +4,7 @@
 
 Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.
 
-**标签**: Agent, LLM, RAG, Workflow, Voice
+**标签**: LLM
 
 **项目地址**: https://github.com/asgeirtj/system_prompts_leaks
 
@@ -12,18 +12,15 @@ Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,
 
 - **主要语言**: JavaScript
 - **框架**: 暂无
-- **License**: Other
-- **支持平台**: macOS, Windows, Linux
+- **License**: Unknown
+- **支持平台**: Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 多代理协作
-- 自动化任务执行
-- 企业内部搜索
-- 文档智能检索
-- 业务流程编排
+- AI 应用开发
+- 技术研究探索
 
 ## 安装方式
 
@@ -39,8 +36,8 @@ Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,
 
 ## 社区数据
 
-- **Stars**: 49936
-- **今日新增**: 981
+- **Stars**: 51484
+- **今日新增**: 1378
 - **Forks**: 0
 
 ---
