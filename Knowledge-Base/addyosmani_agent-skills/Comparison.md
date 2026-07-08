@@ -2,26 +2,24 @@
 
 ## 同类项目
 
-- AutoGen
-- modelcontextprotocol/servers
-- Playwright
-- LangFlow
+- Claude Code
+- CrewAI
+- aider
+- AutoGPT
 - Continue
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| addyosmani/agent-skills | 社区热度高，Star 数量多; 文档完善; 支持本地运行，保护隐私 | 安装可能存在依赖问题; 运行稳定性待验证 | 自动化任务执行; 网页自动化 |
-| AutoGen | 待对比 | 待对比 | 待对比 |
-| modelcontextprotocol/servers | 待对比 | 待对比 | 待对比 |
-| Playwright | 待对比 | 待对比 | 待对比 |
+| addyosmani/agent-skills | 社区热度高，Star 数量多 | 安装可能存在依赖问题; 运行稳定性待验证 | 重构辅助; 代码生成 |
+| Claude Code | 待对比 | 待对比 | 待对比 |
+| CrewAI | 待对比 | 待对比 | 待对比 |
+| aider | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 
 1. 社区热度高，Star 数量多
-2. 文档完善
-3. 支持本地运行，保护隐私
 
 ---
 

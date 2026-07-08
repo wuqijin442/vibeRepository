@@ -16,8 +16,8 @@ Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 51484 |
-| 今日新增 | 1378 |
+| Stars | 52970 |
+| 今日新增 | 1691 |
 | Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |

@@ -4,6 +4,8 @@
 import logging
 import subprocess
 import shutil
+import os
+import re
 from pathlib import Path
 from typing import List
 
@@ -21,6 +23,8 @@ class GitHubSyncer:
         self.author_name = sync_config.get('author_name', 'wuqijin442')
         self.author_email = sync_config.get('author_email', 'wuqijin442@users.noreply.github.com')
         self.workspace = Path(config.get('paths', {}).get('workspace', './workspace'))
+        # 解析带认证的 URL（优先级：环境变量 > 本地 git remote > config）
+        self.authed_repo_url = self._resolve_authed_url()
         self.local_root = Path('.')
         self.sync_dirs = [
             'Daily-Reports',
@@ -50,38 +54,87 @@ class GitHubSyncer:
             '*.env',
         ]
 
+    def _resolve_authed_url(self) -> str:
+        """解析带认证信息的仓库 URL，确保 push 不会因交互式输入失败。
+        优先级：环境变量 GH_TOKEN/GITHUB_TOKEN > 本地 git remote 中已含 token 的 URL > config.repo_url
+        """
+        base = self.repo_url
+        # 1. 环境变量 token
+        token = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN')
+        if token and base:
+            return self._inject_token(base, token, 'x-access-token')
+        # 2. 从本地 git remote 读取带 token 的 URL
+        try:
+            result = subprocess.run(
+                ['git', 'remote', 'get-url', 'origin'],
+                capture_output=True, text=True, timeout=10
+            )
+            if result.returncode == 0:
+                url = result.stdout.strip()
+                if '@github.com/' in url and '://' in url:
+                    logger.info("已从本地 git remote 获取带认证的 URL")
+                    return url
+        except Exception as e:
+            logger.debug(f"读取本地 git remote 失败: {e}")
+        # 3. 回退到 config（push 可能失败）
+        return base
+
+    @staticmethod
+    def _inject_token(url: str, token: str, username: str = 'x-access-token') -> str:
+        """把 token 注入 https URL，形如 https://x-access-token:TOKEN@github.com/..."""
+        m = re.match(r'(https?://)([^@]+@)?(.+)', url)
+        if not m:
+            return url
+        return f"{m.group(1)}{username}:{token}@{m.group(3)}"
+
     def sync(self, date_str: str) -> int:
         if not self.enabled:
             logger.info("GitHub 同步已禁用")
             return 0
-        
+
         logger.info(f"同步到 GitHub: {date_str}")
-        
+
         try:
             repo_dir = self.workspace / 'sync_repo'
-            
+
             if not (repo_dir / '.git').exists():
                 self._clone_repo(repo_dir)
             else:
                 self._pull_repo(repo_dir)
-            
+
             # 强制设置提交账号为 wuqijin442（禁止使用 traeagent）
             self._set_git_author(repo_dir)
-            
+
+            # 确保 sync_repo 的 origin remote 指向带认证的 URL
+            self._ensure_authed_remote(repo_dir)
+
             synced_files = self._copy_files(repo_dir)
-            
+
             # 每次新增内容时更新仓库根 README
             readme_updated = self._update_repo_readme(repo_dir, date_str)
-            
+
             if synced_files > 0 or readme_updated:
                 self._commit_and_push(repo_dir, date_str)
-            
+
             logger.info(f"同步完成，共 {synced_files} 个文件更新，README 更新: {readme_updated}")
             return synced_files
-            
+
         except Exception as e:
             logger.error(f"GitHub 同步失败: {e}")
             return 0
+
+    def _ensure_authed_remote(self, repo_dir: Path):
+        """把 sync_repo 的 origin remote 设置为带认证的 URL，避免 push 时交互式输入失败"""
+        if not self.authed_repo_url or self.authed_repo_url == self.repo_url:
+            return
+        try:
+            subprocess.run(
+                ['git', 'remote', 'set-url', 'origin', self.authed_repo_url],
+                cwd=str(repo_dir), capture_output=True, text=True, timeout=10
+            )
+            logger.info("已更新 origin remote 为带认证的 URL")
+        except Exception as e:
+            logger.warning(f"设置 origin remote 失败: {e}")
 
     def _set_git_author(self, repo_dir: Path):
         """在仓库内设置 wuqijin442 账号，确保提交不使用 traeagent"""

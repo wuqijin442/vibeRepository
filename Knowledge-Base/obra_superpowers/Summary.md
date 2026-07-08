@@ -16,9 +16,9 @@ An agentic skills framework & software development methodology that works.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 247709 |
+| Stars | 248670 |
 | 今日新增 | 0 |
-| Forks | 21991 |
+| Forks | 22083 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -38,9 +38,9 @@ Agent
 
 ## 主要用途
 
-- 自动化任务执行
-- 多代理协作
 - 智能客服
+- 多代理协作
+- 自动化任务执行
 
 ## 技术栈
 

@@ -19,9 +19,9 @@ An agentic skills framework & software development methodology that works.
 
 根据项目分析，该项目主要功能包括：
 
-- 自动化任务执行
-- 多代理协作
 - 智能客服
+- 多代理协作
+- 自动化任务执行
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ An agentic skills framework & software development methodology that works.
 
 ## 社区数据
 
-- **Stars**: 247709
+- **Stars**: 248670
 - **今日新增**: 0
-- **Forks**: 21991
+- **Forks**: 22083
 
 ---
 

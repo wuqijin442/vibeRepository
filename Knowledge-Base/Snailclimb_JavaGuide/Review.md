@@ -1,16 +1,16 @@
-# asgeirtj/system_prompts_leaks 评测报告
+# Snailclimb/JavaGuide 评测报告
 
 ## 项目概述
 
-**项目名称**: asgeirtj/system_prompts_leaks
-**项目地址**: https://github.com/asgeirtj/system_prompts_leaks
-**一句话介绍**: Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.
+**项目名称**: Snailclimb/JavaGuide
+**项目地址**: https://github.com/Snailclimb/JavaGuide
+**一句话介绍**: Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发
 
 ## 评测结果
 
 | 维度 | 评分 | 说明 |
 |------|------|------|
-| 热度 | 180.0 / 100 | 基于 Star 数量和增长速度 |
+| 热度 | 100.0 / 100 | 基于 Star 数量和增长速度 |
 | 创新性 | 待评估 | 基于功能独特性 |
 | 完整度 | 待评估 | 基于文档和功能完整性 |
 | 运行成功率 | 失败 | 实际运行测试结果 |
@@ -29,7 +29,7 @@
 
 ## 适用人群
 
-数据科学家, AI 工程师
+技术研究者, AI 爱好者
 
 ## 适用场景
 

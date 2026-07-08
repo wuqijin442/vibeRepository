@@ -1,4 +1,4 @@
-# addyosmani/agent-skills 快速开始
+# Snailclimb/JavaGuide 快速开始
 
 ## 前置要求
 
@@ -11,8 +11,8 @@
 ### 1. Clone 项目
 
 ```bash
-git clone https://github.com/addyosmani/agent-skills
-cd agent-skills
+git clone https://github.com/Snailclimb/JavaGuide
+cd JavaGuide
 ```
 
 ### 2. 安装依赖

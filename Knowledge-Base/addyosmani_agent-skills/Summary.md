@@ -5,8 +5,8 @@
 - **项目名称**: addyosmani/agent-skills
 - **项目地址**: https://github.com/addyosmani/agent-skills
 - **作者**: 未知
-- **License**: MIT
-- **主要语言**: Shell
+- **License**: Unknown
+- **主要语言**: JavaScript
 
 ## 一句话介绍
 
@@ -16,15 +16,15 @@ Production-grade engineering skills for AI coding agents.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 70771 |
-| 今日新增 | 1112 |
+| Stars | 72119 |
+| 今日新增 | 1317 |
 | Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
 ## 主要标签
 
-Agent, MCP, Coding, Workflow, Browser Use, Local AI, DevTools
+Agent, Coding
 
 ## 快速判断
 
@@ -34,21 +34,21 @@ Agent, MCP, Coding, Workflow, Browser Use, Local AI, DevTools
 
 ## 适合谁
 
-程序员, 开发者, 自动化爱好者, 产品经理, 隐私关注者, 企业用户, AI 研究者, 运维工程师
+自动化爱好者, AI 研究者, 开发者, 程序员
 
 ## 主要用途
 
-- 自动化任务执行
-- 网页自动化
-- 工作流自动化
-- 多工具协同
+- 重构辅助
 - 代码生成
+- 代码审查
+- 自动化任务执行
+- 智能客服
 
 ## 技术栈
 
-- 语言: Shell
+- 语言: JavaScript
 - 框架: 暂无
-- 部署: GitHub Actions
+- 部署: 未知
 
 ---
 

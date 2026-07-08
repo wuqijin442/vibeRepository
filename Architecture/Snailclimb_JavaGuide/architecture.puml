@@ -8,7 +8,7 @@ skinparam classBorderColor #45475a
 skinparam titleFontColor #cdd6f4
 skinparam ArrowColor #89b4fa
 
-title addyosmani/agent-skills 架构图
+title Snailclimb/JavaGuide 架构图
 
 package "接口层" #313244 {
     interface WebUI
