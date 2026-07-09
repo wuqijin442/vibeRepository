@@ -4,7 +4,7 @@
 
 An agentic skills framework & software development methodology that works.
 
-**标签**: Agent
+**标签**: Agent, Coding, Workflow, Local AI, OCR
 
 **项目地址**: https://github.com/obra/superpowers
 
@@ -12,20 +12,22 @@ An agentic skills framework & software development methodology that works.
 
 - **主要语言**: Shell
 - **框架**: 暂无
-- **License**: MIT License
+- **License**: MIT
 - **支持平台**: Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 自动化任务执行
-- 多代理协作
 - 智能客服
+- 工作流自动化
+- 代码生成
+- 重构辅助
+- 自动化任务执行
 
 ## 安装方式
 
-推荐安装方式: **unknown**
+推荐安装方式: **npm**
 
 详细安装步骤请参考 [QuickStart.md](./QuickStart.md)
 
@@ -37,9 +39,9 @@ An agentic skills framework & software development methodology that works.
 
 ## 社区数据
 
-- **Stars**: 247709
-- **今日新增**: 0
-- **Forks**: 21991
+- **Stars**: 249987
+- **今日新增**: 1116
+- **Forks**: 0
 
 ---
 

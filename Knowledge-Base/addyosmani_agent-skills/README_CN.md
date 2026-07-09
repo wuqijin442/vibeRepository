@@ -4,7 +4,7 @@
 
 Production-grade engineering skills for AI coding agents.
 
-**标签**: Agent, MCP, Coding, Workflow, Browser Use, Local AI, DevTools
+**标签**: Agent, MCP, Coding, Workflow, Browser Use, Local AI
 
 **项目地址**: https://github.com/addyosmani/agent-skills
 
@@ -19,11 +19,11 @@ Production-grade engineering skills for AI coding agents.
 
 根据项目分析，该项目主要功能包括：
 
-- 自动化任务执行
-- 网页自动化
+- 智能客服
+- UI 测试
 - 工作流自动化
-- 多工具协同
 - 代码生成
+- 重构辅助
 
 ## 安装方式
 
@@ -39,8 +39,8 @@ Production-grade engineering skills for AI coding agents.
 
 ## 社区数据
 
-- **Stars**: 70771
-- **今日新增**: 1112
+- **Stars**: 74416
+- **今日新增**: 1297
 - **Forks**: 0
 
 ---
