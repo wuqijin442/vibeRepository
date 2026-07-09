@@ -2,9 +2,9 @@
 
 ## 前置要求
 
-- **操作系统**: Linux
+- **操作系统**: Linux, Windows, macOS
 - **主要语言环境**: Python
-- **依赖管理工具**: unknown
+- **依赖管理工具**: uv
 
 ## 安装步骤
 
@@ -17,12 +17,18 @@ cd hermes-agent
 
 ### 2. 安装依赖
 
-请参考项目官方文档进行安装。
+```bash
+# 使用 pip
+pip install -r requirements.txt
+
+# 或使用 uv（推荐）
+uv pip install -r requirements.txt
+```
 
 ### 3. 运行项目
 
 ```bash
-请参考官方文档
+
 ```
 
 ## 验证安装

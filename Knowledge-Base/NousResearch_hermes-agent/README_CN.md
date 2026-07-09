@@ -4,28 +4,30 @@
 
 The agent that grows with you
 
-**标签**: Agent
+**标签**: Agent, LLM, Workflow, Browser Use, Local AI, Voice, Image Gen
 
 **项目地址**: https://github.com/NousResearch/hermes-agent
 
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: 暂无
-- **License**: MIT License
-- **支持平台**: Linux
+- **框架**: fastapi, pydantic, torch
+- **License**: MIT
+- **支持平台**: Linux, Windows, macOS
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 自动化任务执行
-- 多代理协作
 - 智能客服
+- 文字转语音
+- 工作流自动化
+- UI 测试
+- 内容创作
 
 ## 安装方式
 
-推荐安装方式: **unknown**
+推荐安装方式: **uv**
 
 详细安装步骤请参考 [QuickStart.md](./QuickStart.md)
 
@@ -37,9 +39,9 @@ The agent that grows with you
 
 ## 社区数据
 
-- **Stars**: 210354
+- **Stars**: 211675
 - **今日新增**: 0
-- **Forks**: 38532
+- **Forks**: 38924
 
 ---
 

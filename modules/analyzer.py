@@ -4,6 +4,7 @@
 import logging
 import os
 import json
+import shutil
 from pathlib import Path
 from typing import Dict
 import subprocess
@@ -53,21 +54,25 @@ class ProjectAnalyzer:
     def _clone_repo(self, url: str, name: str) -> Path:
         safe_name = name.replace('/', '_').replace('\\', '_')
         clone_path = self.clones_dir / safe_name
-        
+
         if clone_path.exists():
-            logger.info(f"项目已存在，尝试更新: {clone_path}")
-            try:
-                result = subprocess.run(
-                    ['git', 'pull'],
-                    cwd=str(clone_path),
-                    capture_output=True,
-                    text=True,
-                    timeout=60
-                )
-                if result.returncode == 0:
-                    return clone_path
-            except Exception as e:
-                logger.warning(f"更新失败，尝试重新 Clone: {e}")
+            if not (clone_path / '.git').exists():
+                logger.warning(f"目录存在但非有效 git 仓库，删除后重新 Clone: {clone_path}")
+                shutil.rmtree(clone_path)
+            else:
+                logger.info(f"项目已存在，尝试更新: {clone_path}")
+                try:
+                    result = subprocess.run(
+                        ['git', 'pull'],
+                        cwd=str(clone_path),
+                        capture_output=True,
+                        text=True,
+                        timeout=60
+                    )
+                    if result.returncode == 0:
+                        return clone_path
+                except Exception as e:
+                    logger.warning(f"更新失败，尝试重新 Clone: {e}")
         
         try:
             logger.info(f"Cloning {url} -> {clone_path}")

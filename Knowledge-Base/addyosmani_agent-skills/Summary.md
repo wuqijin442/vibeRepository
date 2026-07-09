@@ -16,15 +16,15 @@ Production-grade engineering skills for AI coding agents.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 70771 |
-| 今日新增 | 1112 |
+| Stars | 74416 |
+| 今日新增 | 1297 |
 | Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
 ## 主要标签
 
-Agent, MCP, Coding, Workflow, Browser Use, Local AI, DevTools
+Agent, MCP, Coding, Workflow, Browser Use, Local AI
 
 ## 快速判断
 
@@ -34,15 +34,15 @@ Agent, MCP, Coding, Workflow, Browser Use, Local AI, DevTools
 
 ## 适合谁
 
-程序员, 开发者, 自动化爱好者, 产品经理, 隐私关注者, 企业用户, AI 研究者, 运维工程师
+程序员, AI 研究者, 开发者, 运维工程师, 隐私关注者, 企业用户, 产品经理, 自动化爱好者
 
 ## 主要用途
 
-- 自动化任务执行
-- 网页自动化
+- 智能客服
+- UI 测试
 - 工作流自动化
-- 多工具协同
 - 代码生成
+- 重构辅助
 
 ## 技术栈
 

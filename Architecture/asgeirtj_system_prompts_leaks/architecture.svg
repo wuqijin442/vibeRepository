@@ -39,10 +39,10 @@
   <line x1="400" y1="275" x2="400" y2="300" stroke="#45475a" stroke-width="2" marker-end="url(#arrowhead)"/>
   
   <text x="400" y="320" text-anchor="middle" class="layer-title">核心层 / Core Layer</text>
-  <rect x="100" y="335" width="180" height="70" rx="8" fill="#313244" stroke="#45475a" stroke-width="2"/>
-  <text x="190" y="360" text-anchor="middle" class="box-title">业务逻辑</text>
-  <text x="190" y="380" text-anchor="middle" class="box-text">核心功能模块</text>
-  <text x="190" y="395" text-anchor="middle" class="box-text">业务流程</text>
+  <rect x="100" y="335" width="180" height="70" rx="8" fill="#313244" stroke="#3b82f6" stroke-width="3"/>
+  <text x="190" y="360" text-anchor="middle" class="box-title">🤖 Agent 引擎</text>
+  <text x="190" y="380" text-anchor="middle" class="box-text">多代理协作</text>
+  <text x="190" y="395" text-anchor="middle" class="box-text">任务编排</text>
   
   <rect x="310" y="335" width="180" height="70" rx="8" fill="#313244" stroke="#45475a" stroke-width="2"/>
   <text x="400" y="360" text-anchor="middle" class="box-title">LLM 集成</text>
