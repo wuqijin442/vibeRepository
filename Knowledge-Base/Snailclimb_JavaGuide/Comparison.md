@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- vLLM
-- LlamaIndex
+- AutoGPT
+- MCP Servers Collection
+- Text Generation WebUI
 - LangChain
-- LangChain RAG
-- llama.cpp
+- AutoGen
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 智能客服; 知识库问答 |
-| vLLM | 待对比 | 待对比 | 待对比 |
-| LlamaIndex | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
+| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 多代理协作; 智能客服 |
+| AutoGPT | 待对比 | 待对比 | 待对比 |
+| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
+| Text Generation WebUI | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

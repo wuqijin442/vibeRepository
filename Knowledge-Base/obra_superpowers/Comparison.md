@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Flowise
+- AutoGPT
+- Cursor
+- aider
 - LangChain
-- LangFlow
-- Dify
-- AutoGen
+- Flowise
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| obra/superpowers | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 智能客服; 工作流自动化 |
-| Flowise | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
-| LangFlow | 待对比 | 待对比 | 待对比 |
+| obra/superpowers | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 重构辅助; 多代理协作 |
+| AutoGPT | 待对比 | 待对比 | 待对比 |
+| Cursor | 待对比 | 待对比 | 待对比 |
+| aider | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

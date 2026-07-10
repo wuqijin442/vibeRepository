@@ -13,17 +13,17 @@ Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,
 - **主要语言**: JavaScript
 - **框架**: 暂无
 - **License**: Other
-- **支持平台**: Linux, Windows, macOS
+- **支持平台**: Windows, Linux, macOS
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
+- 多代理协作
 - 智能客服
-- 文字转语音
-- 工作流自动化
-- 知识库问答
-- 语音助手
+- 业务流程编排
+- 语音转文字
+- 自动化任务执行
 
 ## 安装方式
 
@@ -39,8 +39,8 @@ Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code,
 
 ## 社区数据
 
-- **Stars**: 54332
-- **今日新增**: 1218
+- **Stars**: 55136
+- **今日新增**: 1125
 - **Forks**: 0
 
 ---

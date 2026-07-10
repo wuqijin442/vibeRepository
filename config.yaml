@@ -99,7 +99,7 @@ paths:
   metadata: "./Metadata"
 
 github_sync:
-  enabled: false
+  enabled: true
   repo_url: "https://github.com/wuqijin442/vibeRepository"
   branch: "main"
   author_name: "wuqijin442"

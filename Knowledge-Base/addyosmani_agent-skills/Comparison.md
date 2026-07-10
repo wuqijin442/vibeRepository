@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Flowise
-- LangChain
-- LangFlow
-- Dify
-- Puppeteer
+- AutoGPT
+- MCP Servers Collection
+- Cursor
+- Playwright
+- aider
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| addyosmani/agent-skills | 社区热度高，Star 数量多; 文档完善; 支持本地运行，保护隐私 | 安装可能存在依赖问题; 运行稳定性待验证 | 智能客服; UI 测试 |
-| Flowise | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
-| LangFlow | 待对比 | 待对比 | 待对比 |
+| addyosmani/agent-skills | 社区热度高，Star 数量多; 文档完善; 支持本地运行，保护隐私 | 安装可能存在依赖问题; 运行稳定性待验证 | 重构辅助; 多代理协作 |
+| AutoGPT | 待对比 | 待对比 | 待对比 |
+| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
+| Cursor | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 
