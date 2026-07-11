@@ -1,21 +1,21 @@
-# obra/superpowers 竞品分析
+# mattpocock/skills 竞品分析
 
 ## 同类项目
 
+- Browserbase
 - AutoGen
 - Continue
 - AutoGPT
-- Dify
 - CrewAI
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| obra/superpowers | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 智能客服; 多代理协作 |
+| mattpocock/skills | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 智能客服; 多代理协作 |
+| Browserbase | 待对比 | 待对比 | 待对比 |
 | AutoGen | 待对比 | 待对比 | 待对比 |
 | Continue | 待对比 | 待对比 | 待对比 |
-| AutoGPT | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

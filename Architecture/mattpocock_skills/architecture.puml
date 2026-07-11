@@ -8,7 +8,7 @@ skinparam classBorderColor #45475a
 skinparam titleFontColor #cdd6f4
 skinparam ArrowColor #89b4fa
 
-title NousResearch/hermes-agent 架构图
+title mattpocock/skills 架构图
 
 package "接口层" #313244 {
     interface WebUI
@@ -52,8 +52,8 @@ AgentEngine --> Cache
 LLMIntegration --> FileStorage
 
 note right of LLMIntegration
-  主要语言: Python
-  框架: pydantic, fastapi, torch
+  主要语言: Shell
+  框架: N/A
 end note
 
 @enduml

@@ -13,15 +13,15 @@ Production-grade engineering skills for AI coding agents.
 - **主要语言**: Shell
 - **框架**: 暂无
 - **License**: MIT
-- **支持平台**: Linux
+- **支持平台**: Windows, Linux, macOS
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 重构辅助
-- 多代理协作
 - 智能客服
+- 多代理协作
+- AI 工具集成
 - 代码审查
 - 业务流程编排
 
@@ -39,8 +39,8 @@ Production-grade engineering skills for AI coding agents.
 
 ## 社区数据
 
-- **Stars**: 75845
-- **今日新增**: 2554
+- **Stars**: 76808
+- **今日新增**: 1116
 - **Forks**: 0
 
 ---

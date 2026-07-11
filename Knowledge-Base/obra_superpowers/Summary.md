@@ -4,7 +4,7 @@
 
 - **项目名称**: obra/superpowers
 - **项目地址**: https://github.com/obra/superpowers
-- **作者**: obra
+- **作者**: 未知
 - **License**: MIT
 - **主要语言**: Shell
 
@@ -16,9 +16,9 @@ An agentic skills framework & software development methodology that works.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 250842 |
-| 今日新增 | 0 |
-| Forks | 22281 |
+| Stars | 251766 |
+| 今日新增 | 1013 |
+| Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,15 +34,15 @@ Agent, Coding, Workflow, Local AI, OCR
 
 ## 适合谁
 
-运维工程师, 隐私关注者, AI 研究者, 程序员, 自动化爱好者, 企业用户, 开发者, 产品经理
+开发者, 隐私关注者, 程序员, 产品经理, 运维工程师, 企业用户, 自动化爱好者, AI 研究者
 
 ## 主要用途
 
-- 重构辅助
-- 多代理协作
 - 智能客服
+- 多代理协作
 - 代码审查
 - 业务流程编排
+- 工作流自动化
 
 ## 技术栈
 

@@ -16,9 +16,9 @@ The agent that grows with you
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 212195 |
+| Stars | 212760 |
 | 今日新增 | 0 |
-| Forks | 39095 |
+| Forks | 39278 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ Agent, LLM, Workflow, Browser Use, Local AI, Voice, Image Gen
 
 ## 适合谁
 
-运维工程师, 隐私关注者, 语音开发者, 内容创作者, AI 研究者, AI 工程师, 播客创作者, 自动化爱好者, 企业用户, 产品经理, 设计师, 数据科学家
+内容创作者, 语音开发者, 隐私关注者, 数据科学家, AI 工程师, 播客创作者, 设计师, 产品经理, 运维工程师, 企业用户, 自动化爱好者, AI 研究者
 
 ## 主要用途
 
-- 多代理协作
 - 智能客服
-- 业务流程编排
 - 图像生成
+- 多代理协作
+- 语音助手
 - 语音转文字
 
 ## 技术栈
 
 - 语言: Python
-- 框架: fastapi, pydantic, torch
+- 框架: pydantic, fastapi, torch
 - 部署: Docker, Docker Compose, GitHub Actions, Docker Compose
 
 ---

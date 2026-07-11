@@ -1,28 +1,30 @@
-# addyosmani/agent-skills 快速开始
+# mattpocock/skills 快速开始
 
 ## 前置要求
 
-- **操作系统**: Windows, Linux, macOS
+- **操作系统**: Linux
 - **主要语言环境**: Shell
-- **依赖管理工具**: unknown
+- **依赖管理工具**: npm
 
 ## 安装步骤
 
 ### 1. Clone 项目
 
 ```bash
-git clone https://github.com/addyosmani/agent-skills
-cd agent-skills
+git clone https://github.com/mattpocock/skills
+cd skills
 ```
 
 ### 2. 安装依赖
 
-请参考项目官方文档进行安装。
+```bash
+npm install
+```
 
 ### 3. 运行项目
 
 ```bash
-请参考官方文档
+
 ```
 
 ## 验证安装

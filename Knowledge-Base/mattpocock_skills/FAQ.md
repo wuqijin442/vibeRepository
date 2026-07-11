@@ -1,4 +1,4 @@
-# addyosmani/agent-skills 常见问题
+# mattpocock/skills 常见问题
 
 ## 安装相关
 
@@ -9,7 +9,7 @@ A: 请检查以下几点：
 3. 查看错误日志，根据具体错误信息解决
 
 ### Q: 支持哪些操作系统？
-A: Windows, Linux, macOS
+A: Linux
 
 ## 运行相关
 

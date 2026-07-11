@@ -1,12 +1,12 @@
-# obra/superpowers - 中文文档
+# mattpocock/skills - 中文文档
 
 ## 项目简介
 
-An agentic skills framework & software development methodology that works.
+Skills for Real Engineers. Straight from my .claude directory.
 
-**标签**: Agent, Coding, Workflow, Local AI, OCR
+**标签**: Agent, RAG, Coding, Browser Use, Local AI, DevTools
 
-**项目地址**: https://github.com/obra/superpowers
+**项目地址**: https://github.com/mattpocock/skills
 
 ## 技术栈
 
@@ -22,8 +22,8 @@ An agentic skills framework & software development methodology that works.
 - 智能客服
 - 多代理协作
 - 代码审查
-- 业务流程编排
-- 工作流自动化
+- 知识库问答
+- 数据采集
 
 ## 安装方式
 
@@ -39,8 +39,8 @@ An agentic skills framework & software development methodology that works.
 
 ## 社区数据
 
-- **Stars**: 251766
-- **今日新增**: 1013
+- **Stars**: 164587
+- **今日新增**: 1712
 - **Forks**: 0
 
 ---
