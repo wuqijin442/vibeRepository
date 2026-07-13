@@ -1,4 +1,4 @@
-# NousResearch/hermes-agent 快速开始
+# langflow-ai/langflow 快速开始
 
 ## 前置要求
 
@@ -11,8 +11,8 @@
 ### 1. Clone 项目
 
 ```bash
-git clone https://github.com/NousResearch/hermes-agent
-cd hermes-agent
+git clone https://github.com/langflow-ai/langflow
+cd langflow
 ```
 
 ### 2. 安装依赖

@@ -8,7 +8,7 @@ skinparam classBorderColor #45475a
 skinparam titleFontColor #cdd6f4
 skinparam ArrowColor #89b4fa
 
-title Snailclimb/JavaGuide 架构图
+title langgenius/dify 架构图
 
 package "接口层" #313244 {
     interface WebUI
@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: TypeScript
-  框架: @vuepress/helper, vuepress-theme-hope, vuepress
+  框架: N/A
 end note
 
 @enduml

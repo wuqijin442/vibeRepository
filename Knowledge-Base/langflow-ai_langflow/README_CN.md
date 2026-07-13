@@ -1,17 +1,17 @@
-# NousResearch/hermes-agent - 中文文档
+# langflow-ai/langflow - 中文文档
 
 ## 项目简介
 
-The agent that grows with you
+Langflow is a powerful tool for building and deploying AI-powered agents and workflows.
 
-**标签**: Agent, LLM, Workflow, Browser Use, Local AI, Voice, Image Gen
+**标签**: Agent, LLM, MCP, Workflow, Local AI, Open Source
 
-**项目地址**: https://github.com/NousResearch/hermes-agent
+**项目地址**: https://github.com/langflow-ai/langflow
 
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: torch, pydantic, fastapi
+- **框架**: pydantic, langchain, transformers, fastapi, torch
 - **License**: MIT
 - **支持平台**: macOS, Windows, Linux
 
@@ -20,10 +20,10 @@ The agent that grows with you
 根据项目分析，该项目主要功能包括：
 
 - 自动化任务执行
-- 内容创作
-- 设计辅助
 - 业务流程编排
-- UI 测试
+- 模型上下文协议
+- 智能客服
+- 工作流自动化
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ The agent that grows with you
 
 ## 社区数据
 
-- **Stars**: 213730
+- **Stars**: 151779
 - **今日新增**: 0
-- **Forks**: 39626
+- **Forks**: 9665
 
 ---
 

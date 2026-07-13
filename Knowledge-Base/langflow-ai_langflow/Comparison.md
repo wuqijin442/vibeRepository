@@ -1,4 +1,4 @@
-# Snailclimb/JavaGuide 竞品分析
+# langflow-ai/langflow 竞品分析
 
 ## 同类项目
 
@@ -6,13 +6,13 @@
 - MCP Servers Collection
 - modelcontextprotocol/servers
 - Text Generation WebUI
-- Haystack
+- Ollama
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 自动化任务执行; 企业内部搜索 |
+| langflow-ai/langflow | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 自动化任务执行; 业务流程编排 |
 | vLLM | 待对比 | 待对比 | 待对比 |
 | MCP Servers Collection | 待对比 | 待对比 | 待对比 |
 | modelcontextprotocol/servers | 待对比 | 待对比 | 待对比 |
@@ -22,7 +22,8 @@
 1. 社区热度高，Star 数量多
 2. 文档完善
 3. 安装简单，依赖易解决
-4. 支持本地运行，保护隐私
+4. 完全开源
+5. 支持本地运行，保护隐私
 
 ---
 
