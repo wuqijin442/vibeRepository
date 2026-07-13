@@ -231,7 +231,12 @@ class DataCollector:
             return {}
 
     def enrich_with_github_data(self, projects: List[Dict], top_n: int = 20) -> List[Dict]:
+        api_rate_limited = False
         for project in projects[:top_n]:
+            # 已有 open_source_date 则跳过
+            if project.get('open_source_date') or project.get('created_at'):
+                continue
+
             url = project.get('url', '')
             if 'github.com' not in url:
                 continue
@@ -246,34 +251,78 @@ class DataCollector:
                 if not owner or not repo:
                     continue
 
-                api_url = f"https://api.github.com/repos/{owner}/{repo}"
-                resp = self.session.get(api_url, timeout=30)
+                # 优先使用 API（未被限速时）
+                if not api_rate_limited:
+                    api_url = f"https://api.github.com/repos/{owner}/{repo}"
+                    resp = self.session.get(api_url, timeout=30)
 
-                if resp.status_code == 403:
-                    logger.warning("GitHub API rate limit reached (enrich)")
-                    break
-                resp.raise_for_status()
+                    if resp.status_code == 403:
+                        logger.warning("GitHub API rate limit reached (enrich), 切换到网页抓取")
+                        api_rate_limited = True
+                    else:
+                        resp.raise_for_status()
+                        data = resp.json()
+                        created_at = data.get('created_at', '')
+                        if created_at:
+                            project['created_at'] = created_at
+                            project['open_source_date'] = created_at[:10]
 
-                data = resp.json()
-                created_at = data.get('created_at', '')
-                if created_at:
-                    project['created_at'] = created_at
-                    project['open_source_date'] = created_at[:10]
+                        project['forks'] = data.get('forks_count', project.get('forks', 0))
 
-                project['forks'] = data.get('forks_count', project.get('forks', 0))
+                        license_info = data.get('license')
+                        license_name = (license_info or {}).get('name', '')
+                        if license_name:
+                            project['license'] = license_name
 
-                license_info = data.get('license')
-                license_name = (license_info or {}).get('name', '')
-                if license_name:
-                    project['license'] = license_name
+                        time.sleep(random.uniform(1, 2))
+                        continue
 
-                time.sleep(random.uniform(1, 2))
+                # API 限速时回退到网页抓取
+                if api_rate_limited:
+                    created_at = self._scrape_repo_created_at(owner, repo)
+                    if created_at:
+                        project['created_at'] = created_at
+                        project['open_source_date'] = created_at[:10]
+                        logger.info(f"网页抓取开源时间: {owner}/{repo} -> {created_at[:10]}")
+                    time.sleep(random.uniform(0.5, 1))
 
             except Exception as e:
                 logger.debug(f"enrich {project.get('name', '')} 失败: {e}")
                 continue
 
         return projects
+
+    def _scrape_repo_created_at(self, owner: str, repo: str) -> str:
+        """通过抓取 GitHub 仓库页面 HTML 获取开源时间，绕过 API 速率限制"""
+        url = f"https://github.com/{owner}/{repo}"
+        try:
+            resp = self.session.get(url, timeout=30)
+            if resp.status_code != 200:
+                return ''
+
+            html = resp.text
+
+            # 方法1: 解析页面中的 embedded JSON (react-app.embeddedData)
+            import re
+            # 查找 createdAt 字段
+            match = re.search(r'"createdAt"\s*:\s*"([^"]+)"', html)
+            if match:
+                return match.group(1)
+
+            # 方法2: 查找 created_at 字段
+            match = re.search(r'"created_at"\s*:\s*"([^"]+)"', html)
+            if match:
+                return match.group(1)
+
+            # 方法3: 查找最早的 relative-time datetime 属性
+            dates = re.findall(r'datetime="(\d{4}-\d{2}-\d{2})', html)
+            if dates:
+                return min(dates)
+
+            return ''
+        except Exception as e:
+            logger.debug(f"网页抓取 {owner}/{repo} 失败: {e}")
+            return ''
 
     def _collect_huggingface(self) -> List[Dict]:
         projects = []

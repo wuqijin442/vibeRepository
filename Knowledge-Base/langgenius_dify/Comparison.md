@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Flowise
-- Browserbase
-- Dify
-- n8n
+- LangChain
 - LangChain RAG
+- AutoGPT
+- LlamaIndex
+- Browserbase
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| langgenius/dify | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 内容创作; 文档智能检索 |
-| Flowise | 待对比 | 待对比 | 待对比 |
-| Browserbase | 待对比 | 待对比 | 待对比 |
-| Dify | 待对比 | 待对比 | 待对比 |
+| langgenius/dify | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 智能客服; 文字转语音 |
+| LangChain | 待对比 | 待对比 | 待对比 |
+| LangChain RAG | 待对比 | 待对比 | 待对比 |
+| AutoGPT | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

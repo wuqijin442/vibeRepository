@@ -19,11 +19,11 @@ Production-ready platform for agentic workflow development.
 
 根据项目分析，该项目主要功能包括：
 
-- 内容创作
-- 文档智能检索
-- 设计辅助
-- 业务流程编排
+- 智能客服
+- 文字转语音
+- 图像生成
 - 任务调度
+- 语音转文字
 
 ## 安装方式
 

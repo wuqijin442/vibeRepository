@@ -16,7 +16,7 @@ Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 156973 |
+| Stars | 156974 |
 | 今日新增 | 0 |
 | Forks | 46171 |
 | 综合评分 | 0 |
@@ -34,20 +34,20 @@ Agent, LLM, RAG, MCP, Local AI
 
 ## 适合谁
 
-AI 工程师, 自动化爱好者, 隐私关注者, 企业用户, AI 研究者, 数据科学家
+自动化爱好者, AI 研究者, AI 工程师, 隐私关注者, 企业用户, 数据科学家
 
 ## 主要用途
 
-- AI 工具集成
-- 文档智能检索
-- 企业内部搜索
 - 智能客服
-- 多工具协同
+- 模型上下文协议
+- 知识库问答
+- 企业内部搜索
+- 自动化任务执行
 
 ## 技术栈
 
 - 语言: JavaScript
-- 框架: @vuepress/helper, vue, vuepress, @vuepress/plugin-feed, @vuepress/plugin-docsearch, vuepress-theme-hope, @vuepress/bundler-vite
+- 框架: @vuepress/plugin-feed, vue, @vuepress/bundler-vite, @vuepress/plugin-docsearch, vuepress, vuepress-theme-hope, @vuepress/helper
 - 部署: GitHub Actions
 
 ---

@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: JavaScript
-  框架: @vuepress/helper, vue, vuepress
+  框架: @vuepress/plugin-feed, vue, @vuepress/bundler-vite
 end note
 
 @enduml
