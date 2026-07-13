@@ -1,36 +1,36 @@
-# Snailclimb/JavaGuide 快速开始
+# langgenius/dify 快速开始
 
 ## 前置要求
 
 - **操作系统**: Linux
 - **主要语言环境**: TypeScript
-- **依赖管理工具**: npm
+- **依赖管理工具**: pnpm
 
 ## 安装步骤
 
 ### 1. Clone 项目
 
 ```bash
-git clone https://github.com/Snailclimb/JavaGuide
-cd JavaGuide
+git clone https://github.com/langgenius/dify
+cd dify
 ```
 
 ### 2. 安装依赖
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 3. 运行项目
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ## 验证安装
 
 - 运行 Demo: 待验证
-- 启动时间: 13.54s
+- 启动时间: 3.0s
 - 内存占用: 0MB
 
 ## 常见问题

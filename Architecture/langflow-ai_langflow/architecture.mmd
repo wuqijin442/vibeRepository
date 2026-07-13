@@ -7,7 +7,7 @@ graph TB
         WebUI[Web UI]
         CLI[CLI]
         API[API 接口]
-        MCP[MCP Server]
+        MCP[MCP Server]:::highlight
     end
     
     subgraph Core[核心层]
@@ -42,6 +42,6 @@ graph TB
     subgraph TechStack[技术栈]
         direction LR
         Lang[Python]
-        FW[torch, pydantic, fastapi]
-        Deps[package.json, pyproject.toml, setup.py]
+        FW[pydantic, langchain, transformers]
+        Deps[package.json, pyproject.toml]
     end

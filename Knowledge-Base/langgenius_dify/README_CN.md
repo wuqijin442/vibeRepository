@@ -1,18 +1,18 @@
-# obra/superpowers - 中文文档
+# langgenius/dify - 中文文档
 
 ## 项目简介
 
-An agentic skills framework & software development methodology that works.
+Production-ready platform for agentic workflow development.
 
-**标签**: Agent, Coding, Workflow, Local AI, OCR
+**标签**: Agent, LLM, RAG, Workflow, Browser Use, Local AI, Voice, Image Gen
 
-**项目地址**: https://github.com/obra/superpowers
+**项目地址**: https://github.com/langgenius/dify
 
 ## 技术栈
 
-- **主要语言**: Shell
+- **主要语言**: TypeScript
 - **框架**: 暂无
-- **License**: MIT
+- **License**: Apache
 - **支持平台**: Linux
 
 ## 功能特性
@@ -20,28 +20,28 @@ An agentic skills framework & software development methodology that works.
 根据项目分析，该项目主要功能包括：
 
 - 自动化任务执行
-- 代码生成
-- 业务流程编排
-- 智能客服
-- 代码审查
+- 企业内部搜索
+- 内容创作
+- 设计辅助
+- 文档智能检索
 
 ## 安装方式
 
-推荐安装方式: **npm**
+推荐安装方式: **pnpm**
 
 详细安装步骤请参考 [QuickStart.md](./QuickStart.md)
 
 ## 运行说明
 
-- **启动耗时**: 0s
+- **启动耗时**: 3.0s
 - **内存占用**: 0MB
 - **CPU占用**: 0%
 
 ## 社区数据
 
-- **Stars**: 253022
+- **Stars**: 148608
 - **今日新增**: 0
-- **Forks**: 22600
+- **Forks**: 23425
 
 ---
 

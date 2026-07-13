@@ -1,10 +1,10 @@
-# obra/superpowers 评测报告
+# langgenius/dify 评测报告
 
 ## 项目概述
 
-**项目名称**: obra/superpowers
-**项目地址**: https://github.com/obra/superpowers
-**一句话介绍**: An agentic skills framework & software development methodology that works.
+**项目名称**: langgenius/dify
+**项目地址**: https://github.com/langgenius/dify
+**一句话介绍**: Production-ready platform for agentic workflow development.
 
 ## 评测结果
 
@@ -29,23 +29,23 @@
 
 ## 适用人群
 
-产品经理, 程序员, 开发者, 隐私关注者, 自动化爱好者, 运维工程师, 企业用户, AI 研究者
+数据科学家, 产品经理, 语音开发者, 隐私关注者, 播客创作者, AI 工程师, 自动化爱好者, 设计师, 运维工程师, 内容创作者, 企业用户, AI 研究者
 
 ## 适用场景
 
 - 自动化任务执行
-- 代码生成
-- 业务流程编排
-- 智能客服
-- 代码审查
+- 企业内部搜索
+- 内容创作
+- 设计辅助
+- 文档智能检索
 
 ## 性能数据
 
-- 安装耗时: 0.84s
-- 启动耗时: 0s
+- 安装耗时: 62.28s
+- 启动耗时: 3.0s
 - 内存占用: 0MB
 - CPU占用: 0%
-- 磁盘占用: 1.32MB
+- 磁盘占用: 117.32MB
 
 ## 推荐指数
 

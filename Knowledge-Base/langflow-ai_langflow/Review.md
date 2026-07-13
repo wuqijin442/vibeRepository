@@ -1,10 +1,10 @@
-# obra/superpowers 评测报告
+# langflow-ai/langflow 评测报告
 
 ## 项目概述
 
-**项目名称**: obra/superpowers
-**项目地址**: https://github.com/obra/superpowers
-**一句话介绍**: An agentic skills framework & software development methodology that works.
+**项目名称**: langflow-ai/langflow
+**项目地址**: https://github.com/langflow-ai/langflow
+**一句话介绍**: Langflow is a powerful tool for building and deploying AI-powered agents and workflows.
 
 ## 评测结果
 
@@ -21,6 +21,7 @@
 - 社区热度高，Star 数量多
 - 文档完善
 - 安装简单，依赖易解决
+- 完全开源
 - 支持本地运行，保护隐私
 
 ## 缺点
@@ -29,23 +30,23 @@
 
 ## 适用人群
 
-产品经理, 程序员, 开发者, 隐私关注者, 自动化爱好者, 运维工程师, 企业用户, AI 研究者
+数据科学家, 产品经理, 隐私关注者, AI 工程师, 自动化爱好者, 运维工程师, 企业用户, AI 研究者
 
 ## 适用场景
 
 - 自动化任务执行
-- 代码生成
 - 业务流程编排
+- 模型上下文协议
 - 智能客服
-- 代码审查
+- 工作流自动化
 
 ## 性能数据
 
-- 安装耗时: 0.84s
+- 安装耗时: 701.48s
 - 启动耗时: 0s
 - 内存占用: 0MB
 - CPU占用: 0%
-- 磁盘占用: 1.32MB
+- 磁盘占用: 195.79MB
 
 ## 推荐指数
 

@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- AutoGen
-- Continue
+- Cursor
+- LangFlow
+- Flowise
+- LangChain
 - AutoGPT
-- Dify
-- CrewAI
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| obra/superpowers | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 智能客服; 多代理协作 |
-| AutoGen | 待对比 | 待对比 | 待对比 |
-| Continue | 待对比 | 待对比 | 待对比 |
-| AutoGPT | 待对比 | 待对比 | 待对比 |
+| obra/superpowers | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 自动化任务执行; 代码生成 |
+| Cursor | 待对比 | 待对比 | 待对比 |
+| LangFlow | 待对比 | 待对比 | 待对比 |
+| Flowise | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 
