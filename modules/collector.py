@@ -61,28 +61,28 @@ class DataCollector:
                 result.append(p)
         return result
 
-    def _collect_github_trending(self) -> List[Dict]:
+    def _fetch_trending_page(self, since: str) -> List[Dict]:
         projects = []
-        url = "https://github.com/trending?since=daily"
-        
+        url = f"https://github.com/trending?since={since}"
+
         try:
             resp = self.session.get(url, timeout=30)
             resp.raise_for_status()
             soup = BeautifulSoup(resp.text, 'lxml')
-            
+
             articles = soup.select('article.Box-row')
             for article in articles[:100]:
                 try:
                     h2 = article.select_one('h2 a')
                     if not h2:
                         continue
-                    
+
                     repo_name = h2.get_text(strip=True).replace('\n', '').replace(' ', '')
                     repo_url = 'https://github.com' + h2.get('href', '')
-                    
+
                     desc_tag = article.select_one('p')
                     description = desc_tag.get_text(strip=True) if desc_tag else ''
-                    
+
                     stars_tag = article.select_one('a[href$="/stargazers"]')
                     stars = 0
                     if stars_tag:
@@ -91,39 +91,65 @@ class DataCollector:
                             stars = int(stars_text)
                         except ValueError:
                             pass
-                    
-                    daily_stars_tag = article.select_one('span.d-inline-block.float-sm-right')
-                    daily_stars = 0
-                    if daily_stars_tag:
-                        daily_text = daily_stars_tag.get_text(strip=True)
+
+                    period_stars = 0
+                    period_stars_tag = article.select_one('span.d-inline-block.float-sm-right')
+                    if period_stars_tag:
+                        period_text = period_stars_tag.get_text(strip=True)
                         import re
-                        match = re.search(r'([\d,]+)', daily_text)
+                        match = re.search(r'([\d,]+)', period_text)
                         if match:
                             try:
-                                daily_stars = int(match.group(1).replace(',', ''))
+                                period_stars = int(match.group(1).replace(',', ''))
                             except ValueError:
                                 pass
-                    
+
                     lang_tag = article.select_one('[itemprop="programmingLanguage"]')
                     language = lang_tag.get_text(strip=True) if lang_tag else ''
-                    
+
                     projects.append({
                         'name': repo_name,
                         'url': repo_url,
                         'description': description,
                         'stars': stars,
-                        'daily_stars': daily_stars,
+                        'period_stars': period_stars,
                         'language': language,
-                        'source': 'github_trending',
-                        'collected_at': datetime.now().isoformat()
                     })
                 except Exception as e:
-                    logger.debug(f"解析 trending 项目失败: {e}")
+                    logger.debug(f"解析 trending({since}) 项目失败: {e}")
                     continue
-                    
+
         except Exception as e:
-            logger.error(f"GitHub Trending 采集失败: {e}")
-        
+            logger.error(f"GitHub Trending({since}) 采集失败: {e}")
+
+        return projects
+
+    def _collect_github_trending(self) -> List[Dict]:
+        daily_projects = self._fetch_trending_page('daily')
+        time.sleep(random.uniform(1, 2))
+        weekly_projects = self._fetch_trending_page('weekly')
+        time.sleep(random.uniform(1, 2))
+        monthly_projects = self._fetch_trending_page('monthly')
+
+        weekly_map = {p['name']: p['period_stars'] for p in weekly_projects}
+        monthly_map = {p['name']: p['period_stars'] for p in monthly_projects}
+
+        projects = []
+        for p in daily_projects:
+            repo_name = p['name']
+            projects.append({
+                'name': repo_name,
+                'url': p['url'],
+                'description': p['description'],
+                'stars': p['stars'],
+                'daily_stars': p['period_stars'],
+                'weekly_stars': weekly_map.get(repo_name, 0),
+                'monthly_stars': monthly_map.get(repo_name, 0),
+                'language': p['language'],
+                'source': 'github_trending',
+                'collected_at': datetime.now().isoformat()
+            })
+
         return projects
 
     def _collect_github_search(self) -> List[Dict]:
@@ -154,6 +180,8 @@ class DataCollector:
                     
                 data = resp.json()
                 for item in data.get('items', [])[:20]:
+                    created_at = item.get('created_at', '')
+                    open_source_date = created_at[:10] if created_at else ''
                     projects.append({
                         'name': item.get('full_name', ''),
                         'url': item.get('html_url', ''),
@@ -164,7 +192,8 @@ class DataCollector:
                         'forks': item.get('forks_count', 0),
                         'author': item.get('owner', {}).get('login', ''),
                         'license': (item.get('license') or {}).get('name', ''),
-                        'created_at': item.get('created_at', ''),
+                        'created_at': created_at,
+                        'open_source_date': open_source_date,
                         'updated_at': item.get('updated_at', ''),
                         'source': 'github_search',
                         'collected_at': datetime.now().isoformat()
@@ -177,6 +206,123 @@ class DataCollector:
                 continue
         
         return projects
+
+    def _collect_github_stargazers_timeline(self, owner: str, repo: str) -> dict:
+        url = f"https://api.github.com/repos/{owner}/{repo}"
+
+        try:
+            resp = self.session.get(url, timeout=30)
+            if resp.status_code == 403:
+                logger.warning("GitHub API rate limit reached (stargazers timeline)")
+                return {}
+            resp.raise_for_status()
+
+            data = resp.json()
+            time.sleep(random.uniform(1, 2))
+
+            return {
+                'stargazers_count': data.get('stargazers_count', 0),
+                'created_at': data.get('created_at', ''),
+                'updated_at': data.get('updated_at', ''),
+                'pushed_at': data.get('pushed_at', ''),
+            }
+        except Exception as e:
+            logger.error(f"获取 stargazers timeline 失败 {owner}/{repo}: {e}")
+            return {}
+
+    def enrich_with_github_data(self, projects: List[Dict], top_n: int = 20) -> List[Dict]:
+        api_rate_limited = False
+        for project in projects[:top_n]:
+            # 已有 open_source_date 则跳过
+            if project.get('open_source_date') or project.get('created_at'):
+                continue
+
+            url = project.get('url', '')
+            if 'github.com' not in url:
+                continue
+
+            try:
+                parts = url.split('github.com/')[-1].split('/')
+                if len(parts) < 2:
+                    continue
+
+                owner = parts[0]
+                repo = parts[1].split('?')[0].split('#')[0].strip('/')
+                if not owner or not repo:
+                    continue
+
+                # 优先使用 API（未被限速时）
+                if not api_rate_limited:
+                    api_url = f"https://api.github.com/repos/{owner}/{repo}"
+                    resp = self.session.get(api_url, timeout=30)
+
+                    if resp.status_code == 403:
+                        logger.warning("GitHub API rate limit reached (enrich), 切换到网页抓取")
+                        api_rate_limited = True
+                    else:
+                        resp.raise_for_status()
+                        data = resp.json()
+                        created_at = data.get('created_at', '')
+                        if created_at:
+                            project['created_at'] = created_at
+                            project['open_source_date'] = created_at[:10]
+
+                        project['forks'] = data.get('forks_count', project.get('forks', 0))
+
+                        license_info = data.get('license')
+                        license_name = (license_info or {}).get('name', '')
+                        if license_name:
+                            project['license'] = license_name
+
+                        time.sleep(random.uniform(1, 2))
+                        continue
+
+                # API 限速时回退到网页抓取
+                if api_rate_limited:
+                    created_at = self._scrape_repo_created_at(owner, repo)
+                    if created_at:
+                        project['created_at'] = created_at
+                        project['open_source_date'] = created_at[:10]
+                        logger.info(f"网页抓取开源时间: {owner}/{repo} -> {created_at[:10]}")
+                    time.sleep(random.uniform(0.5, 1))
+
+            except Exception as e:
+                logger.debug(f"enrich {project.get('name', '')} 失败: {e}")
+                continue
+
+        return projects
+
+    def _scrape_repo_created_at(self, owner: str, repo: str) -> str:
+        """通过抓取 GitHub 仓库页面 HTML 获取开源时间，绕过 API 速率限制"""
+        url = f"https://github.com/{owner}/{repo}"
+        try:
+            resp = self.session.get(url, timeout=30)
+            if resp.status_code != 200:
+                return ''
+
+            html = resp.text
+
+            # 方法1: 解析页面中的 embedded JSON (react-app.embeddedData)
+            import re
+            # 查找 createdAt 字段
+            match = re.search(r'"createdAt"\s*:\s*"([^"]+)"', html)
+            if match:
+                return match.group(1)
+
+            # 方法2: 查找 created_at 字段
+            match = re.search(r'"created_at"\s*:\s*"([^"]+)"', html)
+            if match:
+                return match.group(1)
+
+            # 方法3: 查找最早的 relative-time datetime 属性
+            dates = re.findall(r'datetime="(\d{4}-\d{2}-\d{2})', html)
+            if dates:
+                return min(dates)
+
+            return ''
+        except Exception as e:
+            logger.debug(f"网页抓取 {owner}/{repo} 失败: {e}")
+            return ''
 
     def _collect_huggingface(self) -> List[Dict]:
         projects = []

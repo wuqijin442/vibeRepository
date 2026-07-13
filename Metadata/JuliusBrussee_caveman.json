@@ -1,33 +1,10 @@
 {
   "name": "JuliusBrussee/caveman",
-  "category": "Others",
-  "url": "https://github.com/JuliusBrussee/caveman",
-  "author": "JuliusBrussee",
-  "license": "Unknown",
-  "description": "Caveman - AI project",
-  "language": "Python",
-  "frameworks": [],
-  "tags": [],
-  "stars": 84855,
-  "daily_stars": 1052,
-  "forks": 0,
-  "score": 0.0,
-  "stars_count": 1,
-  "stars_display": "★☆☆☆☆",
-  "install_success": false,
-  "run_success": false,
-  "demo_success": false,
-  "install_time": 0,
-  "startup_time": 0,
-  "cpu_usage": 0,
-  "memory_usage": 0,
-  "disk_usage": 0,
-  "advantages": [],
-  "disadvantages": [],
-  "target_audience": [],
-  "use_cases": [],
-  "competitors": [],
-  "added_at": "",
-  "updated_at": "",
-  "backfilled_at": "2026-07-08"
+  "star_history": [
+    {
+      "date": "2026-07-13",
+      "stars": 88554,
+      "daily_growth": 0
+    }
+  ]
 }

@@ -6,7 +6,7 @@
 - **项目地址**: https://github.com/Snailclimb/JavaGuide
 - **作者**: Snailclimb
 - **License**: Apache
-- **主要语言**: TypeScript
+- **主要语言**: JavaScript
 
 ## 一句话介绍
 
@@ -34,20 +34,20 @@ Agent, LLM, RAG, MCP, Local AI
 
 ## 适合谁
 
-数据科学家, 隐私关注者, AI 工程师, 自动化爱好者, 企业用户, AI 研究者
+自动化爱好者, AI 研究者, AI 工程师, 隐私关注者, 企业用户, 数据科学家
 
 ## 主要用途
 
-- 自动化任务执行
-- 企业内部搜索
-- 文档智能检索
-- 模型上下文协议
 - 智能客服
+- 模型上下文协议
+- 知识库问答
+- 企业内部搜索
+- 自动化任务执行
 
 ## 技术栈
 
-- 语言: TypeScript
-- 框架: @vuepress/helper, vuepress-theme-hope, vuepress, @vuepress/plugin-docsearch, @vuepress/plugin-feed, vue, @vuepress/bundler-vite
+- 语言: JavaScript
+- 框架: @vuepress/plugin-feed, vue, @vuepress/bundler-vite, @vuepress/plugin-docsearch, vuepress, vuepress-theme-hope, @vuepress/helper
 - 部署: GitHub Actions
 
 ---

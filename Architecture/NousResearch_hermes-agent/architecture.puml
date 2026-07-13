@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: Python
-  框架: torch, pydantic, fastapi
+  框架: torch, fastapi, pydantic
 end note
 
 @enduml
