@@ -25,6 +25,7 @@ from modules.knowledge_base import KnowledgeBaseManager
 from modules.reporter import ReportGenerator
 from modules.github_sync import GitHubSyncer
 from modules.failure_handler import FailureHandler
+from modules.growth_tracker import GrowthTracker
 
 Path('workspace/logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -63,7 +64,8 @@ class AIDailyWorkflow:
         self.reporter = ReportGenerator(self.config)
         self.github_syncer = GitHubSyncer(self.config)
         self.failure_handler = FailureHandler(self.config)
-        
+        self.growth_tracker = GrowthTracker(self.config)
+
         self.stats = {
             'scanned': 0,
             'filtered': 0,
@@ -95,7 +97,8 @@ class AIDailyWorkflow:
             'Benchmarks',
             'Reviews',
             'Architecture',
-            'Metadata'
+            'Metadata',
+            'Rankings'
         ]
         for d in dirs:
             Path(d).mkdir(parents=True, exist_ok=True)
@@ -113,6 +116,7 @@ class AIDailyWorkflow:
         try:
             self._step_1_collect()
             self._step_2_filter()
+            self._step_2_5_track_growth()
             self._step_3_analyze()
             self._step_4_install()
             self._step_5_run()
@@ -126,6 +130,7 @@ class AIDailyWorkflow:
             self._step_13_knowledge_base()
             self._step_13_5_kb_daily_scan()
             self._step_14_report()
+            self._step_14_5_save_ranking()
             self._step_15_github_sync()
             
             logger.info("=" * 60)
@@ -167,6 +172,21 @@ class AIDailyWorkflow:
         self.stats['filtered'] = len(round3)
         logger.info(f"第三轮筛选后: {len(round3)} 个项目 (TOP {top_n})")
         self.filtered_projects = round3
+
+    def _step_2_5_track_growth(self):
+        logger.info("[步骤2.5] 增长趋势追踪...")
+        for project in self.filtered_projects:
+            try:
+                growth_data = self.growth_tracker.track_growth(project)
+                project['daily_growth'] = growth_data.get('daily_growth', 0)
+                project['weekly_growth'] = growth_data.get('weekly_growth', 0)
+                project['monthly_growth'] = growth_data.get('monthly_growth', 0)
+            except Exception as e:
+                logger.error(f"增长追踪 {project.get('name', 'unknown')} 失败: {e}")
+                project['daily_growth'] = 0
+                project['weekly_growth'] = 0
+                project['monthly_growth'] = 0
+        logger.info("增长趋势追踪完成")
 
     def _step_3_analyze(self):
         logger.info("[步骤3] 项目分析...")
@@ -355,6 +375,16 @@ class AIDailyWorkflow:
         if self.is_month_end:
             logger.info("生成月报...")
             self.reporter.generate_monthly_report(self.today)
+
+    def _step_14_5_save_ranking(self):
+        logger.info("[步骤14.5] 保存飙升榜单...")
+        try:
+            ranking_path = self.growth_tracker.save_ranking_snapshot(
+                self.scored_projects, self.today
+            )
+            logger.info(f"飙升榜单已保存: {ranking_path}")
+        except Exception as e:
+            logger.error(f"保存飙升榜单失败: {e}")
 
     def _step_15_github_sync(self):
         if not self.config.get('github_sync', {}).get('enabled', False):

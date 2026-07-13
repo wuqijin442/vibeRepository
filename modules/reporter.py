@@ -8,6 +8,8 @@ from pathlib import Path
 from datetime import datetime, timedelta
 from typing import List, Dict
 
+from modules.growth_tracker import GrowthTracker
+
 logger = logging.getLogger(__name__)
 
 
@@ -21,23 +23,63 @@ class ReportGenerator:
         self.daily_dir.mkdir(parents=True, exist_ok=True)
         self.weekly_dir.mkdir(parents=True, exist_ok=True)
         self.monthly_dir.mkdir(parents=True, exist_ok=True)
+        self.growth_tracker = GrowthTracker(config)
+        self.rankings_dir = Path(config.get('paths', {}).get('rankings', './Rankings'))
+        self.rankings_dir.mkdir(parents=True, exist_ok=True)
 
-    def generate_daily_report(self, projects: List[Dict], stats: Dict, date_str: str, failure_handler=None):
+    def generate_daily_report(self, projects: List[Dict], stats: Dict, date_str: str, failure_handler=None, growth_data=None):
         logger.info(f"生成日报: {date_str}")
-        
-        content = self._build_daily_report(projects, stats, date_str, failure_handler)
-        
+
+        content = self._build_daily_report(projects, stats, date_str, failure_handler, growth_data)
+
         report_path = self.daily_dir / f"{date_str}_Report.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(content)
-        
+
+        try:
+            self.growth_tracker.save_ranking_snapshot(projects, date_str)
+        except Exception as e:
+            logger.error(f"保存排名快照失败: {e}")
+
         logger.info(f"日报已生成: {report_path}")
         return str(report_path)
 
-    def _build_daily_report(self, projects: List[Dict], stats: Dict, date_str: str, failure_handler=None) -> str:
-        content = f"""# Today's Report - {date_str}
+    def _build_daily_report(self, projects: List[Dict], stats: Dict, date_str: str, failure_handler=None, growth_data=None) -> str:
+        # 将增长数据合并到项目副本中（按 name 匹配）
+        growth_map = {}
+        has_growth = False
+        if growth_data:
+            for g in growth_data:
+                if isinstance(g, dict):
+                    name = g.get('name')
+                    if name:
+                        growth_map[name] = g
+            has_growth = bool(growth_map)
 
-## 📊 今日概览
+        enriched = []
+        for p in projects:
+            ep = dict(p)
+            g = growth_map.get(p.get('name'))
+            if g:
+                ep['daily_growth'] = g.get('daily_growth', p.get('daily_growth', p.get('daily_stars', 0)))
+                ep['weekly_growth'] = g.get('weekly_growth', p.get('weekly_growth', 0))
+                ep['monthly_growth'] = g.get('monthly_growth', p.get('monthly_growth', 0))
+            else:
+                ep['daily_growth'] = p.get('daily_growth', p.get('daily_stars', 0))
+                ep['weekly_growth'] = p.get('weekly_growth', 0)
+                ep['monthly_growth'] = p.get('monthly_growth', 0)
+            enriched.append(ep)
+
+        content = f"# Today's Report - {date_str}\n\n"
+
+        # 🏆 今日最佳开源项目
+        content += self._build_best_project_section(enriched, use_growth=has_growth)
+
+        # 📈 今日飙升榜 TOP 10
+        content += self._build_ranking_table(enriched)
+
+        # 📊 今日概览
+        content += f"""## 📊 今日概览
 
 | 指标 | 数量 |
 |------|------|
@@ -50,18 +92,19 @@ class ReportGenerator:
 | 推荐项目 | {stats.get('recommended', 0)} |
 | 同步GitHub | {stats.get('synced', 0)} |
 
-## 🌟 今日 TOP 项目
-
 """
-        
+
+        # 🔍 深度评测 TOP 5
+        content += "## 🔍 深度评测 TOP 5\n\n"
         sorted_projects = sorted(projects, key=lambda x: x.get('score', 0), reverse=True)
-        
-        for i, project in enumerate(sorted_projects[:10], 1):
+        for i, project in enumerate(sorted_projects[:5], 1):
             content += self._format_project_card(project, i)
-        
+
+        # 📈 今日 AI 趋势分析
         content += "\n## 📈 今日 AI 趋势分析\n\n"
         content += self._generate_trend_analysis(projects)
-        
+
+        # ❌ 失败项目列表
         content += "\n## ❌ 失败项目列表\n\n"
         failed = stats.get('failed_projects', [])
         if failed:
@@ -69,11 +112,11 @@ class ReportGenerator:
                 content += f"- **{p.get('name', 'unknown')}**: {p.get('error', p.get('install_error', p.get('run_error', '未知错误')))}\n"
         else:
             content += "无失败项目\n"
-        
+
         if failure_handler:
             failure_summary = failure_handler.generate_failure_report()
             content += "\n" + failure_summary + "\n"
-        
+
         content += f"""
 ## 📝 最终推荐
 
@@ -87,8 +130,69 @@ class ReportGenerator:
 
 *报告由 AI 自动生成，数据基于真实运行结果*
 """
-        
+
         return content
+
+    def _format_stars(self, num) -> str:
+        try:
+            num = int(num)
+        except (ValueError, TypeError):
+            num = 0
+        if num >= 1000000:
+            return f"{num / 1000000:.1f}M"
+        if num >= 1000:
+            return f"{num / 1000:.1f}k"
+        return str(num)
+
+    def _build_ranking_table(self, projects: List[Dict]) -> str:
+        sorted_projects = sorted(projects, key=lambda x: x.get('daily_growth', 0), reverse=True)
+
+        lines = [
+            "## 📈 今日飙升榜 TOP 10",
+            "",
+            "| 排名 | 项目名 | Star⭐ | 日增长🔺 | 周增长🔺 | 月增长🔺 | 开源时间 |",
+            "|---|---|---|---|---|---|---|",
+        ]
+
+        for i, p in enumerate(sorted_projects, 1):
+            name = p.get('name', 'unknown')
+            url = p.get('url', '')
+            stars = self._format_stars(p.get('stars', 0))
+            daily = p.get('daily_growth', 0)
+            weekly = p.get('weekly_growth', 0)
+            monthly = p.get('monthly_growth', 0)
+            open_date = p.get('open_source_date', p.get('created_at', 'N/A'))
+            link = f"[{name}]({url})" if url else name
+            lines.append(f"| {i} | {link} | {stars} | 🔺{daily} | 🔺{weekly} | 🔺{monthly} | {open_date} |")
+
+        lines.append("")
+        return "\n".join(lines)
+
+    def _build_best_project_section(self, projects: List[Dict], use_growth: bool = True) -> str:
+        if not projects:
+            return ""
+
+        if use_growth:
+            best = max(projects, key=lambda x: x.get('daily_growth', 0))
+        else:
+            best = max(projects, key=lambda x: x.get('score', 0))
+
+        name = best.get('name', 'unknown')
+        url = best.get('url', '')
+        open_date = best.get('open_source_date', best.get('created_at', 'N/A'))
+        stars = best.get('stars', 0)
+        daily_growth = best.get('daily_growth', best.get('daily_stars', 0))
+        description = best.get('description', '暂无描述')
+
+        return f"""## 🏆 今日最佳开源项目: {name}
+
+- 开源地址：{url}
+- 📅 开源时间：{open_date}
+- ⭐ 总星标数量：{stars}⭐
+- 🔺 日Star增长量：{daily_growth}⭐
+- 📝 项目描述: {description}
+
+"""
 
     def _format_project_card(self, project: Dict, rank: int) -> str:
         name = project.get('name', 'unknown')

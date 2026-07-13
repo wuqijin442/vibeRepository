@@ -97,6 +97,7 @@ paths:
   reviews: "./Reviews"
   architecture: "./Architecture"
   metadata: "./Metadata"
+  rankings: "./Rankings"
 
 github_sync:
   enabled: true
@@ -104,3 +105,9 @@ github_sync:
   branch: "main"
   author_name: "wuqijin442"
   author_email: "wuqijin442@users.noreply.github.com"
+
+ranking:
+  enabled: true
+  top_n: 10
+  track_growth: true
+  archive_by_month: true

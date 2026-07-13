@@ -2,6 +2,14 @@
 
 > 自动化 AI 开源项目研究、真实测试与知识库维护系统。每日从 GitHub、HuggingFace、HackerNews、Reddit 等平台采集热门 AI 项目，经过多轮筛选、真实安装运行测试，最终生成完整评测报告与知识库。
 
+## 📈 今日飙升榜 TOP 10
+
+| 排名 | 项目名 | Star⭐ | 日增长🔺 | 周增长🔺 | 月增长🔺 | 开源时间 |
+|---|---|---|---|---|---|---|
+| - | 每日自动更新，请查看最新日报 | - | - | - | - | - |
+
+> 完整榜单详见 `Rankings/YYYY/MM/` 目录下的每日排名归档
+
 ## 📊 知识库总览
 
 | 指标 | 数值 |
@@ -20,9 +28,12 @@
 ## 📁 目录结构
 
 ```
-Daily-Reports/        # 每日报告（今日 TOP5/TOP10）
+Daily-Reports/        # 每日报告（飙升榜 + 深度评测）
 Weekly-Reports/       # 每周 TOP10 报告
 Monthly-Reports/      # 月度报告
+Rankings/             # 每日飙升榜归档（按年月组织）
+  └── YYYY/MM/
+      └── YYYY-MM-DD_ranking.md
 Knowledge-Base/       # 知识库（评分≥90 且测试通过的项目）
   └── <项目名>/
       ├── README_CN.md   # 中文说明
@@ -33,8 +44,8 @@ Knowledge-Base/       # 知识库（评分≥90 且测试通过的项目）
       ├── Benchmark.md   # 性能基准
       ├── Summary.md     # 总结
       └── project.json   # 元数据
-Architecture/         # 架构图（Mermaid / PlantUML）
-Metadata/             # 项目元数据
+Architecture/         # 架构图（Mermaid / PlantUML / SVG）
+Metadata/             # 项目元数据（含 Star 增长历史）
 Screenshots/          # 截图与 Demo
 Logs/                 # 运行日志
 Reviews/              # 评测文章
@@ -44,7 +55,8 @@ Awesome-Projects/     # 精选项目列表
 
 ## 🔄 自动更新机制
 
-- **每日**: 自动扫描 300+ 项目 → 3 轮筛选 → TOP5 深度测试 → 生成日报
+- **每日**: 自动扫描 300+ 项目 → 3 轮筛选 → 增长趋势追踪 → TOP5 深度测试 → 生成日报（飙升榜 + 评测）
+- **每日**: 保存飙升榜单快照至 `Rankings/YYYY/MM/` 目录
 - **周日**: 按 GitHub 总 Star 排序 TOP10，生成周报
 - **月末**: 汇总月度数据，生成月报
 - **GitHub 同步**: 仅同步评分 ≥90 且测试通过的项目，提交账号 `wuqijin442`
