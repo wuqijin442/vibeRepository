@@ -16,7 +16,7 @@ An agentic skills framework & software development methodology that works.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 253022 |
+| Stars | 253042 |
 | 今日新增 | 0 |
 | Forks | 22600 |
 | 综合评分 | 0 |
@@ -34,14 +34,14 @@ Agent, Coding, Workflow, Local AI, OCR
 
 ## 适合谁
 
-产品经理, 程序员, 开发者, 隐私关注者, 自动化爱好者, 运维工程师, 企业用户, AI 研究者
+自动化爱好者, 企业用户, 运维工程师, 隐私关注者, 产品经理, AI 研究者, 开发者, 程序员
 
 ## 主要用途
 
+- 工作流自动化
+- 任务调度
 - 自动化任务执行
 - 代码生成
-- 业务流程编排
-- 智能客服
 - 代码审查
 
 ## 技术栈

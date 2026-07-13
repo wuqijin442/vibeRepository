@@ -19,10 +19,10 @@ An agentic skills framework & software development methodology that works.
 
 根据项目分析，该项目主要功能包括：
 
+- 工作流自动化
+- 任务调度
 - 自动化任务执行
 - 代码生成
-- 业务流程编排
-- 智能客服
 - 代码审查
 
 ## 安装方式
@@ -39,7 +39,7 @@ An agentic skills framework & software development methodology that works.
 
 ## 社区数据
 
-- **Stars**: 253022
+- **Stars**: 253042
 - **今日新增**: 0
 - **Forks**: 22600
 
