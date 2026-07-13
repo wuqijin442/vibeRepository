@@ -28,6 +28,18 @@ class GrowthTracker:
         daily = growth['daily_growth']
         star_history = growth['star_history']
 
+        # 无历史数据时回退使用 Trending 采集的 daily_stars
+        if daily == 0:
+            daily = project.get('daily_stars', 0)
+
+        # 无历史数据时回退使用 Trending 采集的 weekly_stars / monthly_stars
+        weekly = growth['weekly_growth']
+        if weekly == 0:
+            weekly = project.get('weekly_stars', 0)
+        monthly = growth['monthly_growth']
+        if monthly == 0:
+            monthly = project.get('monthly_stars', 0)
+
         star_history = [e for e in star_history if e.get('date') != today]
         star_history.append({'date': today, 'stars': stars, 'daily_growth': daily})
         self._save_history(name, {'name': name, 'star_history': star_history})
@@ -37,8 +49,8 @@ class GrowthTracker:
             'date': today,
             'stars': stars,
             'daily_growth': daily,
-            'weekly_growth': growth['weekly_growth'],
-            'monthly_growth': growth['monthly_growth'],
+            'weekly_growth': weekly,
+            'monthly_growth': monthly,
         }
 
     def get_daily_ranking(self, projects: list, top_n: int = 10) -> list:
@@ -48,7 +60,7 @@ class GrowthTracker:
         for p in projects:
             name = p.get('name', 'unknown')
             stars = p.get('stars', 0)
-            if 'daily_growth' in p:
+            if 'daily_growth' in p and p.get('daily_growth', 0) > 0:
                 growth = {
                     'daily_growth': p.get('daily_growth', 0),
                     'weekly_growth': p.get('weekly_growth', 0),
@@ -56,10 +68,19 @@ class GrowthTracker:
                 }
             else:
                 g = self._compute_growth(name, stars)
+                daily = g['daily_growth']
+                if daily == 0:
+                    daily = p.get('daily_stars', 0)
+                weekly = g['weekly_growth']
+                if weekly == 0:
+                    weekly = p.get('weekly_stars', 0)
+                monthly = g['monthly_growth']
+                if monthly == 0:
+                    monthly = p.get('monthly_stars', 0)
                 growth = {
-                    'daily_growth': g['daily_growth'],
-                    'weekly_growth': g['weekly_growth'],
-                    'monthly_growth': g['monthly_growth'],
+                    'daily_growth': daily,
+                    'weekly_growth': weekly,
+                    'monthly_growth': monthly,
                 }
             item = dict(p)
             item.update(growth)
@@ -170,7 +191,9 @@ class GrowthTracker:
             daily = p.get('daily_growth', 0)
             weekly = p.get('weekly_growth', 0)
             monthly = p.get('monthly_growth', 0)
-            created = p.get('created_at', p.get('open_source_date', 'N/A'))
+            created = p.get('open_source_date', p.get('created_at', 'N/A'))
+            if created and created != 'N/A' and 'T' in str(created):
+                created = str(created)[:10]
             language = p.get('primary_language', p.get('language', 'Unknown'))
             lines.append(
                 f"| {i} | {name} | {stars} | 🔺{daily} | 🔺{weekly} | 🔺{monthly} | {created} | {language} |"

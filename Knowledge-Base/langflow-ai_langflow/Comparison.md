@@ -2,20 +2,20 @@
 
 ## 同类项目
 
+- Ollama
+- Flowise
 - LangChain
-- Text Generation WebUI
 - AutoGPT
-- LangFlow
-- n8n
+- llama.cpp
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| langflow-ai/langflow | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 工作流自动化; 任务调度 |
+| langflow-ai/langflow | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | AI 工具集成; 业务流程编排 |
+| Ollama | 待对比 | 待对比 | 待对比 |
+| Flowise | 待对比 | 待对比 | 待对比 |
 | LangChain | 待对比 | 待对比 | 待对比 |
-| Text Generation WebUI | 待对比 | 待对比 | 待对比 |
-| AutoGPT | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

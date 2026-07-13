@@ -19,11 +19,11 @@ Production-ready platform for agentic workflow development.
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 文字转语音
+- 内容创作
+- 文档智能检索
+- 设计辅助
+- 业务流程编排
 - 任务调度
-- 网页自动化
-- 自动化任务执行
 
 ## 安装方式
 
@@ -33,13 +33,13 @@ Production-ready platform for agentic workflow development.
 
 ## 运行说明
 
-- **启动耗时**: 3.01s
+- **启动耗时**: 4.51s
 - **内存占用**: 0MB
 - **CPU占用**: 0%
 
 ## 社区数据
 
-- **Stars**: 148611
+- **Stars**: 148612
 - **今日新增**: 0
 - **Forks**: 23425
 

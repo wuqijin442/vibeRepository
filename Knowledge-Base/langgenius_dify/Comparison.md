@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Qdrant
+- Flowise
 - Browserbase
-- LlamaIndex
+- Dify
 - n8n
-- CrewAI
+- LangChain RAG
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| langgenius/dify | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 工作流自动化; 文字转语音 |
-| Qdrant | 待对比 | 待对比 | 待对比 |
+| langgenius/dify | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 内容创作; 文档智能检索 |
+| Flowise | 待对比 | 待对比 | 待对比 |
 | Browserbase | 待对比 | 待对比 | 待对比 |
-| LlamaIndex | 待对比 | 待对比 | 待对比 |
+| Dify | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

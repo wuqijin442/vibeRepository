@@ -11,7 +11,7 @@
   <rect width="800" height="600" fill="#1e1e2e"/>
   
   <text x="400" y="35" text-anchor="middle" class="title">langflow-ai/langflow - Architecture</text>
-  <text x="400" y="55" text-anchor="middle" class="subtitle">Language: Python | Frameworks: torch, pydantic, langchain</text>
+  <text x="400" y="55" text-anchor="middle" class="subtitle">Language: Python | Frameworks: langchain, pydantic, transformers</text>
   
   <text x="400" y="90" text-anchor="middle" class="layer-title">用户层 / User Layer</text>
   <rect x="300" y="105" width="200" height="50" rx="8" fill="#313244" stroke="#45475a" stroke-width="2"/>

@@ -34,20 +34,20 @@ Agent, LLM, MCP, Workflow, Local AI, Open Source
 
 ## 适合谁
 
-自动化爱好者, 企业用户, 运维工程师, 隐私关注者, 产品经理, 数据科学家, AI 研究者, AI 工程师
+AI 工程师, 产品经理, 自动化爱好者, 隐私关注者, 企业用户, 运维工程师, AI 研究者, 数据科学家
 
 ## 主要用途
 
-- 工作流自动化
-- 任务调度
-- 自动化任务执行
 - AI 工具集成
-- 多代理协作
+- 业务流程编排
+- 任务调度
+- 工作流自动化
+- 智能客服
 
 ## 技术栈
 
 - 语言: Python
-- 框架: torch, pydantic, langchain, transformers, fastapi
+- 框架: langchain, pydantic, transformers, fastapi, torch
 - 部署: GitHub Actions, Makefile
 
 ---

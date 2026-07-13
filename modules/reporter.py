@@ -37,7 +37,11 @@ class ReportGenerator:
             f.write(content)
 
         try:
-            self.growth_tracker.save_ranking_snapshot(projects, date_str)
+            # 飙升榜快照使用全部项目按日增长排序取 TOP 10
+            ranking_projects = self.growth_tracker.get_daily_ranking(
+                growth_data if growth_data else projects, top_n=10
+            )
+            self.growth_tracker.save_ranking_snapshot(ranking_projects, date_str)
         except Exception as e:
             logger.error(f"保存排名快照失败: {e}")
 
@@ -56,6 +60,7 @@ class ReportGenerator:
                         growth_map[name] = g
             has_growth = bool(growth_map)
 
+        # 评测项目的增长数据合并
         enriched = []
         for p in projects:
             ep = dict(p)
@@ -70,13 +75,25 @@ class ReportGenerator:
                 ep['monthly_growth'] = p.get('monthly_growth', 0)
             enriched.append(ep)
 
+        # 飙升榜使用全部采集项目（growth_data），而非仅5个评测项目
+        ranking_projects = []
+        if growth_data:
+            for g in growth_data:
+                if isinstance(g, dict):
+                    gp = dict(g)
+                    if 'daily_growth' not in gp:
+                        gp['daily_growth'] = gp.get('daily_stars', 0)
+                    ranking_projects.append(gp)
+        else:
+            ranking_projects = enriched
+
         content = f"# Today's Report - {date_str}\n\n"
 
-        # 🏆 今日最佳开源项目
-        content += self._build_best_project_section(enriched, use_growth=has_growth)
+        # 🏆 今日最佳开源项目（从飙升榜中选 #1）
+        content += self._build_best_project_section(ranking_projects, use_growth=has_growth)
 
         # 📈 今日飙升榜 TOP 10
-        content += self._build_ranking_table(enriched)
+        content += self._build_ranking_table(ranking_projects)
 
         # 📊 今日概览
         content += f"""## 📊 今日概览
@@ -145,7 +162,7 @@ class ReportGenerator:
         return str(num)
 
     def _build_ranking_table(self, projects: List[Dict]) -> str:
-        sorted_projects = sorted(projects, key=lambda x: x.get('daily_growth', 0), reverse=True)
+        sorted_projects = sorted(projects, key=lambda x: x.get('daily_growth', x.get('daily_stars', 0)), reverse=True)
 
         lines = [
             "## 📈 今日飙升榜 TOP 10",
@@ -154,14 +171,16 @@ class ReportGenerator:
             "|---|---|---|---|---|---|---|",
         ]
 
-        for i, p in enumerate(sorted_projects, 1):
+        for i, p in enumerate(sorted_projects[:10], 1):
             name = p.get('name', 'unknown')
             url = p.get('url', '')
             stars = self._format_stars(p.get('stars', 0))
-            daily = p.get('daily_growth', 0)
+            daily = p.get('daily_growth', p.get('daily_stars', 0))
             weekly = p.get('weekly_growth', 0)
             monthly = p.get('monthly_growth', 0)
             open_date = p.get('open_source_date', p.get('created_at', 'N/A'))
+            if open_date and open_date != 'N/A' and 'T' in str(open_date):
+                open_date = str(open_date)[:10]
             link = f"[{name}]({url})" if url else name
             lines.append(f"| {i} | {link} | {stars} | 🔺{daily} | 🔺{weekly} | 🔺{monthly} | {open_date} |")
 
@@ -173,13 +192,15 @@ class ReportGenerator:
             return ""
 
         if use_growth:
-            best = max(projects, key=lambda x: x.get('daily_growth', 0))
+            best = max(projects, key=lambda x: x.get('daily_growth', x.get('daily_stars', 0)))
         else:
-            best = max(projects, key=lambda x: x.get('score', 0))
+            best = max(projects, key=lambda x: x.get('daily_growth', x.get('daily_stars', 0)))
 
         name = best.get('name', 'unknown')
         url = best.get('url', '')
         open_date = best.get('open_source_date', best.get('created_at', 'N/A'))
+        if open_date and open_date != 'N/A' and 'T' in str(open_date):
+            open_date = str(open_date)[:10]
         stars = best.get('stars', 0)
         daily_growth = best.get('daily_growth', best.get('daily_stars', 0))
         description = best.get('description', '暂无描述')

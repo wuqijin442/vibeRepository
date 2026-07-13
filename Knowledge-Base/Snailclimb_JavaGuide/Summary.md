@@ -34,20 +34,20 @@ Agent, LLM, RAG, MCP, Local AI
 
 ## 适合谁
 
-自动化爱好者, 企业用户, 隐私关注者, 数据科学家, AI 研究者, AI 工程师
+AI 工程师, 自动化爱好者, 隐私关注者, 企业用户, AI 研究者, 数据科学家
 
 ## 主要用途
 
-- 自动化任务执行
 - AI 工具集成
-- 知识库问答
+- 文档智能检索
+- 企业内部搜索
 - 智能客服
-- 多代理协作
+- 多工具协同
 
 ## 技术栈
 
 - 语言: JavaScript
-- 框架: @vuepress/helper, vuepress-theme-hope, @vuepress/plugin-docsearch, vuepress, @vuepress/bundler-vite, vue, @vuepress/plugin-feed
+- 框架: @vuepress/helper, vue, vuepress, @vuepress/plugin-feed, @vuepress/plugin-docsearch, vuepress-theme-hope, @vuepress/bundler-vite
 - 部署: GitHub Actions
 
 ---

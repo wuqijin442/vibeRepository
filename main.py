@@ -175,18 +175,40 @@ class AIDailyWorkflow:
 
     def _step_2_5_track_growth(self):
         logger.info("[步骤2.5] 增长趋势追踪...")
-        for project in self.filtered_projects:
+        # 对全部采集项目追踪增长趋势（用于飙升榜 TOP 10）
+        self.all_growth_projects = []
+        for project in self.raw_projects:
             try:
                 growth_data = self.growth_tracker.track_growth(project)
-                project['daily_growth'] = growth_data.get('daily_growth', 0)
-                project['weekly_growth'] = growth_data.get('weekly_growth', 0)
-                project['monthly_growth'] = growth_data.get('monthly_growth', 0)
+                p = dict(project)
+                p['daily_growth'] = growth_data.get('daily_growth', 0)
+                p['weekly_growth'] = growth_data.get('weekly_growth', 0)
+                p['monthly_growth'] = growth_data.get('monthly_growth', 0)
+                # 回退使用 Trending 的 daily_stars
+                if p['daily_growth'] == 0:
+                    p['daily_growth'] = project.get('daily_stars', 0)
+                if p['weekly_growth'] == 0:
+                    p['weekly_growth'] = project.get('weekly_stars', 0)
+                if p['monthly_growth'] == 0:
+                    p['monthly_growth'] = project.get('monthly_stars', 0)
+                self.all_growth_projects.append(p)
             except Exception as e:
                 logger.error(f"增长追踪 {project.get('name', 'unknown')} 失败: {e}")
-                project['daily_growth'] = 0
-                project['weekly_growth'] = 0
-                project['monthly_growth'] = 0
-        logger.info("增长趋势追踪完成")
+                p = dict(project)
+                p['daily_growth'] = project.get('daily_stars', 0)
+                p['weekly_growth'] = project.get('weekly_stars', 0)
+                p['monthly_growth'] = project.get('monthly_stars', 0)
+                self.all_growth_projects.append(p)
+
+        # 同步给筛选项目
+        growth_map = {p['name']: p for p in self.all_growth_projects if 'name' in p}
+        for project in self.filtered_projects:
+            g = growth_map.get(project.get('name'), {})
+            project['daily_growth'] = g.get('daily_growth', project.get('daily_stars', 0))
+            project['weekly_growth'] = g.get('weekly_growth', 0)
+            project['monthly_growth'] = g.get('monthly_growth', 0)
+
+        logger.info(f"增长趋势追踪完成（{len(self.all_growth_projects)} 个项目）")
 
     def _step_3_analyze(self):
         logger.info("[步骤3] 项目分析...")
@@ -365,7 +387,8 @@ class AIDailyWorkflow:
             self.scored_projects,
             self.stats,
             self.today,
-            failure_handler=self.failure_handler
+            failure_handler=self.failure_handler,
+            growth_data=self.all_growth_projects
         )
         
         if self.is_sunday:
@@ -379,8 +402,12 @@ class AIDailyWorkflow:
     def _step_14_5_save_ranking(self):
         logger.info("[步骤14.5] 保存飙升榜单...")
         try:
+            # 使用全部采集项目按日增长排序，取 TOP 10
+            ranking_projects = self.growth_tracker.get_daily_ranking(
+                self.all_growth_projects, top_n=10
+            )
             ranking_path = self.growth_tracker.save_ranking_snapshot(
-                self.scored_projects, self.today
+                ranking_projects, self.today
             )
             logger.info(f"飙升榜单已保存: {ranking_path}")
         except Exception as e:

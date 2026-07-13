@@ -2,20 +2,20 @@
 
 ## 同类项目
 
+- Flowise
 - Browserbase
+- Dify
 - n8n
-- CrewAI
 - Ollama
-- LangChain
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| NousResearch/hermes-agent | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 工作流自动化; 文字转语音 |
+| NousResearch/hermes-agent | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 内容创作; 设计辅助 |
+| Flowise | 待对比 | 待对比 | 待对比 |
 | Browserbase | 待对比 | 待对比 | 待对比 |
-| n8n | 待对比 | 待对比 | 待对比 |
-| CrewAI | 待对比 | 待对比 | 待对比 |
+| Dify | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

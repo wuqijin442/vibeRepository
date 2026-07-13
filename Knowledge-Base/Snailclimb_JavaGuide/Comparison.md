@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- LangChain RAG
-- Qdrant
+- Ollama
 - LangChain
-- Text Generation WebUI
 - AutoGPT
+- llama.cpp
+- vLLM
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 自动化任务执行; AI 工具集成 |
-| LangChain RAG | 待对比 | 待对比 | 待对比 |
-| Qdrant | 待对比 | 待对比 | 待对比 |
+| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | AI 工具集成; 文档智能检索 |
+| Ollama | 待对比 | 待对比 | 待对比 |
 | LangChain | 待对比 | 待对比 | 待对比 |
+| AutoGPT | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 
