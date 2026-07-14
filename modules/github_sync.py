@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import os
+import re
 import subprocess
 import shutil
 from pathlib import Path
@@ -20,6 +22,18 @@ class GitHubSyncer:
         # 提交账号：默认使用 wuqijin442，禁止使用 traeagent
         self.author_name = sync_config.get('author_name', 'wuqijin442')
         self.author_email = sync_config.get('author_email', 'wuqijin442@users.noreply.github.com')
+        # 优先级：环境变量 GITHUB_TOKEN > config.yaml github.token > 本地 .git/config 的 remote URL 中提取
+        github_token = (config.get('github', {}).get('token', '') or '').strip()
+        if not github_token:
+            github_token = os.environ.get('GITHUB_TOKEN', '').strip()
+        if not github_token:
+            github_token = self._extract_token_from_local_git_remote()
+        self._github_token = github_token
+        if self._github_token and self.repo_url:
+            # 形如 https://x-access-token:TOKEN@github.com/owner/repo
+            self._authed_repo_url = self._inject_token(self.repo_url, self._github_token)
+        else:
+            self._authed_repo_url = self.repo_url
         self.workspace = Path(config.get('paths', {}).get('workspace', './workspace'))
         self.local_root = Path('.')
         self.sync_dirs = [
@@ -49,6 +63,38 @@ class GitHubSyncer:
             '*.log',
             '*.env',
         ]
+
+    @staticmethod
+    def _inject_token(repo_url: str, token: str) -> str:
+        """把 https://github.com/owner/repo 转成 https://x-access-token:TOKEN@github.com/owner/repo"""
+        if not repo_url or not token:
+            return repo_url
+        if '@' in repo_url:
+            return repo_url  # 已包含认证信息，避免重复注入
+        if repo_url.startswith('https://'):
+            return 'https://x-access-token:' + token + '@' + repo_url[len('https://'):]
+        if repo_url.startswith('http://'):
+            return 'http://x-access-token:' + token + '@' + repo_url[len('http://'):]
+        return repo_url
+
+    @staticmethod
+    def _extract_token_from_local_git_remote() -> str:
+        """从本地仓库 .git/config 的 origin remote URL 中提取 token（沙箱环境已配置）。
+        形如 https://x-access-token:ghp_xxx@github.com/owner/repo -> ghp_xxx
+        """
+        try:
+            result = subprocess.run(
+                ['git', 'remote', 'get-url', 'origin'],
+                capture_output=True, text=True, timeout=10
+            )
+            if result.returncode != 0:
+                return ''
+            url = result.stdout.strip()
+            # 匹配 https://<user>:<token>@host/... 中的 token 部分
+            m = re.search(r'https://[^:/@]+:([^/@]+)@', url)
+            return m.group(1) if m else ''
+        except Exception:
+            return ''
 
     def sync(self, date_str: str) -> int:
         if not self.enabled:
@@ -101,19 +147,41 @@ class GitHubSyncer:
     def _clone_repo(self, repo_dir: Path):
         logger.info(f"Clone 仓库: {self.repo_url}")
         repo_dir.parent.mkdir(parents=True, exist_ok=True)
-        
+        # 使用带 token 的 URL 进行 clone（日志中不打印 token）
+        clone_url = self._authed_repo_url or self.repo_url
         result = subprocess.run(
-            ['git', 'clone', '--branch', self.branch, self.repo_url, str(repo_dir)],
+            ['git', 'clone', '--branch', self.branch, clone_url, str(repo_dir)],
             capture_output=True,
             text=True,
             timeout=120
         )
-        
+
         if result.returncode != 0:
-            raise Exception(f"Clone 失败: {result.stderr}")
+            # 隐藏 stderr 中可能出现的 token
+            safe_err = result.stderr.replace(self._github_token, '***') if self._github_token else result.stderr
+            raise Exception(f"Clone 失败: {safe_err}")
 
     def _pull_repo(self, repo_dir: Path):
         logger.info("Pull 最新代码")
+        # 临时把 origin 指向带 token 的 URL，pull 完再恢复，避免在非交互环境请求用户名密码
+        original_url = ''
+        try:
+            r = subprocess.run(
+                ['git', 'remote', 'get-url', 'origin'],
+                cwd=str(repo_dir), capture_output=True, text=True, timeout=10
+            )
+            if r.returncode == 0:
+                original_url = r.stdout.strip()
+        except Exception:
+            pass
+
+        pull_url = self._authed_repo_url or self.repo_url
+        if pull_url != original_url:
+            subprocess.run(
+                ['git', 'remote', 'set-url', 'origin', pull_url],
+                cwd=str(repo_dir), capture_output=True, text=True, timeout=10
+            )
+
         result = subprocess.run(
             ['git', 'pull', 'origin', self.branch],
             cwd=str(repo_dir),
@@ -121,9 +189,17 @@ class GitHubSyncer:
             text=True,
             timeout=60
         )
-        
+
+        # 恢复 origin URL，避免 token 残留在 git config
+        if original_url and pull_url != original_url:
+            subprocess.run(
+                ['git', 'remote', 'set-url', 'origin', original_url],
+                cwd=str(repo_dir), capture_output=True, text=True, timeout=10
+            )
+
         if result.returncode != 0:
-            logger.warning(f"Pull 失败: {result.stderr}")
+            safe_err = result.stderr.replace(self._github_token, '***') if self._github_token else result.stderr
+            logger.warning(f"Pull 失败: {safe_err}")
 
     def _copy_files(self, repo_dir: Path) -> int:
         count = 0
@@ -317,15 +393,18 @@ Awesome-Projects/     # 精选项目列表
             logger.warning(f"git commit 失败: {result.stderr}")
             return
         
+        # push 时直接传带 token 的 URL，避免在非交互环境请求用户名密码
+        push_url = self._authed_repo_url or self.repo_url
         result = subprocess.run(
-            ['git', 'push', 'origin', self.branch],
+            ['git', 'push', push_url, self.branch],
             cwd=str(repo_dir),
             capture_output=True,
             text=True,
             timeout=120
         )
-        
+
         if result.returncode != 0:
-            logger.warning(f"git push 失败: {result.stderr}")
+            safe_err = result.stderr.replace(self._github_token, '***') if self._github_token else result.stderr
+            logger.warning(f"git push 失败: {safe_err}")
         else:
             logger.info("Push 成功")

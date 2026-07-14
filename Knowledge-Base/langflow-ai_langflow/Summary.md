@@ -16,9 +16,9 @@ Langflow is a powerful tool for building and deploying AI-powered agents and wor
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 151779 |
+| Stars | 151826 |
 | 今日新增 | 0 |
-| Forks | 9665 |
+| Forks | 9672 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ Agent, LLM, MCP, Workflow, Local AI, Open Source
 
 ## 适合谁
 
-数据科学家, 产品经理, 隐私关注者, AI 工程师, 自动化爱好者, 运维工程师, 企业用户, AI 研究者
+数据科学家, 运维工程师, 企业用户, 产品经理, AI 研究者, AI 工程师, 隐私关注者, 自动化爱好者
 
 ## 主要用途
 
-- 自动化任务执行
-- 业务流程编排
+- AI 工具集成
+- 多代理协作
+- 多工具协同
 - 模型上下文协议
-- 智能客服
-- 工作流自动化
+- 自动化任务执行
 
 ## 技术栈
 
 - 语言: Python
-- 框架: pydantic, langchain, transformers, fastapi, torch
+- 框架: langchain, pydantic, fastapi, transformers, torch
 - 部署: GitHub Actions, Makefile
 
 ---

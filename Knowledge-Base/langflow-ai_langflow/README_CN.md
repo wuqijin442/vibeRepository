@@ -11,19 +11,19 @@ Langflow is a powerful tool for building and deploying AI-powered agents and wor
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: pydantic, langchain, transformers, fastapi, torch
+- **框架**: langchain, pydantic, fastapi, transformers, torch
 - **License**: MIT
-- **支持平台**: macOS, Windows, Linux
+- **支持平台**: macOS, Linux, Windows
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 自动化任务执行
-- 业务流程编排
+- AI 工具集成
+- 多代理协作
+- 多工具协同
 - 模型上下文协议
-- 智能客服
-- 工作流自动化
+- 自动化任务执行
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Langflow is a powerful tool for building and deploying AI-powered agents and wor
 
 ## 社区数据
 
-- **Stars**: 151779
+- **Stars**: 151826
 - **今日新增**: 0
-- **Forks**: 9665
+- **Forks**: 9672
 
 ---
 
