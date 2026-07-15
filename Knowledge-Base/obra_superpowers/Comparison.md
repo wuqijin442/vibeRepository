@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Cursor
-- LangFlow
-- AutoGen
+- AutoGPT
+- Claude Code
 - Dify
-- Flowise
+- Cursor
+- n8n
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| obra/superpowers | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 代码审查; 多代理协作 |
-| Cursor | 待对比 | 待对比 | 待对比 |
-| LangFlow | 待对比 | 待对比 | 待对比 |
-| AutoGen | 待对比 | 待对比 | 待对比 |
+| obra/superpowers | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 工作流自动化; 任务调度 |
+| AutoGPT | 待对比 | 待对比 | 待对比 |
+| Claude Code | 待对比 | 待对比 | 待对比 |
+| Dify | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

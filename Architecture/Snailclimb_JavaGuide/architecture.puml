@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: TypeScript
-  框架: @vuepress/plugin-docsearch, vuepress, @vuepress/bundler-vite
+  框架: @vuepress/plugin-docsearch, @vuepress/bundler-vite, vue
 end note
 
 @enduml

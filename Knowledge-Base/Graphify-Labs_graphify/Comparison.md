@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Ollama
-- LangChain
-- AutoGen
+- LlamaIndex
+- Claude Code
+- Cursor
+- Qdrant
 - Continue
-- Haystack
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Graphify-Labs/graphify | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 代码审查; 企业内部搜索 |
-| Ollama | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
-| AutoGen | 待对比 | 待对比 | 待对比 |
+| Graphify-Labs/graphify | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 知识库问答; 网页自动化 |
+| LlamaIndex | 待对比 | 待对比 | 待对比 |
+| Claude Code | 待对比 | 待对比 | 待对比 |
+| Cursor | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

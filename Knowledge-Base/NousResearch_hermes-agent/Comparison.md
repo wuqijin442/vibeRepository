@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Ollama
-- Flowise
-- XTTS
-- ComfyUI
+- Dify
+- n8n
 - LangChain
+- Browserbase
+- Fooocus
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| NousResearch/hermes-agent | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 图像生成; 内容创作 |
-| Ollama | 待对比 | 待对比 | 待对比 |
-| Flowise | 待对比 | 待对比 | 待对比 |
-| XTTS | 待对比 | 待对比 | 待对比 |
+| NousResearch/hermes-agent | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 工作流自动化; 图像生成 |
+| Dify | 待对比 | 待对比 | 待对比 |
+| n8n | 待对比 | 待对比 | 待对比 |
+| LangChain | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 
