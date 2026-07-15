@@ -20,10 +20,10 @@ An agentic skills framework & software development methodology that works.
 根据项目分析，该项目主要功能包括：
 
 - 代码审查
-- 多代理协作
-- 重构辅助
 - 代码生成
-- 自动化任务执行
+- 工作流自动化
+- 多代理协作
+- 智能客服
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ An agentic skills framework & software development methodology that works.
 
 ## 社区数据
 
-- **Stars**: 253867
+- **Stars**: 255018
 - **今日新增**: 0
-- **Forks**: 22682
+- **Forks**: 22797
 
 ---
 

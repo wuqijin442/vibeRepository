@@ -16,8 +16,8 @@ AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 84677 |
-| 今日新增 | 1095 |
+| Stars | 86999 |
+| 今日新增 | 1851 |
 | Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
@@ -34,15 +34,15 @@ Agent, LLM, RAG, Coding, Browser Use, Local AI
 
 ## 适合谁
 
-数据科学家, 程序员, 企业用户, 开发者, AI 研究者, AI 工程师, 隐私关注者, 自动化爱好者
+开发者, 程序员, 隐私关注者, 自动化爱好者, 企业用户, AI 工程师, 数据科学家, AI 研究者
 
 ## 主要用途
 
 - 代码审查
+- 代码生成
+- 知识库问答
+- UI 测试
 - 企业内部搜索
-- 多代理协作
-- 数据采集
-- 重构辅助
 
 ## 技术栈
 

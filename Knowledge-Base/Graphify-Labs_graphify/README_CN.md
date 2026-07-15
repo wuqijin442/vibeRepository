@@ -13,17 +13,17 @@ AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and
 - **主要语言**: Python
 - **框架**: 暂无
 - **License**: MIT
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: Windows, macOS, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
 - 代码审查
+- 代码生成
+- 知识库问答
+- UI 测试
 - 企业内部搜索
-- 多代理协作
-- 数据采集
-- 重构辅助
 
 ## 安装方式
 
@@ -39,8 +39,8 @@ AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and
 
 ## 社区数据
 
-- **Stars**: 84677
-- **今日新增**: 1095
+- **Stars**: 86999
+- **今日新增**: 1851
 - **Forks**: 0
 
 ---

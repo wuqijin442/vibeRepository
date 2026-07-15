@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Text Generation WebUI
+- llama.cpp
 - Haystack
-- Ollama
-- AutoGen
-- LangChain RAG
+- MCP Servers Collection
+- LlamaIndex
+- modelcontextprotocol/servers
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 企业内部搜索; 多代理协作 |
-| Text Generation WebUI | 待对比 | 待对比 | 待对比 |
+| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 知识库问答; 多工具协同 |
+| llama.cpp | 待对比 | 待对比 | 待对比 |
 | Haystack | 待对比 | 待对比 | 待对比 |
-| Ollama | 待对比 | 待对比 | 待对比 |
+| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 
