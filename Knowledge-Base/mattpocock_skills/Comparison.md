@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Claude Code
 - Haystack
-- LlamaIndex
-- Playwright
 - AutoGen
+- Cursor
+- aider
+- CrewAI
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| mattpocock/skills | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 代码审查; 代码生成 |
-| Claude Code | 待对比 | 待对比 | 待对比 |
+| mattpocock/skills | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 数据采集; UI 测试 |
 | Haystack | 待对比 | 待对比 | 待对比 |
-| LlamaIndex | 待对比 | 待对比 | 待对比 |
+| AutoGen | 待对比 | 待对比 | 待对比 |
+| Cursor | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

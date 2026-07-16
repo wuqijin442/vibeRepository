@@ -19,11 +19,11 @@ Skills for Real Engineers. Straight from my .claude directory.
 
 根据项目分析，该项目主要功能包括：
 
-- 代码审查
-- 代码生成
-- 知识库问答
+- 数据采集
 - UI 测试
 - 企业内部搜索
+- 重构辅助
+- 文档智能检索
 
 ## 安装方式
 
@@ -39,8 +39,8 @@ Skills for Real Engineers. Straight from my .claude directory.
 
 ## 社区数据
 
-- **Stars**: 171178
-- **今日新增**: 1679
+- **Stars**: 172240
+- **今日新增**: 2130
 - **Forks**: 0
 
 ---

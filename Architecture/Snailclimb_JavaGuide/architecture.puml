@@ -52,8 +52,8 @@ AgentEngine --> Cache
 LLMIntegration --> FileStorage
 
 note right of LLMIntegration
-  主要语言: JavaScript
-  框架: vuepress-theme-hope, vuepress, @vuepress/plugin-feed
+  主要语言: TypeScript
+  框架: @vuepress/plugin-docsearch, vuepress, @vuepress/bundler-vite
 end note
 
 @enduml
