@@ -16,9 +16,9 @@ Production-ready platform for agentic workflow development.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 148608 |
+| Stars | 148971 |
 | 今日新增 | 0 |
-| Forks | 23425 |
+| Forks | 23461 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ Agent, LLM, RAG, Workflow, Browser Use, Local AI, Voice, Image Gen
 
 ## 适合谁
 
-数据科学家, 产品经理, 语音开发者, 隐私关注者, 播客创作者, AI 工程师, 自动化爱好者, 设计师, 运维工程师, 内容创作者, 企业用户, AI 研究者
+语音开发者, 设计师, AI 工程师, 内容创作者, 隐私关注者, 企业用户, 运维工程师, AI 研究者, 播客创作者, 自动化爱好者, 数据科学家, 产品经理
 
 ## 主要用途
 
-- 自动化任务执行
-- 企业内部搜索
-- 内容创作
-- 设计辅助
+- 工作流自动化
+- 任务调度
+- 知识库问答
 - 文档智能检索
+- 业务流程编排
 
 ## 技术栈
 
 - 语言: TypeScript
-- 框架: 暂无
+- 框架: @eslint-react/eslint-plugin
 - 部署: GitHub Actions, Makefile
 
 ---

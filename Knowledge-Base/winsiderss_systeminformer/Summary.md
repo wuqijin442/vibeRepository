@@ -1,0 +1,53 @@
+# winsiderss/systeminformer 项目摘要
+
+## 基本信息
+
+- **项目名称**: winsiderss/systeminformer
+- **项目地址**: https://github.com/winsiderss/systeminformer
+- **作者**: winsiderss
+- **License**: MIT
+- **主要语言**: C
+
+## 一句话介绍
+
+A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware. Brought to you by Winsider Seminars & Solutions, Inc. @ https://windows-internals.com
+
+## 核心数据
+
+| 指标 | 数值 |
+|------|------|
+| Stars | 15395 |
+| 今日新增 | 0 |
+| Forks | 1751 |
+| 综合评分 | 0 |
+| 推荐指数 | ★ |
+
+## 主要标签
+
+Workflow, Open Source
+
+## 快速判断
+
+- ✅ 安装成功: 否
+- ✅ 运行成功: 否
+- ✅ Demo成功: 否
+
+## 适合谁
+
+运维工程师, 产品经理
+
+## 主要用途
+
+- 任务调度
+- 业务流程编排
+- 工作流自动化
+
+## 技术栈
+
+- 语言: C
+- 框架: 暂无
+- 部署: GitHub Actions
+
+---
+
+*本摘要由 AI 自动生成，快速了解项目全貌。*

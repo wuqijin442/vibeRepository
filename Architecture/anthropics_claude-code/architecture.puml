@@ -1,0 +1,59 @@
+@startuml
+!theme plain
+skinparam backgroundColor #1e1e2e
+skinparam classAttributeIconSize 0
+skinparam defaultFontColor #cdd6f4
+skinparam classBackgroundColor #313244
+skinparam classBorderColor #45475a
+skinparam titleFontColor #cdd6f4
+skinparam ArrowColor #89b4fa
+
+title anthropics/claude-code 架构图
+
+package "接口层" #313244 {
+    interface WebUI
+    interface CLI
+    interface RESTAPI
+    interface MCPServer
+}
+
+package "核心层" #313244 {
+    class ServiceLayer
+    class AgentEngine
+    class LLMIntegration
+    class BusinessLogic
+}
+
+package "数据层" #313244 {
+    database Database
+    database VectorDB
+    file FileStorage
+    cache Cache
+}
+
+package "基础设施" #313244 {
+    class DockerContainer
+    class CI_CD
+    class Monitoring
+}
+
+WebUI --> ServiceLayer
+CLI --> ServiceLayer
+RESTAPI --> ServiceLayer
+MCPServer --> ServiceLayer
+
+ServiceLayer --> BusinessLogic
+ServiceLayer --> AgentEngine
+AgentEngine --> LLMIntegration
+
+BusinessLogic --> Database
+BusinessLogic --> VectorDB
+AgentEngine --> Cache
+LLMIntegration --> FileStorage
+
+note right of LLMIntegration
+  主要语言: Python
+  框架: N/A
+end note
+
+@enduml

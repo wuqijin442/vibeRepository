@@ -3,19 +3,19 @@
 ## 同类项目
 
 - Claude Code
-- Cursor
+- LangChain
+- Continue
 - vLLM
-- CrewAI
-- LlamaIndex
+- Cursor
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Graphify-Labs/graphify | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 代码审查; 代码生成 |
+| Graphify-Labs/graphify | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 代码审查; 重构辅助 |
 | Claude Code | 待对比 | 待对比 | 待对比 |
-| Cursor | 待对比 | 待对比 | 待对比 |
-| vLLM | 待对比 | 待对比 | 待对比 |
+| LangChain | 待对比 | 待对比 | 待对比 |
+| Continue | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

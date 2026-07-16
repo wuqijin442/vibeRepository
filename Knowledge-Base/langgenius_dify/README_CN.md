@@ -11,7 +11,7 @@ Production-ready platform for agentic workflow development.
 ## 技术栈
 
 - **主要语言**: TypeScript
-- **框架**: 暂无
+- **框架**: @eslint-react/eslint-plugin
 - **License**: Apache
 - **支持平台**: Linux
 
@@ -19,11 +19,11 @@ Production-ready platform for agentic workflow development.
 
 根据项目分析，该项目主要功能包括：
 
-- 自动化任务执行
-- 企业内部搜索
-- 内容创作
-- 设计辅助
+- 工作流自动化
+- 任务调度
+- 知识库问答
 - 文档智能检索
+- 业务流程编排
 
 ## 安装方式
 
@@ -33,15 +33,15 @@ Production-ready platform for agentic workflow development.
 
 ## 运行说明
 
-- **启动耗时**: 3.0s
+- **启动耗时**: 4.51s
 - **内存占用**: 0MB
 - **CPU占用**: 0%
 
 ## 社区数据
 
-- **Stars**: 148608
+- **Stars**: 148971
 - **今日新增**: 0
-- **Forks**: 23425
+- **Forks**: 23461
 
 ---
 
