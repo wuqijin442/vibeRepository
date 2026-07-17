@@ -298,10 +298,65 @@ class BoardWorkflow:
                 })
 
         self._generate_summary(all_board_results)
+
+        # 同步到 GitHub（wuqijin442 账号 → main 分支）
+        try:
+            self._sync_to_github(all_board_results)
+        except Exception as e:
+            logger.error(f"GitHub 同步失败: {e}", exc_info=True)
+
         logger.info("=" * 60)
         logger.info("板块测试工作流执行完成！")
         logger.info(f"汇总报告: {self.boards_dir / f'{self.today}_Boards-Summary.md'}")
         logger.info("=" * 60)
+
+    def _sync_to_github(self, all_results: List[Dict]):
+        """将板块报告同步到 GitHub main 分支（账号 wuqijin442，禁止 traeagent）"""
+        logger.info("开始同步板块报告到 GitHub...")
+        git_dir = Path('.')
+
+        # 1. git add（仅板块报告 + README + 脚本，排除 workspace/clones 等运行时产物）
+        add_targets = ['Boards-Reports/', 'README.md', 'board_workflow.py']
+        for target in add_targets:
+            if Path(target).exists():
+                subprocess.run(['git', 'add', target],
+                               cwd=str(git_dir), capture_output=True, text=True, timeout=60)
+
+        # 2. 检查是否有待提交内容
+        status = subprocess.run(['git', 'status', '--porcelain', '--untracked-files=no'],
+                                cwd=str(git_dir), capture_output=True, text=True, timeout=30)
+        staged = [l for l in status.stdout.splitlines()
+                  if l.startswith(('A', 'M', 'D', 'R')) and 'workspace/clones' not in l]
+        if not staged:
+            logger.info("无新增板块报告需要提交")
+            return
+
+        # 3. commit（强制 wuqijin442 账号）
+        total_tested = sum(r['stats']['tested'] for r in all_results)
+        total_run = sum(r['stats']['run_ok'] for r in all_results)
+        commit_msg = (
+            f"[{self.today}] Daily Boards Top5 Update\n\n"
+            f"板块测试: {len(all_results)} 板块 × top5 = {total_tested} 项目, "
+            f"运行成功 {total_run}\n"
+            f"8 核心板块 + 3 精品板块（黑科技/大模型训练/学习网站）"
+        )
+        commit = subprocess.run(
+            ['git', '-c', 'user.name=wuqijin442',
+             '-c', 'user.email=wuqijin442@users.noreply.github.com',
+             'commit', '-m', commit_msg],
+            cwd=str(git_dir), capture_output=True, text=True, timeout=60
+        )
+        if commit.returncode != 0:
+            logger.warning(f"提交失败: {commit.stderr}")
+            return
+
+        # 4. push 到 main
+        push = subprocess.run(['git', 'push', 'origin', 'main'],
+                              cwd=str(git_dir), capture_output=True, text=True, timeout=120)
+        if push.returncode == 0:
+            logger.info(f"板块报告已推送到 GitHub main 分支（账号 wuqijin442）")
+        else:
+            logger.error(f"推送失败: {push.stderr}")
 
     def _process_board(self, board: Dict) -> Dict:
         """处理单个板块：采集 → 筛选 → 测试 top5 → 生成报告"""
