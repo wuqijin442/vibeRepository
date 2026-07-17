@@ -19,9 +19,9 @@ A unified AI model hub for aggregation & distribution. It supports cross-convert
 
 根据项目分析，该项目主要功能包括：
 
-- 企业内部搜索
-- 知识库问答
 - 文档智能检索
+- 知识库问答
+- 企业内部搜索
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ A unified AI model hub for aggregation & distribution. It supports cross-convert
 
 ## 社区数据
 
-- **Stars**: 42349
+- **Stars**: 42564
 - **今日新增**: 0
-- **Forks**: 9833
+- **Forks**: 9916
 
 ---
 

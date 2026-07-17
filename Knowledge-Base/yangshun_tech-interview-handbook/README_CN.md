@@ -20,10 +20,10 @@ Curated coding interview preparation materials for busy software engineers
 根据项目分析，该项目主要功能包括：
 
 - 代码审查
-- 知识库问答
-- 文档智能检索
-- 内容创作
 - 企业内部搜索
+- 文档智能检索
+- 知识库问答
+- 图像生成
 
 ## 安装方式
 
@@ -33,15 +33,15 @@ Curated coding interview preparation materials for busy software engineers
 
 ## 运行说明
 
-- **启动耗时**: 30.04s
-- **内存占用**: 2242.3MB
+- **启动耗时**: 30.03s
+- **内存占用**: 1806.1MB
 - **CPU占用**: 0.0%
 
 ## 社区数据
 
-- **Stars**: 141017
+- **Stars**: 141052
 - **今日新增**: 0
-- **Forks**: 16683
+- **Forks**: 16691
 
 ---
 

@@ -16,9 +16,9 @@ There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 70487 |
+| Stars | 70543 |
 | 今日新增 | 0 |
-| Forks | 5059 |
+| Forks | 5062 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,17 +34,17 @@ Local AI, DevTools, Open Source
 
 ## 适合谁
 
-开发者, 企业用户, 隐私关注者, 程序员
+程序员, 企业用户, 隐私关注者, 开发者
 
 ## 主要用途
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 技术栈
 
 - 语言: TypeScript
-- 框架: eslint-plugin-react, electron, eslint-plugin-react-hooks
+- 框架: electron, eslint-plugin-react, eslint-plugin-react-hooks
 - 部署: GitHub Actions
 
 ---

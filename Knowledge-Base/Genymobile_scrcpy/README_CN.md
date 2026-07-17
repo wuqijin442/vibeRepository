@@ -13,14 +13,14 @@ Display and control your Android device
 - **主要语言**: Java
 - **框架**: 暂无
 - **License**: Apache
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 安装方式
 
@@ -36,9 +36,9 @@ Display and control your Android device
 
 ## 社区数据
 
-- **Stars**: 145788
+- **Stars**: 145894
 - **今日新增**: 0
-- **Forks**: 13438
+- **Forks**: 13448
 
 ---
 

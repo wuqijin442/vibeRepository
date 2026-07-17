@@ -16,9 +16,9 @@ For developers, who are building real-time data-driven applications, Redis is th
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 75505 |
+| Stars | 75544 |
 | 今日新增 | 0 |
-| Forks | 24710 |
+| Forks | 24709 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -38,9 +38,9 @@ LLM, RAG, Open Source
 
 ## 主要用途
 
-- 企业内部搜索
-- 知识库问答
 - 文档智能检索
+- 知识库问答
+- 企业内部搜索
 
 ## 技术栈
 

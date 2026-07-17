@@ -16,9 +16,9 @@ Appwrite® - complete cloud infrastructure for your web, mobile and AI apps. Inc
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 56597 |
+| Stars | 56599 |
 | 今日新增 | 0 |
-| Forks | 5555 |
+| Forks | 5559 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,15 +34,15 @@ RAG, Workflow, Browser Use, Local AI
 
 ## 适合谁
 
-隐私关注者, AI 工程师, 运维工程师, 企业用户, 数据科学家, 产品经理
+企业用户, 运维工程师, 产品经理, 隐私关注者, 数据科学家, AI 工程师
 
 ## 主要用途
 
+- 业务流程编排
+- 企业内部搜索
+- 文档智能检索
 - 工作流自动化
 - 任务调度
-- 知识库问答
-- 文档智能检索
-- 业务流程编排
 
 ## 技术栈
 

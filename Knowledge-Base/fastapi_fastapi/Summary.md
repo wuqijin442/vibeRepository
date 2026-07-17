@@ -16,9 +16,9 @@ FastAPI framework, high performance, easy to learn, fast to code, ready for prod
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 100560 |
+| Stars | 100619 |
 | 今日新增 | 0 |
-| Forks | 9621 |
+| Forks | 9636 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ RAG, Workflow
 
 ## 适合谁
 
-数据科学家, AI 工程师, 运维工程师, 产品经理
+运维工程师, 数据科学家, AI 工程师, 产品经理
 
 ## 主要用途
 
+- 业务流程编排
+- 企业内部搜索
+- 文档智能检索
 - 工作流自动化
 - 任务调度
-- 知识库问答
-- 文档智能检索
-- 业务流程编排
 
 ## 技术栈
 
 - 语言: Python
-- 框架: flask, fastapi, pydantic
+- 框架: pydantic, fastapi, flask
 - 部署: GitHub Actions
 
 ---

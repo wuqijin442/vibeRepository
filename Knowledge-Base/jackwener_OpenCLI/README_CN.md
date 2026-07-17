@@ -13,17 +13,17 @@ Make Any Website into CLI & Use your logged-in browser by AI agent.
 - **主要语言**: JavaScript
 - **框架**: 暂无
 - **License**: Apache
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 代码审查
-- 重构辅助
-- 任务调度
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 重构辅助
+- 工作流自动化
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Make Any Website into CLI & Use your logged-in browser by AI agent.
 
 ## 社区数据
 
-- **Stars**: 26724
+- **Stars**: 26833
 - **今日新增**: 0
-- **Forks**: 2629
+- **Forks**: 2641
 
 ---
 

@@ -18,7 +18,7 @@
 |------|------|
 | Stars | 90244 |
 | 今日新增 | 0 |
-| Forks | 30411 |
+| Forks | 30409 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ RAG, Browser Use, Local AI
 
 ## 适合谁
 
-企业用户, 隐私关注者, 数据科学家, AI 工程师
+隐私关注者, 企业用户, 数据科学家, AI 工程师
 
 ## 主要用途
 
-- 知识库问答
-- 文档智能检索
 - 企业内部搜索
+- 文档智能检索
+- 知识库问答
+- 数据采集
 - UI 测试
-- 网页自动化
 
 ## 技术栈
 
 - 语言: JavaScript
-- 框架: vuedraggable, vue-count-to, vue-router, @vue/cli-plugin-babel, vue-splitpane, @vue/cli-plugin-eslint, @vue/cli-service, @vue/cli-plugin-unit-jest, vuex, vue, eslint-plugin-vue, @vue/test-utils, vue-template-compiler
+- 框架: @vue/cli-service, vue-splitpane, @vue/test-utils, vuedraggable, vue-router, @vue/cli-plugin-babel, vue-count-to, vuex, vue-template-compiler, @vue/cli-plugin-unit-jest, eslint-plugin-vue, @vue/cli-plugin-eslint, vue
 - 部署: 未知
 
 ---

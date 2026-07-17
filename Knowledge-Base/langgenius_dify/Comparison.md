@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- LangChain
-- vLLM
-- Coqui TTS
-- Dify
-- LangFlow
+- LangChain RAG
+- XTTS
+- Qdrant
+- Text Generation WebUI
+- Stable Diffusion WebUI
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| langgenius/dify | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 工作流自动化; 任务调度 |
-| LangChain | 待对比 | 待对比 | 待对比 |
-| vLLM | 待对比 | 待对比 | 待对比 |
-| Coqui TTS | 待对比 | 待对比 | 待对比 |
+| langgenius/dify | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 业务流程编排; 多代理协作 |
+| LangChain RAG | 待对比 | 待对比 | 待对比 |
+| XTTS | 待对比 | 待对比 | 待对比 |
+| Qdrant | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

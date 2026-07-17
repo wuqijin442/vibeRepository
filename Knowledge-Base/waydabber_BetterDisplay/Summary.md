@@ -16,9 +16,9 @@ Unlock your displays on your Mac! Flexible HiDPI scaling, XDR/HDR extra brightne
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 32652 |
+| Stars | 32694 |
 | 今日新增 | 0 |
-| Forks | 619 |
+| Forks | 620 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,13 +34,13 @@ Browser Use, Local AI
 
 ## 适合谁
 
-企业用户, 隐私关注者
+隐私关注者, 企业用户
 
 ## 主要用途
 
+- 数据采集
 - UI 测试
 - 网页自动化
-- 数据采集
 
 ## 技术栈
 

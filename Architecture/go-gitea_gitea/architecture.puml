@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: Go
-  框架: eslint-plugin-vue-scoped-css, @vitejs/plugin-vue, @replit/codemirror-lang-svelte
+  框架: vue-chartjs, eslint-plugin-vue-scoped-css, eslint-plugin-vue
 end note
 
 @enduml

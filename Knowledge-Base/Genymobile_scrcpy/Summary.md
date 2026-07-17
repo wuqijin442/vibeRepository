@@ -16,9 +16,9 @@ Display and control your Android device
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 145788 |
+| Stars | 145894 |
 | 今日新增 | 0 |
-| Forks | 13438 |
+| Forks | 13448 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -38,8 +38,8 @@ Open Source
 
 ## 主要用途
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 技术栈
 

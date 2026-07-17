@@ -11,16 +11,16 @@ There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next
 ## 技术栈
 
 - **主要语言**: TypeScript
-- **框架**: eslint-plugin-react, electron, eslint-plugin-react-hooks
+- **框架**: electron, eslint-plugin-react, eslint-plugin-react-hooks
 - **License**: Other
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 安装方式
 
@@ -36,9 +36,9 @@ There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next
 
 ## 社区数据
 
-- **Stars**: 70487
+- **Stars**: 70543
 - **今日新增**: 0
-- **Forks**: 5059
+- **Forks**: 5062
 
 ---
 

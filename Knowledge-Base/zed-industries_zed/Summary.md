@@ -16,9 +16,9 @@ Code at the speed of thought – Zed is a high-performance, multiplayer code edi
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 87048 |
+| Stars | 87148 |
 | 今日新增 | 0 |
-| Forks | 9541 |
+| Forks | 9571 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,13 +34,13 @@ Workflow, Local AI, Open Source
 
 ## 适合谁
 
-企业用户, 隐私关注者, 运维工程师, 产品经理
+运维工程师, 企业用户, 隐私关注者, 产品经理
 
 ## 主要用途
 
-- 任务调度
 - 业务流程编排
 - 工作流自动化
+- 任务调度
 
 ## 技术栈
 

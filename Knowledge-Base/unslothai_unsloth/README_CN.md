@@ -11,19 +11,19 @@ Unsloth Studio is a web UI for training and running open models like Gemma 4, Qw
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: transformers, torch, pydantic
+- **框架**: pydantic, torch, transformers
 - **License**: Apache
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 任务调度
 - 业务流程编排
+- 工作流自动化
+- 文字转语音
+- 任务调度
 - 语音助手
-- 语音转文字
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Unsloth Studio is a web UI for training and running open models like Gemma 4, Qw
 
 ## 社区数据
 
-- **Stars**: 68274
+- **Stars**: 68343
 - **今日新增**: 0
-- **Forks**: 6144
+- **Forks**: 6148
 
 ---
 

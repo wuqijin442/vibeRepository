@@ -16,9 +16,9 @@ An open-source framework for making universal native apps with React. Expo runs 
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 50670 |
+| Stars | 50711 |
 | 今日新增 | 0 |
-| Forks | 13071 |
+| Forks | 13092 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -38,11 +38,11 @@ Workflow, Browser Use, Open Source
 
 ## 主要用途
 
+- 业务流程编排
 - 工作流自动化
 - 任务调度
-- 业务流程编排
+- 数据采集
 - UI 测试
-- 网页自动化
 
 ## 技术栈
 

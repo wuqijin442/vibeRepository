@@ -13,15 +13,15 @@ Unlock your displays on your Mac! Flexible HiDPI scaling, XDR/HDR extra brightne
 - **主要语言**: 
 - **框架**: 暂无
 - **License**: 
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
+- 数据采集
 - UI 测试
 - 网页自动化
-- 数据采集
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ Unlock your displays on your Mac! Flexible HiDPI scaling, XDR/HDR extra brightne
 
 ## 社区数据
 
-- **Stars**: 32652
+- **Stars**: 32694
 - **今日新增**: 0
-- **Forks**: 619
+- **Forks**: 620
 
 ---
 

@@ -16,9 +16,9 @@ Unsloth Studio is a web UI for training and running open models like Gemma 4, Qw
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 68274 |
+| Stars | 68343 |
 | 今日新增 | 0 |
-| Forks | 6144 |
+| Forks | 6148 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ LLM, Workflow, Local AI, Voice
 
 ## 适合谁
 
-隐私关注者, AI 工程师, 数据科学家, 运维工程师, 播客创作者, 企业用户, 语音开发者, 产品经理
+企业用户, 运维工程师, 产品经理, 隐私关注者, 语音开发者, 播客创作者, 数据科学家, AI 工程师
 
 ## 主要用途
 
-- 工作流自动化
-- 任务调度
 - 业务流程编排
+- 工作流自动化
+- 文字转语音
+- 任务调度
 - 语音助手
-- 语音转文字
 
 ## 技术栈
 
 - 语言: Python
-- 框架: transformers, torch, pydantic
+- 框架: pydantic, torch, transformers
 - 部署: GitHub Actions
 
 ---

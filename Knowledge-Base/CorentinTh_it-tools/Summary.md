@@ -16,9 +16,9 @@ Collection of handy online tools for developers, with great UX.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 39819 |
+| Stars | 39840 |
 | 今日新增 | 0 |
-| Forks | 5212 |
+| Forks | 5219 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,17 +34,17 @@ Local AI
 
 ## 适合谁
 
-企业用户, 隐私关注者
+隐私关注者, 企业用户
 
 ## 主要用途
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 技术栈
 
 - 语言: TypeScript
-- 框架: @vitejs/plugin-vue, vue, vuedraggable, @vue/runtime-dom, @intlify/unplugin-vue-i18n, @vueuse/router, @vue/tsconfig, vite-plugin-vue-markdown, vue-shadow-dom, vue-i18n, @vue/test-utils, vue-router, @vueuse/core, @tabler/icons-vue, vue-tsc, unplugin-vue-components, @vue/compiler-sfc, @vueuse/head, @vitejs/plugin-vue-jsx, @tiptap/vue-3
+- 框架: @vitejs/plugin-vue-jsx, @tiptap/vue-3, vue-i18n, @tabler/icons-vue, @vue/test-utils, @vue/tsconfig, vue-router, @vueuse/core, @vueuse/router, vite-plugin-vue-markdown, vue-shadow-dom, @vitejs/plugin-vue, @vue/runtime-dom, @vueuse/head, vuedraggable, unplugin-vue-components, @vue/compiler-sfc, @intlify/unplugin-vue-i18n, vue-tsc, vue
 - 部署: Docker, GitHub Actions
 
 ---

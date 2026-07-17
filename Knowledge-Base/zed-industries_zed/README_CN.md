@@ -13,15 +13,15 @@ Code at the speed of thought – Zed is a high-performance, multiplayer code edi
 - **主要语言**: Rust
 - **框架**: 暂无
 - **License**: Other
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 任务调度
 - 业务流程编排
 - 工作流自动化
+- 任务调度
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ Code at the speed of thought – Zed is a high-performance, multiplayer code edi
 
 ## 社区数据
 
-- **Stars**: 87048
+- **Stars**: 87148
 - **今日新增**: 0
-- **Forks**: 9541
+- **Forks**: 9571
 
 ---
 

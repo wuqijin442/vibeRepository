@@ -16,9 +16,9 @@ Apache Airflow - A platform to programmatically author, schedule, and monitor wo
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 46130 |
+| Stars | 46156 |
 | 今日新增 | 0 |
-| Forks | 17388 |
+| Forks | 17397 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ Agent, RAG, Workflow
 
 ## 适合谁
 
-AI 工程师, 运维工程师, AI 研究者, 自动化爱好者, 数据科学家, 产品经理
+自动化爱好者, 运维工程师, 产品经理, AI 研究者, 数据科学家, AI 工程师
 
 ## 主要用途
 
-- 工作流自动化
-- 任务调度
-- 知识库问答
-- 文档智能检索
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 企业内部搜索
+- 文档智能检索
 
 ## 技术栈
 
 - 语言: Python
-- 框架: flask, fastapi, pydantic
+- 框架: pydantic, fastapi, flask
 - 部署: Docker, GitHub Actions
 
 ---

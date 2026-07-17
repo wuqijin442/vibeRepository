@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Haystack
-- LlamaIndex
 - LangChain RAG
+- Browserbase
 - Qdrant
+- Puppeteer
 - Playwright
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| PanJiaChen/vue-element-admin | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 知识库问答; 文档智能检索 |
-| Haystack | 待对比 | 待对比 | 待对比 |
-| LlamaIndex | 待对比 | 待对比 | 待对比 |
+| PanJiaChen/vue-element-admin | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 企业内部搜索; 文档智能检索 |
 | LangChain RAG | 待对比 | 待对比 | 待对比 |
+| Browserbase | 待对比 | 待对比 | 待对比 |
+| Qdrant | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

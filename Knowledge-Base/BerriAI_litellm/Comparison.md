@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- MCP Servers Collection
 - modelcontextprotocol/servers
-- AutoGen
+- vLLM
+- AutoGPT
+- Text Generation WebUI
 - LangChain
-- CrewAI
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| BerriAI/litellm | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 模型上下文协议; 多代理协作 |
-| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
+| BerriAI/litellm | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 多代理协作; 智能客服 |
 | modelcontextprotocol/servers | 待对比 | 待对比 | 待对比 |
-| AutoGen | 待对比 | 待对比 | 待对比 |
+| vLLM | 待对比 | 待对比 | 待对比 |
+| AutoGPT | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

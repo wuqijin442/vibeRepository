@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: TypeScript
-  框架: @radix-ui/react-label, i18next, next-themes
+  框架: i18next-parser, eslint-plugin-react, eslint-plugin-react-hooks
 end note
 
 @enduml

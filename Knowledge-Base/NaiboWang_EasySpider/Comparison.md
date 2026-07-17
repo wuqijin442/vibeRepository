@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Flowise
-- Claude Code
+- LangFlow
+- aider
+- Browserbase
 - Continue
-- Playwright
-- Cursor
+- Claude Code
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| NaiboWang/EasySpider | 社区热度高，Star 数量多; 文档完善 | 安装可能存在依赖问题; 运行稳定性待验证 | 工作流自动化; 代码审查 |
-| Flowise | 待对比 | 待对比 | 待对比 |
-| Claude Code | 待对比 | 待对比 | 待对比 |
-| Continue | 待对比 | 待对比 | 待对比 |
+| NaiboWang/EasySpider | 社区热度高，Star 数量多; 文档完善 | 安装可能存在依赖问题; 运行稳定性待验证 | 业务流程编排; 代码审查 |
+| LangFlow | 待对比 | 待对比 | 待对比 |
+| aider | 待对比 | 待对比 | 待对比 |
+| Browserbase | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Flowise
-- Haystack
-- LlamaIndex
-- AutoGen
 - LangChain RAG
+- LangFlow
+- Qdrant
+- n8n
+- AutoGPT
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| apache/airflow | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 安装可能存在依赖问题; 运行稳定性待验证 | 工作流自动化; 任务调度 |
-| Flowise | 待对比 | 待对比 | 待对比 |
-| Haystack | 待对比 | 待对比 | 待对比 |
-| LlamaIndex | 待对比 | 待对比 | 待对比 |
+| apache/airflow | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 安装可能存在依赖问题; 运行稳定性待验证 | 业务流程编排; 多代理协作 |
+| LangChain RAG | 待对比 | 待对比 | 待对比 |
+| LangFlow | 待对比 | 待对比 | 待对比 |
+| Qdrant | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

@@ -19,11 +19,11 @@ Bash is all you need -  A nano claude code–like 「agent harness」, built fro
 
 根据项目分析，该项目主要功能包括：
 
-- 数据采集
-- 模型上下文协议
-- 工作流自动化
-- 代码审查
+- 业务流程编排
+- 多代理协作
+- 智能客服
 - 重构辅助
+- 模型上下文协议
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Bash is all you need -  A nano claude code–like 「agent harness」, built fro
 
 ## 社区数据
 
-- **Stars**: 71151
+- **Stars**: 71336
 - **今日新增**: 0
-- **Forks**: 11572
+- **Forks**: 11605
 
 ---
 

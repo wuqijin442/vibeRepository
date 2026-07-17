@@ -16,9 +16,9 @@
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 58746 |
+| Stars | 58832 |
 | 今日新增 | 0 |
-| Forks | 4360 |
+| Forks | 4363 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ RAG, Workflow
 
 ## 适合谁
 
-数据科学家, AI 工程师, 运维工程师, 产品经理
+运维工程师, 数据科学家, AI 工程师, 产品经理
 
 ## 主要用途
 
+- 业务流程编排
+- 企业内部搜索
+- 文档智能检索
 - 工作流自动化
 - 任务调度
-- 知识库问答
-- 文档智能检索
-- 业务流程编排
 
 ## 技术栈
 
 - 语言: TypeScript
-- 框架: eslint-plugin-vue, vue-eslint-parser, electron
+- 框架: electron, vue-eslint-parser, eslint-plugin-vue
 - 部署: GitHub Actions
 
 ---

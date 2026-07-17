@@ -11,7 +11,7 @@ Collection of handy online tools for developers, with great UX.
 ## 技术栈
 
 - **主要语言**: TypeScript
-- **框架**: @vitejs/plugin-vue, vue, vuedraggable, @vue/runtime-dom, @intlify/unplugin-vue-i18n, @vueuse/router, @vue/tsconfig, vite-plugin-vue-markdown, vue-shadow-dom, vue-i18n, @vue/test-utils, vue-router, @vueuse/core, @tabler/icons-vue, vue-tsc, unplugin-vue-components, @vue/compiler-sfc, @vueuse/head, @vitejs/plugin-vue-jsx, @tiptap/vue-3
+- **框架**: @vitejs/plugin-vue-jsx, @tiptap/vue-3, vue-i18n, @tabler/icons-vue, @vue/test-utils, @vue/tsconfig, vue-router, @vueuse/core, @vueuse/router, vite-plugin-vue-markdown, vue-shadow-dom, @vitejs/plugin-vue, @vue/runtime-dom, @vueuse/head, vuedraggable, unplugin-vue-components, @vue/compiler-sfc, @intlify/unplugin-vue-i18n, vue-tsc, vue
 - **License**: Other
 - **支持平台**: Linux
 
@@ -19,8 +19,8 @@ Collection of handy online tools for developers, with great UX.
 
 根据项目分析，该项目主要功能包括：
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 安装方式
 
@@ -30,15 +30,15 @@ Collection of handy online tools for developers, with great UX.
 
 ## 运行说明
 
-- **启动耗时**: 30.04s
-- **内存占用**: 6954.2MB
+- **启动耗时**: 30.18s
+- **内存占用**: 1122.5MB
 - **CPU占用**: 0.0%
 
 ## 社区数据
 
-- **Stars**: 39819
+- **Stars**: 39840
 - **今日新增**: 0
-- **Forks**: 5212
+- **Forks**: 5219
 
 ---
 

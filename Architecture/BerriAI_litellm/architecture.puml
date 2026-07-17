@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: Python
-  框架: @types/react-copy-to-clipboard, prism-react-renderer, langchain
+  框架: pydantic, fastapi, prism-react-renderer
 end note
 
 @enduml

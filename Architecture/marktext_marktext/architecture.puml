@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: TypeScript
-  框架: eslint-plugin-vue, vue-eslint-parser, electron
+  框架: electron, vue-eslint-parser, eslint-plugin-vue
 end note
 
 @enduml

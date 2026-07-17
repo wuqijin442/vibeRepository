@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Haystack
-- Claude Code
-- LlamaIndex
 - LangChain RAG
+- aider
+- ComfyUI
 - Continue
+- Claude Code
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| yangshun/tech-interview-handbook | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 代码审查; 知识库问答 |
-| Haystack | 待对比 | 待对比 | 待对比 |
-| Claude Code | 待对比 | 待对比 | 待对比 |
-| LlamaIndex | 待对比 | 待对比 | 待对比 |
+| yangshun/tech-interview-handbook | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 代码审查; 企业内部搜索 |
+| LangChain RAG | 待对比 | 待对比 | 待对比 |
+| aider | 待对比 | 待对比 | 待对比 |
+| ComfyUI | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

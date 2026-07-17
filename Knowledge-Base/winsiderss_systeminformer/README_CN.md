@@ -13,15 +13,15 @@ A free, powerful, multi-purpose tool that helps you monitor system resources, de
 - **主要语言**: C
 - **框架**: 暂无
 - **License**: MIT
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 任务调度
 - 业务流程编排
 - 工作流自动化
+- 任务调度
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ A free, powerful, multi-purpose tool that helps you monitor system resources, de
 
 ## 社区数据
 
-- **Stars**: 15395
+- **Stars**: 15411
 - **今日新增**: 0
-- **Forks**: 1751
+- **Forks**: 1752
 
 ---
 

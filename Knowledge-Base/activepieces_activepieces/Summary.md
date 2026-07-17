@@ -16,9 +16,9 @@ AI Agents & MCPs & AI Workflow Automation • (~400 MCP servers for AI agents) �
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 23278 |
+| Stars | 23309 |
 | 今日新增 | 0 |
-| Forks | 3925 |
+| Forks | 3924 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -29,25 +29,25 @@ Agent, LLM, MCP, Coding, Workflow, Local AI, Open Source
 ## 快速判断
 
 - ✅ 安装成功: 是
-- ✅ 运行成功: 是
-- ✅ Demo成功: 是
+- ✅ 运行成功: 否
+- ✅ Demo成功: 否
 
 ## 适合谁
 
-隐私关注者, AI 工程师, 企业用户, 开发者, 运维工程师, AI 研究者, 自动化爱好者, 数据科学家, 程序员, 产品经理
+企业用户, 自动化爱好者, 程序员, 运维工程师, 产品经理, AI 研究者, 隐私关注者, 数据科学家, 开发者, AI 工程师
 
 ## 主要用途
 
-- 模型上下文协议
-- 工作流自动化
-- 代码审查
+- 业务流程编排
+- 多代理协作
+- 智能客服
 - 重构辅助
-- 任务调度
+- 模型上下文协议
 
 ## 技术栈
 
 - 语言: TypeScript
-- 框架: @radix-ui/react-label, i18next, next-themes, react-ripples, @uiw/react-codemirror, @vitejs/plugin-react, react-error-boundary, eslint-plugin-react-hooks, @radix-ui/react-popover, @radix-ui/react-toggle, @tanstack/react-query, react-json-view, @radix-ui/react-slot, @fastify/cors, fastify-favicon, fastify-raw-body, @tiptap/react, @tanstack/react-table, @radix-ui/react-progress, @radix-ui/react-dialog, @radix-ui/react-use-controllable-state, fastify-socket, i18next-icu, @radix-ui/react-scroll-area, lucide-react, react-colorful, @radix-ui/react-switch, i18next-http-backend, eslint-plugin-react, react-router-dom, @radix-ui/react-icons, @radix-ui/react-avatar, i18next-browser-languagedetector, react-day-picker, @fastify/multipart, react-hook-form, @radix-ui/react-toast, @fastify/http-proxy, react-dom, @radix-ui/react-checkbox, @fastify/type-provider-typebox, react-data-grid, react-markdown, @tanstack/react-db, fastify, react-use, @radix-ui/react-accordion, react-syntax-highlighter, embla-carousel-react, @fastify/formbody, react-textarea-autosize, @bull-board/fastify, @tanstack/react-virtual, react-resizable-panels, react, @radix-ui/react-dropdown-menu, react-lottie, @radix-ui/react-slider, @fastify/rate-limit, @radix-ui/react-tabs, @fastify/basic-auth, @radix-ui/react-collapsible, @fastify/swagger, @xyflow/react, @radix-ui/react-primitive, i18next-parser, @radix-ui/react-radio-group, @radix-ui/react-select, @radix-ui/react-hover-card, @radix-ui/react-separator, fastify-plugin, @radix-ui/react-context-menu, @radix-ui/react-tooltip, react-i18next
+- 框架: i18next-parser, eslint-plugin-react, eslint-plugin-react-hooks, @vitejs/plugin-react
 - 部署: Docker, Docker Compose, GitHub Actions, Docker Compose
 
 ---

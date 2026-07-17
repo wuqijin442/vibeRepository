@@ -16,9 +16,9 @@ DeepSpeed is a deep learning optimization library that makes distributed trainin
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 42721 |
+| Stars | 42737 |
 | 今日新增 | 0 |
-| Forks | 4888 |
+| Forks | 4889 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,13 +34,13 @@ LLM, Workflow, OCR
 
 ## 适合谁
 
-数据科学家, AI 工程师, 运维工程师, 产品经理
+运维工程师, 数据科学家, AI 工程师, 产品经理
 
 ## 主要用途
 
-- 任务调度
 - 业务流程编排
 - 工作流自动化
+- 任务调度
 
 ## 技术栈
 
