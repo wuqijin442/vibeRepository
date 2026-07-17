@@ -11,7 +11,7 @@ The agent that grows with you
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: fastapi, pydantic, torch
+- **框架**: fastapi, torch, pydantic
 - **License**: MIT
 - **支持平台**: Windows, Linux, macOS
 
@@ -19,11 +19,11 @@ The agent that grows with you
 
 根据项目分析，该项目主要功能包括：
 
-- 内容创作
-- 业务流程编排
+- 语音助手
+- 智能客服
 - 数据采集
-- UI 测试
-- 图像生成
+- 语音转文字
+- 文字转语音
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ The agent that grows with you
 
 ## 社区数据
 
-- **Stars**: 215455
+- **Stars**: 215976
 - **今日新增**: 0
-- **Forks**: 40178
+- **Forks**: 40356
 
 ---
 

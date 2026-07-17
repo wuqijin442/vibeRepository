@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Haystack
-- AutoGen
-- Cursor
+- Playwright
+- Continue
+- Qdrant
+- Browserbase
 - aider
-- CrewAI
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| mattpocock/skills | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 数据采集; UI 测试 |
-| Haystack | 待对比 | 待对比 | 待对比 |
-| AutoGen | 待对比 | 待对比 | 待对比 |
-| Cursor | 待对比 | 待对比 | 待对比 |
+| mattpocock/skills | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 智能客服; 数据采集 |
+| Playwright | 待对比 | 待对比 | 待对比 |
+| Continue | 待对比 | 待对比 | 待对比 |
+| Qdrant | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

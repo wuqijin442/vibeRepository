@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Claude Code
-- LangChain
-- Continue
-- vLLM
-- Cursor
+- Playwright
+- Ollama
+- CrewAI
+- LlamaIndex
+- llama.cpp
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Graphify-Labs/graphify | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 代码审查; 重构辅助 |
-| Claude Code | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
-| Continue | 待对比 | 待对比 | 待对比 |
+| Graphify-Labs/graphify | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 智能客服; 数据采集 |
+| Playwright | 待对比 | 待对比 | 待对比 |
+| Ollama | 待对比 | 待对比 | 待对比 |
+| CrewAI | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

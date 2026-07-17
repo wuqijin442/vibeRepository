@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- llama.cpp
+- Text Generation WebUI
 - vLLM
+- Qdrant
 - Ollama
-- Haystack
-- AutoGen
+- modelcontextprotocol/servers
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 企业内部搜索; 模型上下文协议 |
-| llama.cpp | 待对比 | 待对比 | 待对比 |
+| Snailclimb/JavaGuide | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 需要更多实际使用验证 | 智能客服; 企业内部搜索 |
+| Text Generation WebUI | 待对比 | 待对比 | 待对比 |
 | vLLM | 待对比 | 待对比 | 待对比 |
-| Ollama | 待对比 | 待对比 | 待对比 |
+| Qdrant | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

@@ -16,8 +16,8 @@ Skills for Real Engineers. Straight from my .claude directory.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 172240 |
-| 今日新增 | 2130 |
+| Stars | 174201 |
+| 今日新增 | 2060 |
 | Forks | 0 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
@@ -34,14 +34,14 @@ Agent, RAG, Coding, Browser Use, Local AI, DevTools
 
 ## 适合谁
 
-程序员, 自动化爱好者, 数据科学家, 企业用户, AI 研究者, 开发者, AI 工程师, 隐私关注者
+AI 研究者, 企业用户, AI 工程师, 程序员, 隐私关注者, 开发者, 数据科学家, 自动化爱好者
 
 ## 主要用途
 
+- 智能客服
 - 数据采集
-- UI 测试
-- 企业内部搜索
 - 重构辅助
+- 企业内部搜索
 - 文档智能检索
 
 ## 技术栈
