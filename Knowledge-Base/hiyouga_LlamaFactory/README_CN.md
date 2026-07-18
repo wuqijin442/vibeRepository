@@ -11,19 +11,19 @@ Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: fastapi, transformers, torch, pydantic
+- **框架**: pydantic, fastapi, torch, transformers
 - **License**: Apache
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 任务调度
 - 业务流程编排
 - 多代理协作
 - 智能客服
+- 工作流自动化
+- 任务调度
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)
 
 ## 社区数据
 
-- **Stars**: 73311
+- **Stars**: 73348
 - **今日新增**: 0
-- **Forks**: 8951
+- **Forks**: 8955
 
 ---
 

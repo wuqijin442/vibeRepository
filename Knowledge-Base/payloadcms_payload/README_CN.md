@@ -11,7 +11,7 @@ Payload is the open-source, fullstack Next.js framework, giving you instant back
 ## 技术栈
 
 - **主要语言**: TypeScript
-- **框架**: @types/react, @types/react-dom, next, @next/bundle-analyzer, react, @payloadcms/live-preview-react, react-dom, @sentry/nextjs
+- **框架**: react, @sentry/nextjs, @payloadcms/live-preview-react, @types/react, react-dom, @types/react-dom, @next/bundle-analyzer, next
 - **License**: MIT
 - **支持平台**: Linux
 
@@ -19,29 +19,29 @@ Payload is the open-source, fullstack Next.js framework, giving you instant back
 
 根据项目分析，该项目主要功能包括：
 
+- 业务流程编排
+- 企业内部搜索
+- 文档智能检索
 - 工作流自动化
 - 任务调度
-- 知识库问答
-- 文档智能检索
-- 业务流程编排
 
 ## 安装方式
 
-推荐安装方式: **unknown**
+推荐安装方式: **pnpm**
 
 详细安装步骤请参考 [QuickStart.md](./QuickStart.md)
 
 ## 运行说明
 
-- **启动耗时**: 0s
+- **启动耗时**: 6.0s
 - **内存占用**: 0MB
 - **CPU占用**: 0%
 
 ## 社区数据
 
-- **Stars**: 43604
+- **Stars**: 43646
 - **今日新增**: 0
-- **Forks**: 3927
+- **Forks**: 3941
 
 ---
 

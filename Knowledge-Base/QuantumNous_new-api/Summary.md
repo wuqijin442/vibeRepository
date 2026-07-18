@@ -16,9 +16,9 @@ A unified AI model hub for aggregation & distribution. It supports cross-convert
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 42349 |
+| Stars | 42564 |
 | 今日新增 | 0 |
-| Forks | 9833 |
+| Forks | 9916 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,13 +34,13 @@ LLM, RAG, Local AI
 
 ## 适合谁
 
-企业用户, 隐私关注者, 数据科学家, AI 工程师
+隐私关注者, 企业用户, 数据科学家, AI 工程师
 
 ## 主要用途
 
-- 企业内部搜索
-- 知识库问答
 - 文档智能检索
+- 知识库问答
+- 企业内部搜索
 
 ## 技术栈
 

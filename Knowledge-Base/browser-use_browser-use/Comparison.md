@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- MCP Servers Collection
-- LangChain
+- LangChain RAG
+- Qdrant
+- Text Generation WebUI
+- modelcontextprotocol/servers
 - vLLM
-- Dify
-- LangFlow
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| browser-use/browser-use | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 数据采集; 模型上下文协议 |
-| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
-| vLLM | 待对比 | 待对比 | 待对比 |
+| browser-use/browser-use | 社区热度高，Star 数量多; 文档完善; 支持 Docker 部署 | 运行稳定性待验证 | 业务流程编排; 多代理协作 |
+| LangChain RAG | 待对比 | 待对比 | 待对比 |
+| Qdrant | 待对比 | 待对比 | 待对比 |
+| Text Generation WebUI | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

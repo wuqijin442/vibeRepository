@@ -13,15 +13,15 @@ For developers, who are building real-time data-driven applications, Redis is th
 - **主要语言**: C
 - **框架**: 暂无
 - **License**: GPL
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 企业内部搜索
-- 知识库问答
 - 文档智能检索
+- 知识库问答
+- 企业内部搜索
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ For developers, who are building real-time data-driven applications, Redis is th
 
 ## 社区数据
 
-- **Stars**: 75505
+- **Stars**: 75544
 - **今日新增**: 0
-- **Forks**: 24710
+- **Forks**: 24709
 
 ---
 

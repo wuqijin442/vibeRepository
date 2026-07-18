@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: TypeScript
-  框架: eslint-plugin-react, electron, eslint-plugin-react-hooks
+  框架: electron, eslint-plugin-react, eslint-plugin-react-hooks
 end note
 
 @enduml

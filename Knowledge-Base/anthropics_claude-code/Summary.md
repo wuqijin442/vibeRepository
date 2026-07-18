@@ -16,9 +16,9 @@ Claude Code is an agentic coding tool that lives in your terminal, understands y
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 138003 |
+| Stars | 138105 |
 | 今日新增 | 0 |
-| Forks | 22250 |
+| Forks | 22162 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,15 +34,15 @@ Agent, Coding, Workflow
 
 ## 适合谁
 
-开发者, 运维工程师, AI 研究者, 自动化爱好者, 程序员, 产品经理
+自动化爱好者, 程序员, 运维工程师, 产品经理, AI 研究者, 开发者
 
 ## 主要用途
 
-- 工作流自动化
-- 代码审查
-- 重构辅助
-- 任务调度
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 重构辅助
+- 工作流自动化
 
 ## 技术栈
 

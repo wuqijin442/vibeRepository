@@ -16,9 +16,9 @@ Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 53714 |
+| Stars | 53872 |
 | 今日新增 | 0 |
-| Forks | 9799 |
+| Forks | 9854 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ Agent, LLM, MCP, Local AI, Open Source
 
 ## 适合谁
 
-隐私关注者, AI 工程师, 企业用户, AI 研究者, 自动化爱好者, 数据科学家
+企业用户, 自动化爱好者, AI 研究者, 隐私关注者, 数据科学家, AI 工程师
 
 ## 主要用途
 
-- 模型上下文协议
 - 多代理协作
-- 多工具协同
 - 智能客服
-- 自动化任务执行
+- 模型上下文协议
+- AI 工具集成
+- 多工具协同
 
 ## 技术栈
 
 - 语言: Python
-- 框架: @types/react-copy-to-clipboard, prism-react-renderer, langchain, react-copy-to-clipboard, fastapi, @testing-library/react, pydantic
+- 框架: pydantic, fastapi, prism-react-renderer, react-copy-to-clipboard, @testing-library/react, @types/react-copy-to-clipboard, langchain
 - 部署: Docker, Docker Compose, GitHub Actions, Makefile, Docker Compose
 
 ---

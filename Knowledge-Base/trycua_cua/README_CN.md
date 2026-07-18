@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
+Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.
 
 **标签**: Agent, MCP, Coding, Local AI
 
@@ -11,19 +11,19 @@ Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchma
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: transformers, pydantic
+- **框架**: pydantic, transformers
 - **License**: MIT
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 模型上下文协议
-- 代码审查
-- 重构辅助
 - 多代理协作
-- 多工具协同
+- 智能客服
+- 重构辅助
+- 模型上下文协议
+- AI 工具集成
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchma
 
 ## 社区数据
 
-- **Stars**: 19830
+- **Stars**: 20004
 - **今日新增**: 0
-- **Forks**: 1302
+- **Forks**: 1318
 
 ---
 

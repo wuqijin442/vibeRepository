@@ -11,17 +11,17 @@ Joplin - the privacy-focused note taking app with sync capabilities for Windows,
 ## 技术栈
 
 - **主要语言**: TypeScript
-- **框架**: eslint-plugin-react, @seiyab/eslint-plugin-react-hooks
+- **框架**: @seiyab/eslint-plugin-react-hooks, eslint-plugin-react
 - **License**: GPL
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
+- 数据采集
 - UI 测试
 - 网页自动化
-- 数据采集
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ Joplin - the privacy-focused note taking app with sync capabilities for Windows,
 
 ## 社区数据
 
-- **Stars**: 55601
+- **Stars**: 55625
 - **今日新增**: 0
-- **Forks**: 6178
+- **Forks**: 6180
 
 ---
 

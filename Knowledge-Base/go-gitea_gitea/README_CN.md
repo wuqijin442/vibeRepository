@@ -11,17 +11,17 @@ Git with a cup of tea! Painless self-hosted all-in-one software development serv
 ## 技术栈
 
 - **主要语言**: Go
-- **框架**: eslint-plugin-vue-scoped-css, @vitejs/plugin-vue, @replit/codemirror-lang-svelte, vue-tsc, vue, eslint-plugin-vue, vue-chartjs
+- **框架**: vue-chartjs, eslint-plugin-vue-scoped-css, eslint-plugin-vue, @vitejs/plugin-vue, vue-tsc, @replit/codemirror-lang-svelte, vue
 - **License**: Other
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- 任务调度
 - 业务流程编排
 - 工作流自动化
+- 任务调度
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ Git with a cup of tea! Painless self-hosted all-in-one software development serv
 
 ## 社区数据
 
-- **Stars**: 56836
+- **Stars**: 56873
 - **今日新增**: 0
-- **Forks**: 6913
+- **Forks**: 6912
 
 ---
 

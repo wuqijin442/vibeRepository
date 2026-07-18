@@ -10,15 +10,15 @@
 
 ## 一句话介绍
 
-Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
+Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.
 
 ## 核心数据
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 19830 |
+| Stars | 20004 |
 | 今日新增 | 0 |
-| Forks | 1302 |
+| Forks | 1318 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,20 +34,20 @@ Agent, MCP, Coding, Local AI
 
 ## 适合谁
 
-隐私关注者, 企业用户, 开发者, AI 研究者, 自动化爱好者, 程序员
+企业用户, 自动化爱好者, 程序员, AI 研究者, 隐私关注者, 开发者
 
 ## 主要用途
 
-- 模型上下文协议
-- 代码审查
-- 重构辅助
 - 多代理协作
-- 多工具协同
+- 智能客服
+- 重构辅助
+- 模型上下文协议
+- AI 工具集成
 
 ## 技术栈
 
 - 语言: Python
-- 框架: transformers, pydantic
+- 框架: pydantic, transformers
 - 部署: GitHub Actions, Makefile
 
 ---

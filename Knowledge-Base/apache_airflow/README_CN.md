@@ -11,7 +11,7 @@ Apache Airflow - A platform to programmatically author, schedule, and monitor wo
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: flask, fastapi, pydantic
+- **框架**: pydantic, fastapi, flask
 - **License**: Apache
 - **支持平台**: Linux
 
@@ -19,11 +19,11 @@ Apache Airflow - A platform to programmatically author, schedule, and monitor wo
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 任务调度
-- 知识库问答
-- 文档智能检索
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 企业内部搜索
+- 文档智能检索
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Apache Airflow - A platform to programmatically author, schedule, and monitor wo
 
 ## 社区数据
 
-- **Stars**: 46130
+- **Stars**: 46156
 - **今日新增**: 0
-- **Forks**: 17388
+- **Forks**: 17397
 
 ---
 

@@ -19,8 +19,8 @@ Storybook is the industry standard workshop for building, documenting, and testi
 
 根据项目分析，该项目主要功能包括：
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 安装方式
 
@@ -36,9 +36,9 @@ Storybook is the industry standard workshop for building, documenting, and testi
 
 ## 社区数据
 
-- **Stars**: 90705
+- **Stars**: 90609
 - **今日新增**: 0
-- **Forks**: 10315
+- **Forks**: 10217
 
 ---
 

@@ -19,11 +19,11 @@ LlamaIndex is the leading document agent and OCR platform
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 任务调度
-- 知识库问答
-- 文档智能检索
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 企业内部搜索
+- 文档智能检索
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ LlamaIndex is the leading document agent and OCR platform
 
 ## 社区数据
 
-- **Stars**: 50877
+- **Stars**: 50914
 - **今日新增**: 0
-- **Forks**: 7758
+- **Forks**: 7766
 
 ---
 

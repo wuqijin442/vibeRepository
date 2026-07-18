@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: TypeScript
-  框架: @vitejs/plugin-vue, vue, vuedraggable
+  框架: @vitejs/plugin-vue-jsx, @tiptap/vue-3, vue-i18n
 end note
 
 @enduml

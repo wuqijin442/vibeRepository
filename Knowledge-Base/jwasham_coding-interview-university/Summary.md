@@ -16,9 +16,9 @@ A complete computer science study plan to become a software engineer.
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 356325 |
+| Stars | 356477 |
 | 今日新增 | 0 |
-| Forks | 84288 |
+| Forks | 84312 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,13 +34,13 @@ Coding, Local AI
 
 ## 适合谁
 
-开发者, 企业用户, 隐私关注者, 程序员
+程序员, 企业用户, 隐私关注者, 开发者
 
 ## 主要用途
 
-- 代码审查
-- 重构辅助
 - 代码生成
+- 重构辅助
+- 代码审查
 
 ## 技术栈
 

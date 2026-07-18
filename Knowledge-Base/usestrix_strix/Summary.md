@@ -16,9 +16,9 @@ Open-source AI penetration testing tool to find and fix your app’s vulnerabili
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 41889 |
+| Stars | 42226 |
 | 今日新增 | 0 |
-| Forks | 4400 |
+| Forks | 4359 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,15 +34,15 @@ Agent, LLM, RAG, Workflow, Browser Use, Local AI
 
 ## 适合谁
 
-隐私关注者, AI 工程师, 企业用户, 运维工程师, AI 研究者, 自动化爱好者, 数据科学家, 产品经理
+企业用户, 自动化爱好者, 运维工程师, 产品经理, AI 研究者, 隐私关注者, 数据科学家, AI 工程师
 
 ## 主要用途
 
-- 工作流自动化
-- 任务调度
-- 知识库问答
-- 文档智能检索
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 企业内部搜索
+- 文档智能检索
 
 ## 技术栈
 

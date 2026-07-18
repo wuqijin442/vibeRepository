@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- MCP Servers Collection
+- LangChain RAG
 - Claude Code
-- LangChain
-- Continue
-- vLLM
+- Qdrant
+- Cursor
+- Text Generation WebUI
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| shareAI-lab/learn-claude-code | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 数据采集; 模型上下文协议 |
-| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
+| shareAI-lab/learn-claude-code | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 业务流程编排; 多代理协作 |
+| LangChain RAG | 待对比 | 待对比 | 待对比 |
 | Claude Code | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
+| Qdrant | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

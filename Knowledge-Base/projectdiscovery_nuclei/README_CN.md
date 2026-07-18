@@ -19,29 +19,29 @@ Nuclei is a fast, customizable vulnerability scanner powered by the global secur
 
 根据项目分析，该项目主要功能包括：
 
+- 业务流程编排
+- 企业内部搜索
+- 文档智能检索
 - 工作流自动化
 - 任务调度
-- 知识库问答
-- 文档智能检索
-- 业务流程编排
 
 ## 安装方式
 
-推荐安装方式: **unknown**
+推荐安装方式: **go**
 
 详细安装步骤请参考 [QuickStart.md](./QuickStart.md)
 
 ## 运行说明
 
-- **启动耗时**: 0s
+- **启动耗时**: 1.5s
 - **内存占用**: 0MB
 - **CPU占用**: 0%
 
 ## 社区数据
 
-- **Stars**: 29857
+- **Stars**: 29799
 - **今日新增**: 0
-- **Forks**: 3728
+- **Forks**: 3608
 
 ---
 

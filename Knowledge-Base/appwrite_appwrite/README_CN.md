@@ -13,17 +13,17 @@ Appwrite® - complete cloud infrastructure for your web, mobile and AI apps. Inc
 - **主要语言**: PHP
 - **框架**: 暂无
 - **License**: Other
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
+- 业务流程编排
+- 企业内部搜索
+- 文档智能检索
 - 工作流自动化
 - 任务调度
-- 知识库问答
-- 文档智能检索
-- 业务流程编排
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Appwrite® - complete cloud infrastructure for your web, mobile and AI apps. Inc
 
 ## 社区数据
 
-- **Stars**: 56597
+- **Stars**: 56599
 - **今日新增**: 0
-- **Forks**: 5555
+- **Forks**: 5559
 
 ---
 

@@ -10,6 +10,7 @@ build/
 target/
 .next/
 .cache/
+.pnpm-store/
 
 # 工作区临时文件
 workspace/clones/

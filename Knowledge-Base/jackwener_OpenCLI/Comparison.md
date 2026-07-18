@@ -3,19 +3,19 @@
 ## 同类项目
 
 - Claude Code
-- LangChain
-- Continue
-- vLLM
 - Cursor
+- Text Generation WebUI
+- vLLM
+- Continue
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| jackwener/OpenCLI | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 工作流自动化; 代码审查 |
+| jackwener/OpenCLI | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 业务流程编排; 多代理协作 |
 | Claude Code | 待对比 | 待对比 | 待对比 |
-| LangChain | 待对比 | 待对比 | 待对比 |
-| Continue | 待对比 | 待对比 | 待对比 |
+| Cursor | 待对比 | 待对比 | 待对比 |
+| Text Generation WebUI | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

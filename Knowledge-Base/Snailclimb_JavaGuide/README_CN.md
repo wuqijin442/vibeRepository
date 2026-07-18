@@ -11,7 +11,7 @@ Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分
 ## 技术栈
 
 - **主要语言**: TypeScript
-- **框架**: @vuepress/plugin-docsearch, vuepress, @vuepress/bundler-vite, vue, vuepress-theme-hope, @vuepress/helper, @vuepress/plugin-feed
+- **框架**: @vuepress/bundler-vite, @vuepress/helper, @vuepress/plugin-feed, vuepress, vuepress-theme-hope, @vuepress/plugin-docsearch, vue
 - **License**: Apache
 - **支持平台**: Linux
 
@@ -19,11 +19,11 @@ Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分
 
 根据项目分析，该项目主要功能包括：
 
-- 企业内部搜索
-- 模型上下文协议
 - 文档智能检索
+- 企业内部搜索
+- 自动化任务执行
 - 智能客服
-- AI 工具集成
+- 多代理协作
 
 ## 安装方式
 
@@ -33,15 +33,15 @@ Java 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分
 
 ## 运行说明
 
-- **启动耗时**: 30.45s
-- **内存占用**: 2417.8MB
+- **启动耗时**: 30.03s
+- **内存占用**: 2337.5MB
 - **CPU占用**: 0.0%
 
 ## 社区数据
 
-- **Stars**: 157054
+- **Stars**: 157100
 - **今日新增**: 0
-- **Forks**: 46167
+- **Forks**: 46176
 
 ---
 

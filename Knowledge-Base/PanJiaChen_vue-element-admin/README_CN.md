@@ -11,7 +11,7 @@
 ## 技术栈
 
 - **主要语言**: JavaScript
-- **框架**: vuedraggable, vue-count-to, vue-router, @vue/cli-plugin-babel, vue-splitpane, @vue/cli-plugin-eslint, @vue/cli-service, @vue/cli-plugin-unit-jest, vuex, vue, eslint-plugin-vue, @vue/test-utils, vue-template-compiler
+- **框架**: @vue/cli-service, vue-splitpane, @vue/test-utils, vuedraggable, vue-router, @vue/cli-plugin-babel, vue-count-to, vuex, vue-template-compiler, @vue/cli-plugin-unit-jest, eslint-plugin-vue, @vue/cli-plugin-eslint, vue
 - **License**: MIT
 - **支持平台**: Linux
 
@@ -19,11 +19,11 @@
 
 根据项目分析，该项目主要功能包括：
 
-- 知识库问答
-- 文档智能检索
 - 企业内部搜索
+- 文档智能检索
+- 知识库问答
+- 数据采集
 - UI 测试
-- 网页自动化
 
 ## 安装方式
 
@@ -33,15 +33,15 @@
 
 ## 运行说明
 
-- **启动耗时**: 30.03s
-- **内存占用**: 2108.3MB
+- **启动耗时**: 30.07s
+- **内存占用**: 2119.0MB
 - **CPU占用**: 0.0%
 
 ## 社区数据
 
 - **Stars**: 90244
 - **今日新增**: 0
-- **Forks**: 30411
+- **Forks**: 30409
 
 ---
 

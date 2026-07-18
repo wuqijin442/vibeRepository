@@ -16,9 +16,9 @@ A powerful cross-platform UI toolkit for building native-quality iOS, Android, a
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 52582 |
+| Stars | 52585 |
 | 今日新增 | 0 |
-| Forks | 13339 |
+| Forks | 13338 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -38,8 +38,8 @@ Open Source
 
 ## 主要用途
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 技术栈
 

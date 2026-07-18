@@ -16,9 +16,9 @@ A set of beautifully-designed, accessible components and a code distribution pla
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 119205 |
+| Stars | 119185 |
 | 今日新增 | 0 |
-| Forks | 9514 |
+| Forks | 9429 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -38,13 +38,13 @@ Open Source
 
 ## 主要用途
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 技术栈
 
 - 语言: TypeScript
-- 框架: @types/react, eslint-plugin-react, @types/react-dom, eslint-config-next
+- 框架: eslint-config-next, @types/react, eslint-plugin-react, @types/react-dom
 - 部署: GitHub Actions
 
 ---

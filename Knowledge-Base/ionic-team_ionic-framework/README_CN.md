@@ -13,14 +13,14 @@ A powerful cross-platform UI toolkit for building native-quality iOS, Android, a
 - **主要语言**: TypeScript
 - **框架**: 暂无
 - **License**: MIT
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 安装方式
 
@@ -36,9 +36,9 @@ A powerful cross-platform UI toolkit for building native-quality iOS, Android, a
 
 ## 社区数据
 
-- **Stars**: 52582
+- **Stars**: 52585
 - **今日新增**: 0
-- **Forks**: 13339
+- **Forks**: 13338
 
 ---
 

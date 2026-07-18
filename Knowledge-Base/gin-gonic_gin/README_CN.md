@@ -13,17 +13,17 @@ Gin is a high-performance HTTP web framework written in Go. It provides a Martin
 - **主要语言**: Go
 - **框架**: 暂无
 - **License**: MIT
-- **支持平台**: macOS, Linux, Windows
+- **支持平台**: macOS, Windows, Linux
 
 ## 功能特性
 
 根据项目分析，该项目主要功能包括：
 
+- 业务流程编排
+- 企业内部搜索
+- 文档智能检索
 - 工作流自动化
 - 任务调度
-- 知识库问答
-- 文档智能检索
-- 业务流程编排
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Gin is a high-performance HTTP web framework written in Go. It provides a Martin
 
 ## 社区数据
 
-- **Stars**: 88919
+- **Stars**: 88921
 - **今日新增**: 0
-- **Forks**: 8641
+- **Forks**: 8642
 
 ---
 

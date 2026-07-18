@@ -11,7 +11,7 @@ A set of beautifully-designed, accessible components and a code distribution pla
 ## 技术栈
 
 - **主要语言**: TypeScript
-- **框架**: @types/react, eslint-plugin-react, @types/react-dom, eslint-config-next
+- **框架**: eslint-config-next, @types/react, eslint-plugin-react, @types/react-dom
 - **License**: MIT
 - **支持平台**: Linux
 
@@ -19,8 +19,8 @@ A set of beautifully-designed, accessible components and a code distribution pla
 
 根据项目分析，该项目主要功能包括：
 
-- AI 应用开发
 - 技术研究探索
+- AI 应用开发
 
 ## 安装方式
 
@@ -30,15 +30,15 @@ A set of beautifully-designed, accessible components and a code distribution pla
 
 ## 运行说明
 
-- **启动耗时**: 20.61s
+- **启动耗时**: 7.52s
 - **内存占用**: 0MB
 - **CPU占用**: 0%
 
 ## 社区数据
 
-- **Stars**: 119205
+- **Stars**: 119185
 - **今日新增**: 0
-- **Forks**: 9514
+- **Forks**: 9429
 
 ---
 

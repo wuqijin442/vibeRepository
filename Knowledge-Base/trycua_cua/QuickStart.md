@@ -2,7 +2,7 @@
 
 ## 前置要求
 
-- **操作系统**: macOS, Linux, Windows
+- **操作系统**: macOS, Windows, Linux
 - **主要语言环境**: Python
 - **依赖管理工具**: uv
 

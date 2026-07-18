@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- Flowise
-- Haystack
-- MCP Servers Collection
+- LangChain RAG
+- LangFlow
 - modelcontextprotocol/servers
-- LlamaIndex
+- vLLM
+- Qdrant
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| serverless/serverless | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 模型上下文协议; 工作流自动化 |
-| Flowise | 待对比 | 待对比 | 待对比 |
-| Haystack | 待对比 | 待对比 | 待对比 |
-| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
+| serverless/serverless | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 业务流程编排; 模型上下文协议 |
+| LangChain RAG | 待对比 | 待对比 | 待对比 |
+| LangFlow | 待对比 | 待对比 | 待对比 |
+| modelcontextprotocol/servers | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

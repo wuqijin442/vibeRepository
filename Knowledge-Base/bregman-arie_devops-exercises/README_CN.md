@@ -20,9 +20,9 @@ Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, 
 根据项目分析，该项目主要功能包括：
 
 - 代码审查
-- 知识库问答
-- 文档智能检索
 - 企业内部搜索
+- 文档智能检索
+- 知识库问答
 - 代码生成
 
 ## 安装方式
@@ -39,9 +39,9 @@ Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, 
 
 ## 社区数据
 
-- **Stars**: 83193
+- **Stars**: 83217
 - **今日新增**: 0
-- **Forks**: 19743
+- **Forks**: 19748
 
 ---
 

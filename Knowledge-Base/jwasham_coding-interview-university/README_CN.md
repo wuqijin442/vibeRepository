@@ -19,9 +19,9 @@ A complete computer science study plan to become a software engineer.
 
 根据项目分析，该项目主要功能包括：
 
-- 代码审查
-- 重构辅助
 - 代码生成
+- 重构辅助
+- 代码审查
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ A complete computer science study plan to become a software engineer.
 
 ## 社区数据
 
-- **Stars**: 356325
+- **Stars**: 356477
 - **今日新增**: 0
-- **Forks**: 84288
+- **Forks**: 84312
 
 ---
 

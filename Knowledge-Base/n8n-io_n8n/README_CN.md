@@ -19,11 +19,11 @@ Fair-code workflow automation platform with native AI capabilities. Combine visu
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 任务调度
-- 知识库问答
-- 文档智能检索
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 企业内部搜索
+- 文档智能检索
 
 ## 安装方式
 
@@ -33,15 +33,15 @@ Fair-code workflow automation platform with native AI capabilities. Combine visu
 
 ## 运行说明
 
-- **启动耗时**: 20.01s
-- **内存占用**: 0MB
-- **CPU占用**: 0%
+- **启动耗时**: 35.43s
+- **内存占用**: 3951.1MB
+- **CPU占用**: 0.0%
 
 ## 社区数据
 
-- **Stars**: 196593
+- **Stars**: 196826
 - **今日新增**: 0
-- **Forks**: 59344
+- **Forks**: 59407
 
 ---
 

@@ -19,11 +19,11 @@ An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that 
 
 根据项目分析，该项目主要功能包括：
 
-- 工作流自动化
-- 代码审查
-- 重构辅助
-- 任务调度
 - 业务流程编排
+- 多代理协作
+- 智能客服
+- 重构辅助
+- 工作流自动化
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that 
 
 ## 社区数据
 
-- **Stars**: 58630
+- **Stars**: 58784
 - **今日新增**: 0
-- **Forks**: 5039
+- **Forks**: 5060
 
 ---
 

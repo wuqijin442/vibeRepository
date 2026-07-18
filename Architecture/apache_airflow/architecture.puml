@@ -53,7 +53,7 @@ LLMIntegration --> FileStorage
 
 note right of LLMIntegration
   主要语言: Python
-  框架: flask, fastapi, pydantic
+  框架: pydantic, fastapi, flask
 end note
 
 @enduml

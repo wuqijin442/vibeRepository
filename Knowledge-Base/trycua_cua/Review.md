@@ -4,7 +4,7 @@
 
 **项目名称**: trycua/cua
 **项目地址**: https://github.com/trycua/cua
-**一句话介绍**: Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
+**一句话介绍**: Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.
 
 ## 评测结果
 
@@ -29,23 +29,23 @@
 
 ## 适用人群
 
-隐私关注者, 企业用户, 开发者, AI 研究者, 自动化爱好者, 程序员
+企业用户, 自动化爱好者, 程序员, AI 研究者, 隐私关注者, 开发者
 
 ## 适用场景
 
-- 模型上下文协议
-- 代码审查
-- 重构辅助
 - 多代理协作
-- 多工具协同
+- 智能客服
+- 重构辅助
+- 模型上下文协议
+- AI 工具集成
 
 ## 性能数据
 
-- 安装耗时: 656.77s
+- 安装耗时: 595.33s
 - 启动耗时: 0s
 - 内存占用: 0MB
 - CPU占用: 0%
-- 磁盘占用: 225.14MB
+- 磁盘占用: 232.51MB
 
 ## 推荐指数
 

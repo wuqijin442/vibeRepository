@@ -19,9 +19,9 @@ DeepSpeed is a deep learning optimization library that makes distributed trainin
 
 根据项目分析，该项目主要功能包括：
 
-- 任务调度
 - 业务流程编排
 - 工作流自动化
+- 任务调度
 
 ## 安装方式
 
@@ -37,9 +37,9 @@ DeepSpeed is a deep learning optimization library that makes distributed trainin
 
 ## 社区数据
 
-- **Stars**: 42721
+- **Stars**: 42737
 - **今日新增**: 0
-- **Forks**: 4888
+- **Forks**: 4889
 
 ---
 

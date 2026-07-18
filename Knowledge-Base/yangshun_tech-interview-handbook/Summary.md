@@ -16,9 +16,9 @@ Curated coding interview preparation materials for busy software engineers
 
 | 指标 | 数值 |
 |------|------|
-| Stars | 141017 |
+| Stars | 141052 |
 | 今日新增 | 0 |
-| Forks | 16683 |
+| Forks | 16691 |
 | 综合评分 | 0 |
 | 推荐指数 | ★ |
 
@@ -34,15 +34,15 @@ RAG, Coding, Image Gen
 
 ## 适合谁
 
-设计师, AI 工程师, 开发者, 内容创作者, 数据科学家, 程序员
+设计师, 程序员, 内容创作者, 数据科学家, 开发者, AI 工程师
 
 ## 主要用途
 
 - 代码审查
-- 知识库问答
-- 文档智能检索
-- 内容创作
 - 企业内部搜索
+- 文档智能检索
+- 知识库问答
+- 图像生成
 
 ## 技术栈
 

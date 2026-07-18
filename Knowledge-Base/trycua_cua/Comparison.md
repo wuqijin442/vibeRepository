@@ -2,20 +2,20 @@
 
 ## 同类项目
 
-- MCP Servers Collection
+- aider
 - modelcontextprotocol/servers
+- Continue
 - Claude Code
-- AutoGen
-- LangChain
+- Cursor
 
 ## 对比分析
 
 | 项目 | 优势 | 劣势 | 适用场景 |
 |------|------|------|----------|
-| trycua/cua | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 模型上下文协议; 代码审查 |
-| MCP Servers Collection | 待对比 | 待对比 | 待对比 |
+| trycua/cua | 社区热度高，Star 数量多; 文档完善; 安装简单，依赖易解决 | 运行稳定性待验证 | 多代理协作; 智能客服 |
+| aider | 待对比 | 待对比 | 待对比 |
 | modelcontextprotocol/servers | 待对比 | 待对比 | 待对比 |
-| Claude Code | 待对比 | 待对比 | 待对比 |
+| Continue | 待对比 | 待对比 | 待对比 |
 
 ## 本项目独特优势
 

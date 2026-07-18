@@ -11,7 +11,7 @@ Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native
 ## 技术栈
 
 - **主要语言**: Python
-- **框架**: @types/react-copy-to-clipboard, prism-react-renderer, langchain, react-copy-to-clipboard, fastapi, @testing-library/react, pydantic
+- **框架**: pydantic, fastapi, prism-react-renderer, react-copy-to-clipboard, @testing-library/react, @types/react-copy-to-clipboard, langchain
 - **License**: MIT
 - **支持平台**: Linux
 
@@ -19,11 +19,11 @@ Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native
 
 根据项目分析，该项目主要功能包括：
 
-- 模型上下文协议
 - 多代理协作
-- 多工具协同
 - 智能客服
-- 自动化任务执行
+- 模型上下文协议
+- AI 工具集成
+- 多工具协同
 
 ## 安装方式
 
@@ -39,9 +39,9 @@ Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native
 
 ## 社区数据
 
-- **Stars**: 53714
+- **Stars**: 53872
 - **今日新增**: 0
-- **Forks**: 9799
+- **Forks**: 9854
 
 ---
 
